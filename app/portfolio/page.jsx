@@ -4,14 +4,13 @@ import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import { useLanguage } from "@/i18n"
 import { useBreakpoint } from "@/hooks/use-media-query"
-import { Play, ArrowUpRight } from "lucide-react"
+import { Play, ArrowUpRight, Newspaper } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import { PageTransition, Stagger, StaggerItem, ScrollRevealMotion } from "@/components/animations"
-import { Briefcase, GraduationCap, Award, Heart, Code, Palette, Smartphone, Monitor, Figma, Newspaper } from "lucide-react"
+import ReactGA from "react-ga4";
 import InteractiveCard from "@/components/interactive-card"
 import Navbar from "@/components/navbar"
-import MouseParallax from "@/components/mouse-parallax"
 import OptimizedImage from "@/components/optimized-image"
 import ParallaxHero from "@/components/parallax-hero"
 import ParticleBackground from "@/components/particle-background"
@@ -142,6 +141,12 @@ export default function PortfolioPage() {
   const { isMobile, isTablet } = useBreakpoint()
 
   useEffect(() => {
+    if (!window.location.href.includes('localhost')) {
+      console.log("[ReactGA.initialize] page : /portfolio");
+      ReactGA.initialize("G-970VH63QCH");
+      ReactGA.send({ hitType: "pageview", page: "/portfolio", title: "Portfolio Main View" });
+    }
+
     const handleContextMenu = (event) => {
       event.preventDefault(); // 우클릭 방지
     }

@@ -4,6 +4,7 @@ import { useRef, useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import { useLanguage } from "@/i18n"
 import { Briefcase, GraduationCap, Award, Heart, Code, Palette, Smartphone, Monitor, Figma, Newspaper } from "lucide-react"
+import ReactGA from "react-ga4";
 import InteractiveCard from "@/components/interactive-card"
 import Navbar from "@/components/navbar"
 import ParallaxHero from "@/components/parallax-hero"
@@ -84,6 +85,12 @@ export default function AboutPage() {
   }, [])
 
   useEffect(() => {
+    if (!window.location.href.includes('localhost')) {
+      console.log("[ReactGA.initialize] page : /about");
+      ReactGA.initialize("G-970VH63QCH");
+      ReactGA.send({ hitType: "pageview", page: "/about", title: "About View" });
+    }
+
     const handleContextMenu = (event) => {
       event.preventDefault(); // 우클릭 방지
     }

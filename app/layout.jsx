@@ -17,7 +17,7 @@ const notoSansJP = Noto_Sans_JP({
 })
 
 export const metadata = {
-  title: "Portfolio : Shin JeongSoon",
+  title: "Shin JeongSoon's Portfolio",
   description: "UIアニメーションデザイナー（Shin JeongSoon）のポートフォリオ",
     generator: ''
 }

@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation"
 import { useLanguage } from "@/i18n"
 import { ArrowLeft, Play, ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import ReactGA from "react-ga4";
 import InteractiveCard from "@/components/interactive-card"
 import ImageGallery from "@/components/image-gallery"
 import Navbar from "@/components/navbar"
@@ -562,6 +563,14 @@ export default function PortfolioDetailPage({ params }) {
   const { t } = useLanguage()
 
   useEffect(() => {
+    const pageid = id;
+    
+    if (!window.location.href.includes('localhost')) {
+      console.log("[ReactGA.initialize] page : /portfolio/" + pageid);
+      ReactGA.initialize("G-970VH63QCH");
+      ReactGA.send({ hitType: "pageview", page: "/portfolio/" + pageid, title: "Portfolio Detail View" });
+    }
+
     const handleContextMenu = (event) => {
       event.preventDefault(); // 우클릭 방지
     }
@@ -569,7 +578,7 @@ export default function PortfolioDetailPage({ params }) {
     document.addEventListener("contextmenu", handleContextMenu);
     
     // 포트폴리오 아이템 찾기
-    const parsedId = Number.parseInt(id);
+    const parsedId = Number.parseInt(pageid);
 
     if (isNaN(parsedId)) {
       router.push("/portfolio")
