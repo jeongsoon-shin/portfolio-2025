@@ -135,16 +135,24 @@ const interviews = [
 
 export default function PortfolioPage() {
   const router = useRouter()
+  const [isLoading, setIsLoading] = useState(true)
   const [selectedCategory, setSelectedCategory] = useState("全て")
   const [filteredItems, setFilteredItems] = useState(portfolioItems)
   const { t } = useLanguage()
   const { isMobile, isTablet } = useBreakpoint()
 
   useEffect(() => {
+    // 로딩 상태 업데이트
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 500)
+  }, [])
+
+  useEffect(() => {
     if (!window.location.href.includes('localhost')) {
-      console.log("[ReactGA.initialize] page : /portfolio");
       ReactGA.initialize("G-970VH63QCH");
-      ReactGA.send({ hitType: "pageview", page: "/portfolio", title: "Portfolio Main View" });
+      // ReactGA.send({ hitType: "pageview", page: "/portfolio", title: "Portfolio Main View" });
+      ReactGA.send({ hitType: "pageview"});
     }
 
     const handleContextMenu = (event) => {
@@ -182,6 +190,14 @@ export default function PortfolioPage() {
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
+  }
+
+  if (isLoading) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-white">
+        <div className="h-8 w-8 animate-spin rounded-full border-2 border-gray-300 border-t-gray-900"></div>
+      </div>
+    )
   }
 
   return (
