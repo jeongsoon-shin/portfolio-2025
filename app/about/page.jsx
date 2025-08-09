@@ -88,7 +88,7 @@ export default function AboutPage() {
     if (!window.location.href.includes('localhost')) {
       ReactGA.initialize("G-970VH63QCH");
       // ReactGA.send({ hitType: "pageview", page: "/about", title: "About View" });
-      ReactGA.send({ hitType: "pageview"});
+      ReactGA.send({ hitType: "pageview", title: "About Page" });
     }
 
     const handleContextMenu = (event) => {

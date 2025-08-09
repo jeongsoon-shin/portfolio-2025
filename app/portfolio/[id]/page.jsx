@@ -568,7 +568,7 @@ export default function PortfolioDetailPage({ params }) {
     if (!window.location.href.includes('localhost')) {
       ReactGA.initialize("G-970VH63QCH");
       // ReactGA.send({ hitType: "pageview", page: "/portfolio/" + pageid, title: "Portfolio Detail View" });
-      ReactGA.send({ hitType: "pageview"});
+      ReactGA.send({ hitType: "pageview", title: "Portfolio Detail Page" });
     }
 
     const handleContextMenu = (event) => {
