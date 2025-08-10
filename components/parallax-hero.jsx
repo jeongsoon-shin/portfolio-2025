@@ -47,7 +47,7 @@ export default function ParallaxHero({
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center text-white">
         {title && (
           <h1
-            className={`animate-fade-in-down mb-4 text-4xl font-semibold md:text-5xl lg:text-6xl text-gray-50/80`}
+            className={`animate-fade-in-down mb-4 text-4xl font-semibold md:text-5xl lg:text-6xl bg-gradient-to-r from-cyan-300 via-pink-400 to-amber-400 bg-clip-text text-transparent`}
           >
             {title}
           </h1>
@@ -55,7 +55,7 @@ export default function ParallaxHero({
 
         {subtitle && (
           <p
-            className={`animate-fade-in-down-delay mb-8 max-w-2xl text-lg font-light text-gray-200/80 md:text-xl`}
+            className={`animate-fade-in-down-delay mb-8 max-w-2xl text-lg font-light md:text-xl bg-gradient-to-l from-cyan-100 via-pink-200 to-amber-200 bg-clip-text text-transparent`}
           >
             {subtitle}
           </p>
