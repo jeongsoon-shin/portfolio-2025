@@ -1,8 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const TARGET_NAME = '\[id\]'; 
-// 원본 템플릿 폴더명
+const TARGET_NAME = '[id]'; // 원본 템플릿 폴더명
 const baseTemplateDir = path.resolve(__dirname, './app/portfolio', TARGET_NAME);
 const componentsDir = path.resolve(__dirname, './app/portfolio');
 
@@ -10,8 +9,8 @@ const componentsDir = path.resolve(__dirname, './app/portfolio');
 const COUNT = 13;
 
 for (let i = 1; i <= COUNT; i++) {
-  const componentName = `${i}`; // 예: Component1, Component2, ...
-  const targetDir = path.join(componentsDir, componentName);
+  const targetDirName = `${i}`; // 숫자 폴더명
+  const targetDir = path.join(componentsDir, targetDirName);
 
   // 1. 템플릿 복제
   fs.cpSync(baseTemplateDir, targetDir, { recursive: true });
@@ -20,10 +19,15 @@ for (let i = 1; i <= COUNT; i++) {
   const indexFilePath = path.join(targetDir, 'page.jsx');
   let content = fs.readFileSync(indexFilePath, 'utf8');
 
-  // 템플릿 이름 및 변수 치환
+  // const pageid = id; → const pageid = {i};
   content = content.replace(/const pageid = id;/, `const pageid = ${i};`);
 
   fs.writeFileSync(indexFilePath, content, 'utf8');
 
-  console.log(`✅ ${componentName} 생성 완료`);
+  console.log(`✅ ${targetDirName} 생성 완료`);
 }
+
+// 3. 원본 폴더명 변경
+const newOriginalDir = path.join(componentsDir, '0'); // 0번 폴더로 변경
+fs.renameSync(baseTemplateDir, newOriginalDir);
+console.log(`📂 원본 폴더명 변경: ${TARGET_NAME} → 0`);
