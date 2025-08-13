@@ -302,6 +302,8 @@ body {
 /* 다크 모드 전환 시 그라데이션 배경 효과 */
 .bg-gradient-light {
   background: linear-gradient(to bottom right, hsl(var(--gradient-start)), hsl(var(--gradient-end)));
+  /* background-image: repeating-linear-gradient(233deg, rgba(0,0,0, 0.25), rgba(0,0,0, 0.25) 1px, transparent -19px, transparent 2px);
+  background-size: 10px; */
 }
 
 .bg-gradient-dark {
