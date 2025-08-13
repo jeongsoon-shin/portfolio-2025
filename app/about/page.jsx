@@ -3,7 +3,7 @@
 import { useRef, useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import { useLanguage } from "@/i18n"
-import { Briefcase, GraduationCap, Award, Heart, Code, Palette, Smartphone, Monitor, Figma, Newspaper } from "lucide-react"
+import { Briefcase, Mail, Link, Facebook, Award, Heart, Code, Palette, Smartphone, Monitor, Figma, Newspaper } from "lucide-react"
 import ReactGA from "react-ga4";
 import InteractiveCard from "@/components/interactive-card"
 import Navbar from "@/components/navbar"
@@ -31,7 +31,7 @@ const experiences = [
     icon: <Briefcase className="h-5 w-5" />,
   },
   {
-    title: "Flash Developer",
+    title: "Flash Developer & Front-End Engineer",
     company: "(株)バードマン(BIRDMAN)",
     period: "2011 - 2013",
     description: "Flash(ActionScript 3.0)やHTML,CSS,JavaScriptを用いたWEBサイト制作・モバイルコンテンツの制作を担当しました。",
@@ -163,7 +163,7 @@ export default function AboutPage() {
                   />
                 </div>
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white">{t("about.name")}</h2>
-                <p className="text-gray-500 dark:text-gray-400">{t("about.job")}</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">{t("about.job")}</p>
               </div>
 
               <div className="mb-6">
@@ -178,8 +178,9 @@ export default function AboutPage() {
               <div className="mb-6">
                 <h3 className="mb-3 text-lg font-semibold text-gray-900 dark:text-white">{t("about.contact")}</h3>
                 <ul className="space-y-2 text-gray-700 dark:text-gray-300">
-                  <li className="text-md">📧 <a href="mailto:shin.jeongsoon.1210@gmail.com">shin.jeongsoon.1210@gmail.com</a></li>
-                  <li className="text-md">🌐 <a href="http://theflasia.cafe24.com/">http://theflasia.cafe24.com/</a></li>
+                  <li className="flex text-sm"><Mail size={20} /><a href="mailto:shin.jeongsoon.1210@gmail.com" className="ml-2">shin.jeongsoon.1210@gmail.com</a></li>
+                  <li className="flex text-sm"><Link size={20} /><a href="http://theflasia.cafe24.com/" className="ml-2">http://theflasia.cafe24.com/</a></li>
+                  <li className="flex text-sm"><Facebook size={20} /><a href="https://www.facebook.com/ShinJeongSoon" target="_blank" className="ml-2">https://www.facebook.com/ShinJeongSoon</a></li>
                 </ul>
               </div>
 
@@ -209,6 +210,15 @@ export default function AboutPage() {
                   </span>
                   <span className="rounded-full bg-gray-100 px-3 py-1 text-xs text-gray-800 dark:bg-gray-700 dark:text-gray-200">
                     WEBデザイン
+                  </span>
+                  <span className="rounded-full bg-gray-100 px-3 py-1 text-xs text-gray-800 dark:bg-gray-700 dark:text-gray-200">
+                    NETFLIX
+                  </span>
+                  <span className="rounded-full bg-gray-100 px-3 py-1 text-xs text-gray-800 dark:bg-gray-700 dark:text-gray-200">
+                    YouTube
+                  </span>
+                  <span className="rounded-full bg-gray-100 px-3 py-1 text-xs text-gray-800 dark:bg-gray-700 dark:text-gray-200">
+                    ゲーム実況
                   </span>
                 </div>
               </div>

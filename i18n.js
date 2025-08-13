@@ -256,7 +256,7 @@ const translations = {
     about: {
       title: "PORTFOLIO : ABOUT ME",
       subtitle: "簡単な自己紹介と経歴やスキルについて",
-      name: "申政淳",
+      name: "申 政淳",
       job: "UIアニメーションデザイナー / インタラクティブデザイナー",
       intro: "自己紹介",
       introText:[
