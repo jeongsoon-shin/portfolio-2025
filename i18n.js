@@ -250,7 +250,7 @@ const translations = {
       details: "プロジェクト詳細",
       process: "担当業務内容",
       tools: "使用ツール",
-      visitWebsite: "公式サイトへ",
+      visitWebsite: "公式サイトへ移動",
     },
     // 紹介ページ
     about: {

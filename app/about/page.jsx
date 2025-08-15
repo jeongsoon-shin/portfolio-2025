@@ -148,6 +148,7 @@ export default function AboutPage() {
         subtitle={t("about.subtitle")}
         height="35vh"
         overlayOpacity={0.7}
+        offsetY="-60px"
       />
 
       <main className="container relative mx-auto px-4 py-12">

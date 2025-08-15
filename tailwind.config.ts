@@ -91,7 +91,12 @@ const config: Config = {
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out'
-  		}
+  		},
+		textShadow: {
+			sm: '0px 0px 1px rgba(0, 0, 0, 0.2)',
+			md: '1px 1px 2px rgba(0, 0, 0, 0.4)',
+			lg: '2px 2px 4px rgba(0, 0, 0, 0.6)',
+		},
   	}
   },
   plugins: [require("tailwindcss-animate")],

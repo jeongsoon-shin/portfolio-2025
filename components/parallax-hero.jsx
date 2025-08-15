@@ -1,6 +1,7 @@
 "use client"
 
 import { useRef, useEffect } from "react"
+import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 
 export default function ParallaxHero({
   imageUrl = "/placeholder.svg?height=1080&width=1920",
@@ -9,6 +10,7 @@ export default function ParallaxHero({
   height = "500px",
   overlayOpacity = 0.5,
   children,
+  offsetY = "0px",
 }) {
   const parallaxRef = useRef(null)
 
@@ -26,16 +28,20 @@ export default function ParallaxHero({
   return (
     <div className="relative overflow-hidden" style={{ height }}>
       {/* 패럴랙스 배경 이미지 */}
-      <div
-        ref={parallaxRef}
-        className="absolute inset-0 h-full w-full bg-cover bg-center bg-no-repeat transition-all duration-500"
-        style={{
-          backgroundImage: `url(${imageUrl})`,
-          height: `calc(${height} + 200px)`,
-          top: "-100px",
-          filter: "none",
-        }}
-      />
+      <ParallaxProvider>
+        <Parallax speed={-25}>
+          <div
+            ref={parallaxRef}
+            className="absolute inset-0 h-full w-full bg-cover bg-center bg-no-repeat transition-all duration-500"
+            style={{
+              backgroundImage: `url(${imageUrl})`,
+              height: `calc(${height} + 200px)`,
+              top: `calc(${offsetY} - 300px)`,
+              filter: "none",
+            }}
+          />
+        </Parallax>
+      </ParallaxProvider>
 
       {/* 오버레이 */}
       <div
@@ -47,7 +53,7 @@ export default function ParallaxHero({
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center text-white">
         {title && (
           <h1
-            className={`animate-fade-in-down mb-4 text-4xl font-semibold md:text-5xl lg:text-6xl bg-gradient-to-r from-cyan-300 via-pink-400 to-amber-400 bg-clip-text text-transparent`}
+            className={`animate-fade-in-down mb-2 text-4xl font-semibold md:text-5xl lg:text-6xl bg-gradient-to-r from-cyan-300 via-pink-400 to-amber-400 bg-clip-text text-transparent text-shadow-sm`}
           >
             {title}
           </h1>

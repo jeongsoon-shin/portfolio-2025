@@ -5,7 +5,7 @@ import { useState, useRef } from "react"
 export default function InteractiveCard({
   children,
   className = "",
-  depth = 6,
+  depth = 4,
   backgroundImage = "",
   backgroundOpacity = 0.1,
   glareEffect = true,
@@ -36,7 +36,7 @@ export default function InteractiveCard({
   }
 
   const handleMouseEnter = () => {
-    setScale(1.05)
+    setScale(1.04)
   }
 
   const handleMouseLeave = () => {

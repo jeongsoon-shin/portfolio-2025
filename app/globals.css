@@ -481,3 +481,8 @@ body {
 .dark ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.3);
 }
+
+.text-outline {
+  -webkit-text-stroke-width: 1px; /* Adjust thickness as needed */
+  -webkit-text-stroke-color: black; /* Adjust color as needed */
+}

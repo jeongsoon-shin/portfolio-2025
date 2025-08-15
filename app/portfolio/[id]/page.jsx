@@ -694,7 +694,7 @@ export default function PortfolioDetailPage({ params }) {
         {/* 비디오 플레이어 */}
         {portfolio.videoUrl && (
         <ScrollReveal>
-          <div className="m-4 mb-6 overflow-hidden rounded-xl bg-gradient-to-r from-gray-900 to-gray-700 shadow-xl">
+          <div className="m-4 mt-2 mb-6 overflow-hidden rounded-xl bg-gradient-to-r from-gray-900 to-gray-700 shadow-xl">
             <div className="aspect-video">
               <ReactPlayer
               url = {portfolio.videoUrl}
@@ -712,7 +712,7 @@ export default function PortfolioDetailPage({ params }) {
         {/* 갤러리 섹션 */}
         {portfolio.gallery && (
           <ScrollReveal>
-            <div className="m-4 mb-6 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
+            <div className="m-4 mt-2 mb-6 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
               {/* <h2 className="mb-2 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-lg font-bold tracking-tight text-transparent dark:from-gray-100 dark:to-gray-400">{portfolio.galleryTitle}</h2> */}
               <h2 className="mb-4 ml-0 mr-0 text-xl font-semibold text-gray-900 dark:text-white">{portfolio.galleryTitle}</h2>
               <ImageGallery images={portfolio.gallery} isDetailView = {portfolio.galleryDetailView} grids={portfolio.galleryGrids} />
@@ -721,7 +721,7 @@ export default function PortfolioDetailPage({ params }) {
         )}
 
         <ScrollReveal>
-          <div className="m-4 mb-12 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
+          <div className="m-4 mt-2 mb-6 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
             <div className="prose max-w-none dark:prose-invert">
               <h2 className="text-xl font-semibold text-gray-900 dark:text-white">{t("project.tools")}</h2>
               <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
@@ -741,10 +741,10 @@ export default function PortfolioDetailPage({ params }) {
 
         {portfolio.url && (
           <ScrollReveal>
-            <div className="mt-12 flex justify-center">
+            <div className="m-4 mt-2 mb-2 flex justify-center shadow-lg">
               <Button
                 variant="outline"
-                className="flex items-center gap-2 rounded-full border-gray-300 px-6 py-2 text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-800"
+                className="flex items-center gap-2 rounded-xl w-full border-gray-300 px-12 py-6 text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-800"
                 onClick={() => window.open(portfolio.url, "_blank")}
               >
                 <ExternalLink className="h-4 w-4" />
@@ -753,6 +753,19 @@ export default function PortfolioDetailPage({ params }) {
             </div>
           </ScrollReveal>
         )}
+
+        <ScrollReveal>
+          <div className="m-4 mt-2 mb-6 animate-fade-in-left">
+            <Button
+              variant="ghost"
+              className="mb-2 flex items-center gap-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
+              onClick={() => router.push("/portfolio")}
+            >
+              <ArrowLeft className="h-4 w-4" />
+              {t("project.viewAll")}
+            </Button>
+          </div>
+        </ScrollReveal>
       </main>
     </div>
   )
