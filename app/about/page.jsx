@@ -3,7 +3,7 @@
 import { useRef, useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import { useLanguage } from "@/i18n"
-import { Briefcase, Mail, Link, Facebook, Award, Heart, Code, Palette, Smartphone, Monitor, Figma, Newspaper } from "lucide-react"
+import { Briefcase, Mail, Link, Facebook, Award, Heart, Code, Palette, Smartphone, Monitor, Figma, Newspaper, Linkedin } from "lucide-react"
 import ReactGA from "react-ga4";
 import InteractiveCard from "@/components/interactive-card"
 import Navbar from "@/components/navbar"
@@ -155,7 +155,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {/* 프로필 섹션 */}
           <ScrollReveal direction="left" className="md:col-span-1">
-            <InteractiveCard className="rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800 dark:shadow-gray-900/30">
+            <InteractiveCard className="mb-8 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800 dark:shadow-gray-900/30">
               <div className="mb-6 flex flex-col items-center">
                 <div className="mb-4 h-32 w-32 overflow-hidden rounded-full bg-gradient-to-r from-gray-900 to-gray-700 p-1 dark:from-gray-700 dark:to-gray-500">
                   <img
@@ -163,11 +163,10 @@ export default function AboutPage() {
                     className="h-full w-full rounded-full object-cover"
                   />
                 </div>
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white">{t("about.name")}</h2>
-                <p className="text-sm text-gray-500 dark:text-gray-400">{t("about.job")}</p>
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white">{t("about.name")}<span className="text-sm font-light">{t("about.name_kana")}</span></h2>
+                <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">{t("about.job")}</p>
               </div>
-
-              <div className="mb-6">
+              <div className="mb-0">
                 <h3 className="mb-3 text-lg font-semibold text-gray-900 dark:text-white">{t("about.intro")}</h3>
                 {t("about.introText").map((text, index) => (
                   <p className="mt-1 text-md text-gray-700 dark:text-gray-300" key={index}>
@@ -175,16 +174,19 @@ export default function AboutPage() {
                 </p>
                 ))}
               </div>
-
-              <div className="mb-6">
+            </InteractiveCard>
+            <InteractiveCard className="mb-8 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800 dark:shadow-gray-900/30">
+              <div className="mb-0">
                 <h3 className="mb-3 text-lg font-semibold text-gray-900 dark:text-white">{t("about.contact")}</h3>
                 <ul className="space-y-2 text-gray-700 dark:text-gray-300">
-                  <li className="flex text-sm"><Mail size={20} /><a href="mailto:shin.jeongsoon.1210@gmail.com" className="ml-2">shin.jeongsoon.1210@gmail.com</a></li>
-                  <li className="flex text-sm"><Link size={20} /><a href="http://theflasia.cafe24.com/" className="ml-2">http://theflasia.cafe24.com/</a></li>
-                  <li className="flex text-sm"><Facebook size={20} /><a href="https://www.facebook.com/ShinJeongSoon" target="_blank" className="ml-2">https://www.facebook.com/ShinJeongSoon</a></li>
+                  <li className="flex text-xs"><Mail size={20} /><a href="mailto:shin.jeongsoon.1210@gmail.com" className="ml-3 mt-1">shin.jeongsoon.1210@gmail.com</a></li>
+                  <li className="flex text-xs"><Link size={20} /><a href="http://theflasia.cafe24.com/" className="ml-3 mt-1">http://theflasia.cafe24.com/</a></li>
+                  <li className="flex text-xs"><Facebook size={20} /><a href="https://www.facebook.com/shin.jeongsoon" target="_blank" className="ml-3 mt-1">https://www.facebook.com/shin.jeongsoon</a></li>
+                  <li className="flex text-xs"><Linkedin size={20} /><a href="https://www.linkedin.com/in/shin-jeongsoon" target="_blank" className="ml-3 mt-1">https://www.linkedin.com/in/shin-jeongsoon</a></li>
                 </ul>
               </div>
-
+            </InteractiveCard>
+            <InteractiveCard className="mb-8 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800 dark:shadow-gray-900/30">
               <div>
                 <h3 className="mb-3 text-lg font-semibold text-gray-900 dark:text-white">{t("about.interests")}</h3>
                 <div className="flex flex-wrap gap-2">

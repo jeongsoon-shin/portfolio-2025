@@ -20,10 +20,10 @@ import ScrollProgress from "@/components/scroll-progress"
 const portfolioItems = [
   {
     id: "13",
-    title: "新規プロジェクト",
+    title: "怪獣８号 THE GAME",
     category: "GAME",
-    thumbnail: "/images/portfolio-thumb-newgame.png?height=225&width=400",
-    description: "新規開発プロジェクトでUIアニメーションのセクションリードとして制作を担当しています。",
+    thumbnail: "/images/portfolio-thumb-kaijyu8.png?height=225&width=400",
+    description: "「怪獣８号 THE GAME」でUIアニメーションのセクションリードとして制作を担当しました。",
   },
   {
     id: "12",

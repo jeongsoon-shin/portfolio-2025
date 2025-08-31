@@ -21,9 +21,9 @@ import * as BoxIcons from "react-icons/bi"
 const portfolioItems = [
   {
     id: 13,
-    title: "新規プロジェクト",
-    // thumbnail: "/images/portfolio-top-kaijyu8.png?height=672&width=1280",
-    thumbnail: "/images/page-top-newgame.png?height=630&width=1200",
+    title: "怪獣８号 THE GAME",
+    thumbnail: "/images/portfolio-top-kaijyu8.png?height=672&width=1280",
+    // thumbnail: "/images/page-top-newgame.png?height=630&width=1200",
     description: "モバイル・PC向けの新規ゲーム開発におけるUIアニメーション制作内容",
     category: "モバイル・PC",
     overviewTitle: "プロジェクトの紹介",
@@ -172,6 +172,7 @@ const portfolioItems = [
     duration: "1年~",
     client: "-",
     year: "2021",
+    url: "https://www.sparkjoy.jp/",
   },
   {
     id: 9,
@@ -204,6 +205,7 @@ const portfolioItems = [
     duration: "2年~",
     client: "-",
     year: "2020",
+    url: "https://x.com/HoneyWorks_Game",
   },
   {
     id: 8,
@@ -237,6 +239,7 @@ const portfolioItems = [
     duration: "2年~",
     client: "-",
     year: "2018",
+    url: "https://x.com/ONEPIECE_BONBON",
   },
   {
     id: 7,
@@ -268,6 +271,7 @@ const portfolioItems = [
     duration: "1年~",
     client: "-",
     year: "2017",
+    url: "https://x.com/SideM_LOS",
   },
   {
     id: 6,
