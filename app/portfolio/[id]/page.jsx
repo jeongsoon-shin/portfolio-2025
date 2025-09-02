@@ -3,7 +3,7 @@
 import { useEffect, useState, use } from "react"
 import { useRouter } from "next/navigation"
 import { useLanguage } from "@/i18n"
-import { ArrowLeft, Play, ExternalLink } from "lucide-react"
+import { ArrowLeft, Play, ExternalLink, ArrowRight, ArrowUp } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import ReactGA from "react-ga4";
 import InteractiveCard from "@/components/interactive-card"
@@ -631,19 +631,6 @@ export default function PortfolioDetailPage({ params }) {
       ></ParallaxHero>
 
       <main className="container relative mx-auto px-4 py-8">
-        <ScrollReveal>
-          <div className="animate-fade-in-left">
-            <Button
-              variant="ghost"
-              className="mb-2 flex items-center gap-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
-              onClick={() => router.push("/portfolio")}
-            >
-              <ArrowLeft className="h-4 w-4" />
-              {t("project.viewAll")}
-            </Button>
-          </div>
-        </ScrollReveal>
-
         {/* 프로젝트소개 */}
         {(portfolio.overview.length > 0) && (
         <ScrollReveal>
@@ -748,7 +735,7 @@ export default function PortfolioDetailPage({ params }) {
             <div className="m-4 mt-2 mb-2 flex justify-center shadow-lg">
               <Button
                 variant="outline"
-                className="flex items-center gap-2 rounded-xl w-full border-gray-300 px-12 py-6 text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-800"
+                className="flex items-center gap-2 rounded-xl w-full border-gray-300 px-12 py-6 text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-800 cursor-pointer"
                 onClick={() => window.open(portfolio.url, "_blank")}
               >
                 <ExternalLink className="h-4 w-4" />
@@ -759,14 +746,38 @@ export default function PortfolioDetailPage({ params }) {
         )}
 
         <ScrollReveal>
-          <div className="m-4 mt-2 mb-6 animate-fade-in-left">
+          <div className="flex items-center justify-between m-4 mt-6 mb-6 animate-fade-in-up">
             <Button
-              variant="ghost"
-              className="mb-2 flex items-center gap-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
-              onClick={() => router.push("/portfolio")}
+              variant="outline"
+              className={`mb-2 px-8 flex items-center gap-2 ${Number.parseInt(id) < portfolioItems.length ? "text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 cursor-pointer hover:border-gray-400 hover:bg-gray-50 shadow-md hover:shadow-lg" : "text-gray-300"} rounded-xl border-gray-300 bg-gray-50`}
+              onClick={() => {
+                if(Number.parseInt(id) < portfolioItems.length) {
+                  router.push(`/portfolio/${Number.parseInt(id) + 1}`);
+                } 
+              }}
             >
               <ArrowLeft className="h-4 w-4" />
+              {t("project.viewNext")}
+            </Button>
+            <Button
+              variant="outline"
+              className="mb-2 px-8 flex items-center gap-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 cursor-pointer hover:border-gray-400 hover:bg-gray-50 hover:shadow-lg rounded-xl border-gray-300 bg-gray-50 shadow-md"
+              onClick={() => router.push("/portfolio")}
+            >
+              <ArrowUp className="h-4 w-4" />
               {t("project.viewAll")}
+            </Button>
+            <Button
+              variant="outline"
+              className={`mb-2 px-8 flex items-center gap-2 ${Number.parseInt(id) - 1 > 0 ? "text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 cursor-pointer hover:border-gray-400 hover:bg-gray-50 shadow-md hover:shadow-lg" : "text-gray-300"} rounded-xl border-gray-300 bg-gray-50`}
+              onClick={() => {
+                if(Number.parseInt(id) - 1 > 0) {
+                  router.push(`/portfolio/${Number.parseInt(id) - 1}`);
+                } 
+              }}
+            >
+              {t("project.viewPrev")}
+              <ArrowRight className="h-4 w-4" />
             </Button>
           </div>
         </ScrollReveal>

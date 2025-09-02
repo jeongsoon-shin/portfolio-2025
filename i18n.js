@@ -38,6 +38,8 @@ const translations = {
     // 프로젝트 상세 페이지
     project: {
       viewAll: "모든 작품 보기",
+      viewPrev: "PREV",
+      viewNext: "NEXT",
       overview: "프로젝트 개요",
       jobDescription: "담당 업무 내용",
       with: "와 함께한",
@@ -137,6 +139,8 @@ const translations = {
     // Project detail page
     project: {
       viewAll: "View All Works",
+      viewPrev: "View Prev Work",
+      viewNext: "View Next Work",
       overview: "Project Overview",
       jobDescription: "Job Description",
       with: "with",
@@ -237,6 +241,11 @@ const translations = {
     // プロジェクト詳細ページ
     project: {
       viewAll: "リストに戻る",
+      viewPrev: "前のプロジェクト",
+      viewNext: "次のプロジェクト",
+      // viewAll: "View All Works",
+      // viewPrev: "View Prev Work",
+      // viewNext: "View Next Work",
       overview: "プロジェクトの紹介",
       jobDescription: "プロジェクトでの担当業務内容",
       with: "と一緒に",

@@ -259,7 +259,7 @@ export default function PortfolioPage() {
                   >
                     <Button
                       variant={selectedCategory === category ? "default" : "outline"}
-                      className={`rounded-full px-4 py-2 text-sm font-medium ${
+                      className={`rounded-full px-4 py-2 text-sm font-medium cursor-pointer ${
                         selectedCategory === category ? "bg-gradient-primary text-white" : "border-gray-200 text-gray-600 hover:bg-gray-100 hover:text-gray-900"
                       }`}
                       onClick={() => setSelectedCategory(category)}
@@ -284,7 +284,7 @@ export default function PortfolioPage() {
                     backgroundOpacity={0.05}
                     enhanced={true}
                   >
-                    <div className="group relative overflow-hidden rounded-xl">
+                    <div className="group relative overflow-hidden rounded-xl cursor-pointer" onClick={() => router.push(`/portfolio/${item.id}`)}>
                       <div className="relative aspect-video overflow-hidden">
                         <OptimizedImage
                           src={item.thumbnail || "/placeholder.svg"}
@@ -293,11 +293,11 @@ export default function PortfolioPage() {
                           height={400}
                           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                         />
-                        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100" onClick={() => router.push(`/portfolio/${item.id}`)}>
+                        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100">
                           <Button
                             onClick={() => router.push(`/portfolio/${item.id}`)}
                             variant="outline"
-                            className="flex items-center gap-2 rounded-full border-white bg-white/20 px-8 py-4 text-sm font-medium text-white backdrop-blur-sm transition-all hover:bg-white hover:text-gray-900 dark:hover:bg-gray-800 dark:hover:text-white"
+                            className="flex items-center gap-2 rounded-full border-white bg-white/20 px-8 py-4 text-sm font-medium text-white backdrop-blur-sm transition-all hover:bg-white hover:text-gray-900 dark:hover:bg-gray-800 dark:hover:text-white cursor-pointer"
                           >
                             <Play className="h-4 w-4" />
                             {t("portfolio.viewProject")}
@@ -315,7 +315,7 @@ export default function PortfolioPage() {
                             whileHover={{ scale: 1.1, rotate: 15 }}
                             whileTap={{ scale: 0.9 }}
                             onClick={() => router.push(`/portfolio/${item.id}`)}
-                            className={`rounded-full p-1.5 transition-colors text-gray-400 hover:bg-gray-100 hover:text-gray-900}`}
+                            className={`rounded-full p-1.5 transition-colors text-gray-400 hover:bg-gray-100 hover:text-gray-900} cursor-pointer`}
                           >
                             <ArrowUpRight className="h-4 w-4" />
                           </motion.button>
