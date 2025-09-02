@@ -18,6 +18,7 @@ import * as SimpleIcons from "react-icons/si"
 import * as BoxIcons from "react-icons/bi"
 
 // 포트폴리오 데이터
+let currentPortfolioNum = 0;
 const portfolioItems = [
   {
     id: 13,
@@ -568,6 +569,7 @@ export default function PortfolioDetailPage({ params }) {
 
   useEffect(() => {
     const pageid = id;
+    currentPortfolioNum = id;
     
     if (!window.location.href.includes('localhost')) {
       ReactGA.initialize("G-970VH63QCH");
@@ -749,10 +751,10 @@ export default function PortfolioDetailPage({ params }) {
           <div className="flex items-center justify-between m-4 mt-6 mb-6 animate-fade-in-up">
             <Button
               variant="outline"
-              className={`mb-2 px-8 flex items-center gap-2 ${Number.parseInt(id) < portfolioItems.length ? "text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 cursor-pointer hover:border-gray-400 hover:bg-gray-50 shadow-md hover:shadow-lg" : "text-gray-300"} rounded-xl border-gray-300 bg-gray-50`}
+              className={`mb-2 px-8 flex items-center gap-2 ${Number.parseInt(currentPortfolioNum) < portfolioItems.length ? "text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 cursor-pointer hover:border-gray-400 hover:bg-gray-50 shadow-md hover:shadow-lg" : "text-gray-300"} rounded-xl border-gray-300 bg-gray-50`}
               onClick={() => {
-                if(Number.parseInt(id) < portfolioItems.length) {
-                  router.push(`/portfolio/${Number.parseInt(id) + 1}`);
+                if(Number.parseInt(currentPortfolioNum) < portfolioItems.length) {
+                  router.push(`/portfolio/${Number.parseInt(currentPortfolioNum) + 1}`);
                 } 
               }}
             >
@@ -769,10 +771,10 @@ export default function PortfolioDetailPage({ params }) {
             </Button>
             <Button
               variant="outline"
-              className={`mb-2 px-8 flex items-center gap-2 ${Number.parseInt(id) - 1 > 0 ? "text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 cursor-pointer hover:border-gray-400 hover:bg-gray-50 shadow-md hover:shadow-lg" : "text-gray-300"} rounded-xl border-gray-300 bg-gray-50`}
+              className={`mb-2 px-8 flex items-center gap-2 ${Number.parseInt(currentPortfolioNum) - 1 > 0 ? "text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 cursor-pointer hover:border-gray-400 hover:bg-gray-50 shadow-md hover:shadow-lg" : "text-gray-300"} rounded-xl border-gray-300 bg-gray-50`}
               onClick={() => {
-                if(Number.parseInt(id) - 1 > 0) {
-                  router.push(`/portfolio/${Number.parseInt(id) - 1}`);
+                if(Number.parseInt(currentPortfolioNum) - 1 > 0) {
+                  router.push(`/portfolio/${Number.parseInt(currentPortfolioNum) - 1}`);
                 } 
               }}
             >
