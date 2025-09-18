@@ -40,13 +40,28 @@ const portfolioItems = [
       "セクションのリードとして体制管理と進行管理",
       "外部の制作会社さんとの連携",
     ],
-    videoUrl: "",
+    videoUrl: "https://youtu.be/_JVsbOn_8f0",
+    galleryTitle: "UIアニメーションディレクションと制作事例",
+    galleryDetailView: "false",
+    galleryGrids: "sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4",
+    gallery: [
+      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_01.gif?height=360&width=640", alt: "バトルにおけるUIアニメーション", caption: "バトルにおけるUIアニメーション実装" },
+      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_02.gif?height=660&width=720", alt: "バトルにおけるUIアニメーション", caption: "バトルにおけるUIアニメーション実装" },
+      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_03.gif?height=360&width=640", alt: "バトルにおけるUIアニメーション", caption: "バトルにおけるUIアニメーション実装" },
+      // { src: "/images/kj8-thegame/kj8-thegame_ui_anim_04.gif?height=360&width=640", alt: "キャラクター画面のUIアニメーション", caption: "キャラクター画面のUIアニメーション" },
+      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_05.gif?height=295&width=640", alt: "チュートリアルとメッセージ機能のUIアニメーション", caption: "チュートリアルとメッセージ機能のUIアニメーション" },
+      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_06.gif?height=295&width=640", alt: "プレイヤーランクアップのUIアニメーション", caption: "プレイヤーランクアップのUIアニメーション" },
+      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_07.gif?height=295&width=640", alt: "ストーリー画面のUIアニメーション", caption: "ストーリー画面のUIアニメーション" },
+      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_08.gif?height=295&width=640", alt: "キャラクター画面のUIアニメーション", caption: "キャラクター画面のUIアニメーション" },
+      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_09.gif?height=295&width=640", alt: "ショップ画面のUIアニメーション", caption: "ョップ画面のUIアニメーション" },
+      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_10.gif?height=295&width=640", alt: "ガチャ画面のUIアニメーション", caption: "ガチャ画面のUIアニメーション" },
+    ],
     tools: [ 
-      {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
-      {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
-      {icon : <SimpleIcons.SiAdobephotoshop size="32px" className="mb-2" />, name :"Adobe Photoshop"},
-      {icon : <SimpleIcons.SiGithub size="32px" className="mb-2" />, name :"GitHub"},
-      {icon : <BoxIcons.BiLogoVisualStudio size="32px" className="mb-2" />, name :"Visual Studio Code"},
+      {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
+      {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
+      {icon : <SimpleIcons.SiAdobephotoshop size="32px" className="mb-0" />, name :"Adobe Photoshop"},
+      {icon : <SimpleIcons.SiGithub size="32px" className="mb-0" />, name :"GitHub"},
+      {icon : <BoxIcons.BiLogoVisualStudio size="32px" className="mb-0" />, name :"Visual Studio Code"},
     ],
     duration: "6ヶ月~",
     client: "-",
@@ -80,28 +95,28 @@ const portfolioItems = [
     videoUrl: "https://youtu.be/MAc9YG05rNM",
     galleryTitle: "制作のスナップショット",
     galleryDetailView: "false",
-    galleryGrids: "sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5",
+    galleryGrids: "sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4",
     gallery: [
-      { src: "/images/tribenine/tribeninve_camera_work_01.gif?height=658&width=720", alt: "カメラワーク実装", caption: "Unityでのカメラワーク実装" },
-      { src: "/images/tribenine/tribeninve_ui_anim_01.gif?height=658&width=720", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
-      { src: "/images/tribenine/tribeninve_ui_anim_05.gif?height=660&width=720", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
-      { src: "/images/tribenine/tribeninve_ui_anim_03.gif?height=658&width=720", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
-      { src: "/images/tribenine/tribeninve_ui_anim_06.gif?height=658&width=720", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
-      { src: "/images/tribenine/tribeninve_ui_anim_07.gif?height=658&width=720", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
-      { src: "/images/tribenine/tribeninve_ui_anim_08.gif?height=660&width=720", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
-      { src: "/images/tribenine/tribeninve_ui_anim_04.gif?height=658&width=720", alt: "UnityのuGUI用Shader作成", caption: "UnityのuGUI用Shader作" },
-      { src: "/images/tribenine/tribeninve_support_site_01.png?height=1373&width=1440", alt: "お問い合わせサイトのデザイン作成と実装(CMS)", caption: "お問い合わせサイトのデザイン作成と実装(CMS)" },
-      // { src: "/images/tribenine/tribeninve_support_site_02.png?height=1160&width=1440", alt: "お問い合わせサイトのデザイン作成と実装(CMS)", caption: "お問い合わせサイトのデザイン作成と実装(CMS)" },
-      { src: "/images/tribenine/tribeninve_webstore_site_01.png?height=1776&width=1440", alt: "外部決済サイトのデザイン作成と実装(CMS)", caption: "外部決済サイトのデザイン作成と実装(CMS)" },
+      { src: "/images/tribenine/tribenine_camera_work_01.gif?height=658&width=720", alt: "カメラワーク実装", caption: "Unityでのカメラワーク実装" },
+      { src: "/images/tribenine/tribenine_ui_anim_01.gif?height=658&width=720", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
+      { src: "/images/tribenine/tribenine_ui_anim_05.gif?height=660&width=720", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
+      { src: "/images/tribenine/tribenine_ui_anim_03.gif?height=658&width=720", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
+      { src: "/images/tribenine/tribenine_ui_anim_06.gif?height=658&width=720", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
+      { src: "/images/tribenine/tribenine_ui_anim_07.gif?height=658&width=720", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
+      { src: "/images/tribenine/tribenine_ui_anim_08.gif?height=660&width=720", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
+      { src: "/images/tribenine/tribenine_ui_anim_04.gif?height=658&width=720", alt: "UnityのuGUI用Shader作成", caption: "UnityのuGUI用Shader作" },
+      { src: "/images/tribenine/tribenine_support_site_01.png?height=1373&width=1440", alt: "お問い合わせサイトのデザイン作成と実装(CMS)", caption: "お問い合わせサイトのデザイン作成と実装(CMS)" },
+      // { src: "/images/tribenine/tribenine_support_site_02.png?height=1160&width=1440", alt: "お問い合わせサイトのデザイン作成と実装(CMS)", caption: "お問い合わせサイトのデザイン作成と実装(CMS)" },
+      { src: "/images/tribenine/tribenine_webstore_site_01.png?height=1776&width=1440", alt: "外部決済サイトのデザイン作成と実装(CMS)", caption: "外部決済サイトのデザイン作成と実装(CMS)" },
     ],
     tools: [ 
-      {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
-      {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
-      {icon : <SimpleIcons.SiAdobephotoshop size="32px" className="mb-2" />, name :"Adobe Photoshop"},
-      {icon : <SimpleIcons.SiGithub size="32px" className="mb-2" />, name :"GitHub"},
-      {icon : <BoxIcons.BiLogoVisualStudio size="32px" className="mb-2" />, name :"Visual Studio Code"},
-      {icon : <SimpleIcons.SiAutodeskmaya size="32px" className="mb-2" />, name :"Maya"},
-      {icon : <SimpleIcons.SiAdobe size="32px" className="mb-2" />, name :"Adobe Substance 3D Designer"},
+      {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
+      {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
+      {icon : <SimpleIcons.SiAdobephotoshop size="32px" className="mb-0" />, name :"Adobe Photoshop"},
+      {icon : <SimpleIcons.SiGithub size="32px" className="mb-0" />, name :"GitHub"},
+      {icon : <BoxIcons.BiLogoVisualStudio size="32px" className="mb-0" />, name :"Visual Studio Code"},
+      {icon : <SimpleIcons.SiAutodeskmaya size="32px" className="mb-0" />, name :"Maya"},
+      {icon : <SimpleIcons.SiAdobe size="32px" className="mb-0" />, name :"Adobe Substance 3D Designer"},
     ],
     duration: "3年~",
     client: "-",
@@ -136,8 +151,8 @@ const portfolioItems = [
       { src: "/images/shader/Shadow.gif?height=500&width=600", alt: "画像にShadow効果を反映させるShader", caption: "画像にShadow効果を反映させるShader" },
     ],
     tools: [ 
-      {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
-      {icon : <BoxIcons.BiLogoVisualStudio size="32px" className="mb-2" />, name :"Visual Studio Code"},
+      {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
+      {icon : <BoxIcons.BiLogoVisualStudio size="32px" className="mb-0" />, name :"Visual Studio Code"},
     ],
     duration: "2年~",
     client: "-",
@@ -163,11 +178,11 @@ const portfolioItems = [
     ],
     videoUrl: "https://youtu.be/UbhDj6wOsqo",
     tools: [ 
-      {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
-      {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
-      {icon : <SimpleIcons.SiAdobephotoshop size="32px" className="mb-2" />, name :"Adobe Photoshop"},
-      {icon : <SimpleIcons.SiGithub size="32px" className="mb-2" />, name :"GitHub"},
-      {icon : <BoxIcons.BiLogoVisualStudio size="32px" className="mb-2" />, name :"Visual Studio Code"},
+      {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
+      {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
+      {icon : <SimpleIcons.SiAdobephotoshop size="32px" className="mb-0" />, name :"Adobe Photoshop"},
+      {icon : <SimpleIcons.SiGithub size="32px" className="mb-0" />, name :"GitHub"},
+      {icon : <BoxIcons.BiLogoVisualStudio size="32px" className="mb-0" />, name :"Visual Studio Code"},
     ],
     duration: "1年~",
     client: "-",
@@ -196,11 +211,11 @@ const portfolioItems = [
     ],
     videoUrl: "https://youtu.be/Utsz-ajBvUw",
     tools: [ 
-      {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
-      {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
-      {icon : <SimpleIcons.SiAdobephotoshop size="32px" className="mb-2" />, name :"Adobe Photoshop"},
-      {icon : <SimpleIcons.SiGithub size="32px" className="mb-2" />, name :"GitHub"},
-      {icon : <BoxIcons.BiLogoVisualStudio size="32px" className="mb-2" />, name :"Visual Studio Code"},
+      {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
+      {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
+      {icon : <SimpleIcons.SiAdobephotoshop size="32px" className="mb-0" />, name :"Adobe Photoshop"},
+      {icon : <SimpleIcons.SiGithub size="32px" className="mb-0" />, name :"GitHub"},
+      {icon : <BoxIcons.BiLogoVisualStudio size="32px" className="mb-0" />, name :"Visual Studio Code"},
     ],
     duration: "2年~",
     client: "-",
@@ -230,11 +245,11 @@ const portfolioItems = [
     ],
     videoUrl: "https://youtu.be/HfFRJdeWR_k",
     tools: [ 
-      {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
-      {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
-      {icon : <SimpleIcons.SiAdobephotoshop size="32px" className="mb-2" />, name :"Adobe Photoshop"},
-      {icon : <SimpleIcons.SiGithub size="32px" className="mb-2" />, name :"GitHub"},
-      {icon : <BoxIcons.BiLogoVisualStudio size="32px" className="mb-2" />, name :"Visual Studio Code"},
+      {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
+      {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
+      {icon : <SimpleIcons.SiAdobephotoshop size="32px" className="mb-0" />, name :"Adobe Photoshop"},
+      {icon : <SimpleIcons.SiGithub size="32px" className="mb-0" />, name :"GitHub"},
+      {icon : <BoxIcons.BiLogoVisualStudio size="32px" className="mb-0" />, name :"Visual Studio Code"},
     ],
     duration: "2年~",
     client: "-",
@@ -263,10 +278,10 @@ const portfolioItems = [
     ],
     videoUrl: "https://youtu.be/YzFR1-4qvr8",
     tools: [ 
-      {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
-      {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
-      {icon : <SimpleIcons.SiAdobephotoshop size="32px" className="mb-2" />, name :"Adobe Photoshop"},
-      {icon : <SimpleIcons.SiGithub size="32px" className="mb-2" />, name :"GitHub"},
+      {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
+      {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
+      {icon : <SimpleIcons.SiAdobephotoshop size="32px" className="mb-0" />, name :"Adobe Photoshop"},
+      {icon : <SimpleIcons.SiGithub size="32px" className="mb-0" />, name :"GitHub"},
     ],
     duration: "1年~",
     client: "-",
@@ -294,10 +309,10 @@ const portfolioItems = [
     ],
     videoUrl: "https://youtu.be/6Y4d1JH939I",
     tools: [ 
-      {icon : <SimpleIcons.SiUnity size="32px" className="mb-2" />, name :"Unity"},
-      {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
-      {icon : <SimpleIcons.SiAdobephotoshop size="32px" className="mb-2" />, name :"Adobe Photoshop"},
-      {icon : <SimpleIcons.SiGithub size="32px" className="mb-2" />, name :"GitHub"},
+      {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
+      {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
+      {icon : <SimpleIcons.SiAdobephotoshop size="32px" className="mb-0" />, name :"Adobe Photoshop"},
+      {icon : <SimpleIcons.SiGithub size="32px" className="mb-0" />, name :"GitHub"},
     ],
     duration: "1年~",
     client: "-",
@@ -323,10 +338,10 @@ const portfolioItems = [
     ],
     videoUrl: "https://youtu.be/XNOXl7gE2_c",
     tools: [ 
-      {icon : <SimpleIcons.SiAdobe size="32px" className="mb-2" />, name :"Adobe Flash"},
-      {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
-      {icon : <SimpleIcons.SiAdobephotoshop size="32px" className="mb-2" />, name :"Adobe Photoshop"},
-      {icon : <SimpleIcons.SiAdobeillustrator size="32px" className="mb-2" />, name :"Adobe Illustrator"},
+      {icon : <SimpleIcons.SiAdobe size="32px" className="mb-0" />, name :"Adobe Flash"},
+      {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
+      {icon : <SimpleIcons.SiAdobephotoshop size="32px" className="mb-0" />, name :"Adobe Photoshop"},
+      {icon : <SimpleIcons.SiAdobeillustrator size="32px" className="mb-0" />, name :"Adobe Illustrator"},
     ],
     duration: "1年~",
     client: "-",
@@ -352,10 +367,10 @@ const portfolioItems = [
     ],
     videoUrl: "https://youtu.be/kPCtgFWWzhM",
     tools: [ 
-      {icon : <SimpleIcons.SiAdobe size="32px" className="mb-2" />, name :"Adobe Flash"},
-      {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
-      {icon : <SimpleIcons.SiAdobephotoshop size="32px" className="mb-2" />, name :"Adobe Photoshop"},
-      {icon : <SimpleIcons.SiAdobeillustrator size="32px" className="mb-2" />, name :"Adobe Illustrator"},
+      {icon : <SimpleIcons.SiAdobe size="32px" className="mb-0" />, name :"Adobe Flash"},
+      {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
+      {icon : <SimpleIcons.SiAdobephotoshop size="32px" className="mb-0" />, name :"Adobe Photoshop"},
+      {icon : <SimpleIcons.SiAdobeillustrator size="32px" className="mb-0" />, name :"Adobe Illustrator"},
     ],
     duration: "1年~",
     client: "-",
@@ -403,10 +418,10 @@ const portfolioItems = [
       { src: "/images/birdman/hondaN.png?height=386&width=560", alt: "Honda N teaser", caption: "Honda N teaser" }
     ],
     tools: [ 
-      {icon : <SimpleIcons.SiAdobe size="32px" className="mb-2" />, name :"Adobe Flash"},
-      {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
-      {icon : <SimpleIcons.SiAdobephotoshop size="32px" className="mb-2" />, name :"Adobe Photoshop"},
-      {icon : <SimpleIcons.SiAdobeillustrator size="32px" className="mb-2" />, name :"Adobe Illustrator"},
+      {icon : <SimpleIcons.SiAdobe size="32px" className="mb-0" />, name :"Adobe Flash"},
+      {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
+      {icon : <SimpleIcons.SiAdobephotoshop size="32px" className="mb-0" />, name :"Adobe Photoshop"},
+      {icon : <SimpleIcons.SiAdobeillustrator size="32px" className="mb-0" />, name :"Adobe Illustrator"},
     ],
     duration: "2年~",
     client: "-",
@@ -456,10 +471,10 @@ const portfolioItems = [
       { src: "/images/ccc/yukai_life_website.png?height=480&width=430", alt: "YUKAI LIFE Flash Contents", caption: "Yukai Life" }
     ],
     tools: [ 
-      {icon : <SimpleIcons.SiAdobe size="32px" className="mb-2" />, name :"Adobe Flash"},
-      {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
-      {icon : <SimpleIcons.SiAdobephotoshop size="32px" className="mb-2" />, name :"Adobe Photoshop"},
-      {icon : <SimpleIcons.SiAdobeillustrator size="32px" className="mb-2" />, name :"Adobe Illustrator"},
+      {icon : <SimpleIcons.SiAdobe size="32px" className="mb-0" />, name :"Adobe Flash"},
+      {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
+      {icon : <SimpleIcons.SiAdobephotoshop size="32px" className="mb-0" />, name :"Adobe Photoshop"},
+      {icon : <SimpleIcons.SiAdobeillustrator size="32px" className="mb-0" />, name :"Adobe Illustrator"},
     ],
     duration: "2年~",
     client: "-",
@@ -548,10 +563,10 @@ const portfolioItems = [
       // { src: "/images/weditdesign/asiana01.jpg?width=428&height=343", alt: "Asiana Littles", caption: "Asiana Littles Website" },
     ],
     tools: [ 
-      {icon : <SimpleIcons.SiAdobe size="32px" className="mb-2" />, name :"Adobe Flash"},
-      {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-2" />, name :"Adobe After Effects"},
-      {icon : <SimpleIcons.SiAdobephotoshop size="32px" className="mb-2" />, name :"Adobe Photoshop"},
-      {icon : <SimpleIcons.SiAdobeillustrator size="32px" className="mb-2" />, name :"Adobe Illustrator"},
+      {icon : <SimpleIcons.SiAdobe size="32px" className="mb-0" />, name :"Adobe Flash"},
+      {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
+      {icon : <SimpleIcons.SiAdobephotoshop size="32px" className="mb-0" />, name :"Adobe Photoshop"},
+      {icon : <SimpleIcons.SiAdobeillustrator size="32px" className="mb-0" />, name :"Adobe Illustrator"},
     ],
     duration: "2年~",
     client: "-",
@@ -723,8 +738,10 @@ export default function PortfolioDetailPage({ params }) {
                     key={index}
                     className="flex items-center gap-3 rounded-lg border border-gray-100 bg-gray-50 p-4 transition-all hover:-translate-y-1 hover:shadow-md dark:border-gray-700 dark:bg-gray-800 dark:hover:shadow-gray-900/30"
                   >
-                    {tool.icon}
-                    <span className="font-medium text-gray-900 dark:text-white text-xs">{tool.name}</span>
+                    <div className="flex justify-center items-center">
+                      {tool.icon}
+                      <span className="ml-2 font-medium text-gray-900 dark:text-white text-xs">{tool.name}</span>
+                    </div>
                   </InteractiveCard>
                 ))}
               </div>
@@ -751,7 +768,7 @@ export default function PortfolioDetailPage({ params }) {
           <div className="flex items-center justify-between m-4 mt-6 mb-6 animate-fade-in-up">
             <Button
               variant="outline"
-              className={`mb-2 px-8 flex items-center gap-2 ${Number.parseInt(currentPageNum) < portfolioItems.length ? "text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 cursor-pointer hover:border-gray-400 hover:bg-gray-50 shadow-md hover:shadow-lg" : "text-gray-300"} rounded-xl border-gray-300 bg-gray-50`}
+              className={`mb-2 px-6 flex items-center gap-2 ${Number.parseInt(currentPageNum) < portfolioItems.length ? "text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 cursor-pointer hover:border-gray-400 hover:bg-gray-50 shadow-md hover:shadow-lg" : "text-gray-300"} rounded-xl border-gray-300 bg-gray-50`}
               onClick={() => {
                 if(Number.parseInt(currentPageNum) < portfolioItems.length) {
                   router.push(`/portfolio/${Number.parseInt(currentPageNum) + 1}`);
@@ -763,7 +780,7 @@ export default function PortfolioDetailPage({ params }) {
             </Button>
             <Button
               variant="outline"
-              className="mb-2 px-8 flex items-center gap-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 cursor-pointer hover:border-gray-400 hover:bg-gray-50 hover:shadow-lg rounded-xl border-gray-300 bg-gray-50 shadow-md"
+              className="mb-2 px-6 flex items-center gap-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 cursor-pointer hover:border-gray-400 hover:bg-gray-50 hover:shadow-lg rounded-xl border-gray-300 bg-gray-50 shadow-md"
               onClick={() => router.push("/portfolio")}
             >
               <ArrowUp className="h-4 w-4" />
@@ -771,7 +788,7 @@ export default function PortfolioDetailPage({ params }) {
             </Button>
             <Button
               variant="outline"
-              className={`mb-2 px-8 flex items-center gap-2 ${Number.parseInt(currentPageNum) - 1 > 0 ? "text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 cursor-pointer hover:border-gray-400 hover:bg-gray-50 shadow-md hover:shadow-lg" : "text-gray-300"} rounded-xl border-gray-300 bg-gray-50`}
+              className={`mb-2 px-6 flex items-center gap-2 ${Number.parseInt(currentPageNum) - 1 > 0 ? "text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 cursor-pointer hover:border-gray-400 hover:bg-gray-50 shadow-md hover:shadow-lg" : "text-gray-300"} rounded-xl border-gray-300 bg-gray-50`}
               onClick={() => {
                 if(Number.parseInt(currentPageNum) - 1 > 0) {
                   router.push(`/portfolio/${Number.parseInt(currentPageNum) - 1}`);

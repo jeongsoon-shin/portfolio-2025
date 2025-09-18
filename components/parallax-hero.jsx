@@ -11,6 +11,7 @@ export default function ParallaxHero({
   overlayOpacity = 0.5,
   children,
   offsetY = "0px",
+  translateYIntensity = 0.05,
 }) {
   const parallaxRef = useRef(null)
 
@@ -18,7 +19,7 @@ export default function ParallaxHero({
     const handleScroll = () => {
       if (!parallaxRef.current) return
       const scrollPosition = window.scrollY
-      parallaxRef.current.style.transform = `translateY(${scrollPosition * 0.4}px)`
+      parallaxRef.current.style.transform = `translateY(${scrollPosition * translateYIntensity}px)`
     }
 
     window.addEventListener("scroll", handleScroll)

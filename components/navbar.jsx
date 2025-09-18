@@ -58,8 +58,39 @@ export default function Navbar() {
       initial="hidden"
       animate="visible"
       variants={navVariants}
-      className={`sticky top-0 z-50 w-full border-b transition-all duration-300 ${"border-gray-100 bg-white/90 backdrop-blur-md"} ${scrolled ? "shadow-sm" : ""}`}
+      className={`sticky top-0 z-50 w-full border-b transition-all duration-300 ${"border-gray-100 bg-white/80 backdrop-blur-md"} ${scrolled ? "shadow-sm" : ""}`}
     >
+      {/* <svg
+        className="editorial"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 24 150 28"
+        preserveAspectRatio="none"
+        style={{ transform: "scaleY(1)" }}
+      >
+        <defs>
+          <path
+            id="gentle-wave"
+            d="M-160 44c30 0 
+              58-18 88-18s
+              58 18 88 18 
+              58-18 88-18 
+              58 18 88 18
+              v44h-352z"
+          />
+        </defs>
+        <g className="parallax1 from-cyan-300">
+          <use href="#gentle-wave" x="50" y="0" fill="#4DD0E1" />
+        </g>
+        <g className="parallax2">
+          <use href="#gentle-wave" x="50" y="3" fill="#EC407A" />
+        </g>
+        <g className="parallax3">
+          <use href="#gentle-wave" x="50" y="6" fill="#FFCA28" />
+        </g>
+        <g className="parallax4">
+          <use href="#gentle-wave" x="50" y="9" fill="#E3E2E1" />
+        </g>
+      </svg> */}
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <motion.div variants={itemVariants} className="flex items-center">
@@ -74,10 +105,10 @@ export default function Navbar() {
               <motion.div variants={itemVariants}>
                 <Link
                   href="/portfolio"
-                  className={`rounded-md px-3 py-2 text-sm font-medium transition-colors ${
+                  className={`rounded-md border-1 border-gray-400/0 px-3 py-2 text-sm font-medium transition-colors ${
                     isActive("/portfolio")
                       ? "text-gray-900"
-                      : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                      : "text-gray-600 hover:bg-gray-900/10 hover:text-gray-900 hover:border-gray-400"
                   }`}
                 >
                   {t("nav.portfolio")}
@@ -86,10 +117,10 @@ export default function Navbar() {
               <motion.div variants={itemVariants}>
                 <Link
                   href="/about"
-                  className={`rounded-md px-3 py-2 text-sm font-medium transition-colors ${
+                  className={`rounded-md border-1 border-gray-400/0 px-3 py-2 text-sm font-medium transition-colors ${
                     isActive("/about")
                       ? "text-gray-900"
-                      : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                      : "text-gray-600 hover:bg-gray-900/10 hover:text-gray-900 hover:border-gray-400"
                   }`}
                 >
                   {t("nav.about")}
