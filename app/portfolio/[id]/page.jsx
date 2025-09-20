@@ -94,7 +94,7 @@ const portfolioItems = [
       "お問い合わせや外部決済サイトのデザイン改修（HTML、CSS、JavaScriptコーディング）",
     ],
     // videoUrlYoutube: "https://youtu.be/MAc9YG05rNM",
-    videoUrl: "/movies/TribeNine_1080p.mp4",
+    videoUrl: "/movies/TribeNine_720p.mp4",
     videoThumb: "/movies/TribeNine_thumb.png",
     galleryTitle: "制作のスナップショット",
     galleryDetailView: "false",
@@ -180,7 +180,7 @@ const portfolioItems = [
       "プロモーションムービー制作にも部分的に関与",
     ],
     // videoUrlYoutube: "https://youtu.be/UbhDj6wOsqo",
-    videoUrl: "/movies/KonMari_1080p.mp4",
+    videoUrl: "/movies/KonMari_720p.mp4",
     videoThumb: "/movies/KonMari_thumb.png",
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
@@ -215,7 +215,7 @@ const portfolioItems = [
       "外部の制作会社さんとの連携",
     ],
     // videoUrlYoutube: "https://youtu.be/Utsz-ajBvUw",
-    videoUrl: "/movies/HoneyWorks_1080p.mp4",
+    videoUrl: "/movies/HoneyWorks_720p.mp4",
     videoThumb: "/movies/HoneyWorks_thumb.png",
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
@@ -251,7 +251,7 @@ const portfolioItems = [
       "外部の制作会社さんの開拓と連携",
     ],
     // videoUrlYoutube: "https://youtu.be/HfFRJdeWR_k",
-    videoUrl: "/movies/BonBonJourney_1080p.mp4",
+    videoUrl: "/movies/BonBonJourney_720p.mp4",
     videoThumb: "/movies/BonBonJourney_thumb.png",
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
@@ -286,7 +286,7 @@ const portfolioItems = [
       "UnityのuGUIを用いたUIの実装",
     ],
     // videoUrlYoutube: "https://youtu.be/YzFR1-4qvr8",
-    videoUrl: "/movies/IdolMasterSideM_1080p.mp4",
+    videoUrl: "/movies/IdolMasterSideM_720p.mp4",
     videoThumb: "/movies/IdolMasterSideM_thumb.png",
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
@@ -319,7 +319,7 @@ const portfolioItems = [
       "UnityのNGUIを用いたUIの実装",
     ],
     // videoUrlYoutube: "https://youtu.be/6Y4d1JH939I",
-    videoUrl: "/movies/SummonSoulBattle_1080p.mp4",
+    videoUrl: "/movies/SummonSoulBattle_720p.mp4",
     videoThumb: "/movies/SummonSoulBattle_thumb.png",
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
@@ -350,7 +350,7 @@ const portfolioItems = [
       "ゲーム内の演出制作全般",
     ],
     // videoUrlYoutube: "https://youtu.be/XNOXl7gE2_c",
-    videoUrl: "/movies/WakeUpGirls_1080p.mp4",
+    videoUrl: "/movies/WakeUpGirls_720p.mp4",
     videoThumb: "/movies/WakeUpGirls_thumb.png",
     tools: [ 
       {icon : <SimpleIcons.SiAdobe size="32px" className="mb-0" />, name :"Adobe Flash"},
@@ -381,7 +381,7 @@ const portfolioItems = [
       "ゲーム内の演出制作全般",
     ],
     // videoUrlYoutube: "https://youtu.be/kPCtgFWWzhM",
-    videoUrl: "/movies/SkyLock_1080p.mp4",
+    videoUrl: "/movies/SkyLock_720p.mp4",
     videoThumb: "/movies/SkyLock_thumb.png",
     tools: [ 
       {icon : <SimpleIcons.SiAdobe size="32px" className="mb-0" />, name :"Adobe Flash"},
@@ -739,11 +739,16 @@ export default function PortfolioDetailPage({ params }) {
         <ScrollReveal>
           <div className="m-4 mt-2 mb-6 overflow-hidden rounded-xl bg-gradient-to-r from-gray-900 to-gray-700 shadow-xl">
             <div className="aspect-video">
-              <MediaController>
+              <MediaController style={{ width: "100%" }} mediacontroller="mc">
                 <video
                   slot = "media"
                   src = {portfolio.videoUrl}
                   poster = {portfolio.videoThumb}
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    objectFit: 'cover',
+                  }}
                 ></video>
                 <MediaControlBar>
                   <MediaPlayButton className="pl-4" />
