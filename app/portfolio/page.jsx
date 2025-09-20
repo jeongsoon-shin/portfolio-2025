@@ -22,6 +22,10 @@ const portfolioItems = [
     id: "13",
     title: "怪獣８号 THE GAME",
     category: "GAME",
+    platformList: [
+      {platform : "MOBILE"},
+      {platform : "PC"},
+    ],
     thumbnail: "/images/portfolio-thumb-kaijyu8.png?height=225&width=400",
     description: "「怪獣８号 THE GAME」でUIアニメーションのセクションリードとして制作を担当しました。",
   },
@@ -29,6 +33,10 @@ const portfolioItems = [
     id: "12",
     title: "TRIBE NINE",
     category: "GAME",
+    platformList: [
+      {platform : "MOBILE"},
+      {platform : "PC"},
+    ],
     thumbnail: "/images/portfolio-thumb-tribenine.png?height=225&width=400",
     description: "「TRIBE NINE」でUIアニメーションのセクションリードとして制作を担当しました。",
   },
@@ -36,6 +44,9 @@ const portfolioItems = [
     id: "11",
     title: "uGUI用Shader",
     category: "GAME",
+    platformList: [
+      {platform : "Shader"},
+    ],
     thumbnail: "/images/portfolio-thumb-shader.png?height=225&width=400",
     description: "UnityのuGUIに向けたShader作成の事例",
   },
@@ -43,6 +54,9 @@ const portfolioItems = [
     id: "10",
     title: "KonMari Spark Joy!",
     category: "GAME",
+    platformList: [
+      {platform : "MOBILE"},
+    ],
     thumbnail: "/images/portfolio-thumb-konmari.png?height=225&width=400",
     description: "「KonMari Spark Joy!」でUIアニメーションの制作を担当しました。",
   },
@@ -50,6 +64,9 @@ const portfolioItems = [
     id: "9",
     title: "HoneyWorks Premium Live",
     category: "GAME",
+    platformList: [
+      {platform : "MOBILE"},
+    ],
     thumbnail: "/images/portfolio-thumb-honeyworks.png?height=225&width=400",
     description: "「HoneyWorks Premium Live」でUIアニメーションの制作を担当しました。",
   },
@@ -57,6 +74,9 @@ const portfolioItems = [
     id: "8",
     title: "ONE PIECE ボン！ボン！ジャーニー!!",
     category: "GAME",
+    platformList: [
+      {platform : "MOBILE"},
+    ],
     thumbnail: "/images/portfolio-thumb-bonbonjourney.png?height=225&width=400",
     description: "「ONE PIECE ボン！ボン！ジャーニー!!」でUIアニメーションの制作を担当しました。",
   },
@@ -64,6 +84,9 @@ const portfolioItems = [
     id: "7",
     title: "アイドルマスター SideM LIVE ON ST@GE!",
     category: "GAME",
+    platformList: [
+      {platform : "MOBILE"},
+    ],
     thumbnail: "/images/portfolio-thumb-idolmastersidem.png?height=225&width=400",
     description: "「アイドルマスター SideM LIVE ON ST@GE!」でUIアニメーションの制作を担当しました。",
   },
@@ -71,6 +94,9 @@ const portfolioItems = [
     id: "6",
     title: "サモンソウルバトル",
     category: "GAME",
+    platformList: [
+      {platform : "MOBILE"},
+    ],
     thumbnail: "/images/portfolio-thumb-summonsoulbattle.png?height=225&width=400",
     description: "「サモンソウルバトル」でUIアニメーションの制作を担当しました。",
   },
@@ -78,6 +104,9 @@ const portfolioItems = [
     id: "5",
     title: "Wake Up, Girls! ステージの天使",
     category: "GAME",
+    platformList: [
+      {platform : "MOBILE"},
+    ],
     thumbnail: "/images/portfolio-thumb-wakeupgirls.png?height=225&width=400",
     description: "「Wake Up, Girls! ステージの天使」でゲーム内の演出制作を担当しました。",
   },
@@ -85,6 +114,9 @@ const portfolioItems = [
     id: "4",
     title: "SKYLOCK(スカイロック)",
     category: "GAME",
+    platformList: [
+      {platform : "MOBILE"},
+    ],
     thumbnail: "/images/portfolio-thumb-skylock.png?height=225&width=400",
     description: "「SKYLOCK(スカイロック)」でゲーム内の演出制作を担当しました。",
   },
@@ -92,6 +124,10 @@ const portfolioItems = [
     id: "3",
     title: "BIRDMAN「バードマン」",
     category: "WEB",
+    platformList: [
+      {platform : "MOBILE"},
+      {platform : "PC"},
+    ],
     thumbnail: "/images/portfolio-thumb-birdman.png?height=225&width=400",
     description: "Flash Developer / Front-End EngineerとしてWebコンテンツの制作を担当しました。",
   },
@@ -99,6 +135,10 @@ const portfolioItems = [
     id: "2",
     title: "クリエイターズカンパニーコネクション",
     category: "WEB",
+    platformList: [
+      {platform : "MOBILE"},
+      {platform : "PC"},
+    ],
     thumbnail: "/images/portfolio-thumb-ccc.png?height=225&width=400",
     description: "Web DesignerとしてWebコンテンツの制作を担当しました。",
   },
@@ -106,6 +146,9 @@ const portfolioItems = [
     id: "1",
     title: "WEDIT DESIGN",
     category: "WEB",
+    platformList: [
+      {platform : "PC"},
+    ],
     thumbnail: "/images/portfolio-thumb-weditdesign.png?height=225&width=400",
     description: "Web DesignerとしてWebコンテンツの制作を担当しました。",
   },
@@ -212,7 +255,7 @@ export default function PortfolioPage() {
           imageUrl="/images/page-top-bg.png?height=630&width=1200"
           title={t("portfolio.title")}
           subtitle={t("portfolio.subtitle")}
-          height="35vh"
+          height="40vh"
           overlayOpacity={0.7}
         >
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -306,11 +349,13 @@ export default function PortfolioPage() {
                       </div>
                       <div className="p-4 pt-2">
                         <div className="mb-0 flex items-center justify-between">
-                          <span
-                            className={`inline-block rounded-full px-2.5 py-0.5 text-xs font-medium bg-gray-100 text-gray-800}`}
-                          >
-                            {item.category}
-                          </span>
+                          <div className="mb-1.5">
+                            <span className={`inline-block rounded-full px-2 py-0.5 text-xs font-medium bg-gray-100 text-gray-800}`}
+                          >{item.category}</span>
+                          {item.platformList && item.platformList.map((platform, index) => (
+                            <span key={index} className={`inline-block rounded-full ml-1 px-2 py-0.5 text-xs font-light bg-gray-100 text-gray-800}`}
+                          >{platform.platform}</span>))}
+                          </div>
                           <motion.button
                             whileHover={{ scale: 1.1, rotate: 15 }}
                             whileTap={{ scale: 0.9 }}

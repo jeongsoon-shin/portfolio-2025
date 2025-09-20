@@ -146,9 +146,9 @@ export default function AboutPage() {
         imageUrl="/images/about-top.png?height=600&width=1200"
         title={t("about.title")}
         subtitle={t("about.subtitle")}
-        height="35vh"
+        height="40vh"
         overlayOpacity={0.7}
-        offsetY="-60px"
+        offsetY="-40px"
       />
 
       <main className="container relative mx-auto px-4 py-12">

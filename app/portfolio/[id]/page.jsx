@@ -3,7 +3,7 @@
 import { useEffect, useState, use } from "react"
 import { useRouter } from "next/navigation"
 import { useLanguage } from "@/i18n"
-import { ArrowLeft, Play, ExternalLink, ArrowRight, ArrowUp } from "lucide-react"
+import { ArrowLeft, Play, ExternalLink, ArrowRight, List } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import ReactGA from "react-ga4";
 import InteractiveCard from "@/components/interactive-card"
@@ -12,6 +12,7 @@ import Navbar from "@/components/navbar"
 import ParallaxHero from "@/components/parallax-hero"
 import ParticleBackground from "@/components/particle-background"
 import ReactPlayer from 'react-player'
+import { MediaController, MediaControlBar, MediaTimeRange, MediaTimeDisplay, MediaPlaybackRateButton, MediaPlayButton, MediaFullscreenButton, } from "media-chrome/react";
 import ScrollReveal from "@/components/scroll-reveal"
 import ScrollProgress from "@/components/scroll-progress"
 import * as SimpleIcons from "react-icons/si"
@@ -40,21 +41,21 @@ const portfolioItems = [
       "セクションのリードとして体制管理と進行管理",
       "外部の制作会社さんとの連携",
     ],
-    videoUrl: "https://youtu.be/_JVsbOn_8f0",
+    videoUrlYoutube: "https://youtu.be/_JVsbOn_8f0",
     galleryTitle: "UIアニメーションディレクションと制作事例",
     galleryDetailView: "false",
     galleryGrids: "sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4",
     gallery: [
-      // { src: "/images/kj8-thegame/kj8-thegame_ui_anim_01.gif?height=270&width=480", alt: "バトルにおけるUIアニメーション", caption: "バトルにおけるUIアニメーション実装" },
-      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_02.gif?height=270&width=480", alt: "バトルにおけるUIアニメーション", caption: "バトルにおけるUIアニメーション実装" },
-      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_03.gif?height=270&width=480", alt: "バトルにおけるUIアニメーション", caption: "バトルにおけるUIアニメーション実装" },
-      // { src: "/images/kj8-thegame/kj8-thegame_ui_anim_04.gif?height=270&width=480", alt: "キャラクター画面のUIアニメーション", caption: "キャラクター画面のUIアニメーション" },
-      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_05.gif?height=221&width=480", alt: "チュートリアルとメッセージ機能のUIアニメーション", caption: "チュートリアルとメッセージ機能のUIアニメーション" },
-      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_06.gif?height=221&width=480", alt: "プレイヤーランクアップのUIアニメーション", caption: "プレイヤーランクアップのUIアニメーション" },
-      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_07.gif?height=221&width=480", alt: "ストーリー画面のUIアニメーション", caption: "ストーリー画面のUIアニメーション" },
-      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_08.gif?height=221&width=480", alt: "キャラクター画面のUIアニメーション", caption: "キャラクター画面のUIアニメーション" },
-      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_09.gif?height=221&width=480", alt: "ショップ画面のUIアニメーション", caption: "ョップ画面のUIアニメーション" },
-      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_10.gif?height=221&width=480", alt: "ガチャ画面のUIアニメーション", caption: "ガチャ画面のUIアニメーション" },
+      // { src: "/images/kj8-thegame/kj8-thegame_ui_anim_01.gif?height=360&width=640", alt: "バトルにおけるUIアニメーション", caption: "バトルにおけるUIアニメーション実装" },
+      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_02.gif?height=360&width=640", alt: "バトルにおけるUIアニメーション", caption: "バトルにおけるUIアニメーション実装" },
+      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_03.gif?height=360&width=640", alt: "バトルにおけるUIアニメーション", caption: "バトルにおけるUIアニメーション実装" },
+      // { src: "/images/kj8-thegame/kj8-thegame_ui_anim_04.gif?height=360&width=640", alt: "キャラクター画面のUIアニメーション", caption: "キャラクター画面のUIアニメーション" },
+      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_05.gif?height=295&width=640", alt: "チュートリアルとメッセージ機能のUIアニメーション", caption: "チュートリアルとメッセージ機能のUIアニメーション" },
+      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_06.gif?height=295&width=640", alt: "プレイヤーランクアップのUIアニメーション", caption: "プレイヤーランクアップのUIアニメーション" },
+      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_07.gif?height=295&width=640", alt: "ストーリー画面のUIアニメーション", caption: "ストーリー画面のUIアニメーション" },
+      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_08.gif?height=295&width=640", alt: "キャラクター画面のUIアニメーション", caption: "キャラクター画面のUIアニメーション" },
+      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_09.gif?height=295&width=640", alt: "ショップ画面のUIアニメーション", caption: "ョップ画面のUIアニメーション" },
+      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_10.gif?height=295&width=640", alt: "ガチャ画面のUIアニメーション", caption: "ガチャ画面のUIアニメーション" },
     ],
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
@@ -92,22 +93,24 @@ const portfolioItems = [
       "外部の制作会社の開拓と連携",
       "お問い合わせや外部決済サイトのデザイン改修（HTML、CSS、JavaScriptコーディング）",
     ],
-    videoUrl: "https://youtu.be/MAc9YG05rNM",
+    // videoUrlYoutube: "https://youtu.be/MAc9YG05rNM",
+    videoUrl: "/movies/TribeNine_1080p.mp4",
+    videoThumb: "/movies/TribeNine_thumb.png",
     galleryTitle: "制作のスナップショット",
     galleryDetailView: "false",
     galleryGrids: "sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4",
     gallery: [
-      { src: "/images/tribenine/tribenine_camera_work_01.gif?height=439&width=480", alt: "カメラワーク実装", caption: "Unityでのカメラワーク実装" },
-      { src: "/images/tribenine/tribenine_ui_anim_01.gif?height=439&width=480", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
-      { src: "/images/tribenine/tribenine_ui_anim_05.gif?height=440&width=480", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
-      { src: "/images/tribenine/tribenine_ui_anim_03.gif?height=439&width=480", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
-      { src: "/images/tribenine/tribenine_ui_anim_06.gif?height=439&width=480", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
-      { src: "/images/tribenine/tribenine_ui_anim_07.gif?height=439&width=480", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
-      { src: "/images/tribenine/tribenine_ui_anim_08.gif?height=440&width=480", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
-      { src: "/images/tribenine/tribenine_ui_anim_04.gif?height=439&width=480", alt: "UnityのuGUI用Shader作成", caption: "UnityのuGUI用Shader作" },
-      // { src: "/images/tribenine/tribenine_support_site_01.png?height=610&width=640", alt: "お問い合わせサイトのデザイン作成と実装(CMS)", caption: "お問い合わせサイトのデザイン作成と実装(CMS)" },
-      // { src: "/images/tribenine/tribenine_support_site_02.png?height=516&width=640", alt: "お問い合わせサイトのデザイン作成と実装(CMS)", caption: "お問い合わせサイトのデザイン作成と実装(CMS)" },
-      // { src: "/images/tribenine/tribenine_webstore_site_01.png?height=789&width=640", alt: "外部決済サイトのデザイン作成と実装(CMS)", caption: "外部決済サイトのデザイン作成と実装(CMS)" },
+      { src: "/images/tribenine/tribenine_camera_work_01.gif?height=658&width=720", alt: "カメラワーク実装", caption: "Unityでのカメラワーク実装" },
+      { src: "/images/tribenine/tribenine_ui_anim_01.gif?height=659&width=720", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
+      { src: "/images/tribenine/tribenine_ui_anim_05.gif?height=660&width=720", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
+      { src: "/images/tribenine/tribenine_ui_anim_03.gif?height=658&width=720", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
+      { src: "/images/tribenine/tribenine_ui_anim_06.gif?height=658&width=720", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
+      { src: "/images/tribenine/tribenine_ui_anim_07.gif?height=658&width=720", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
+      { src: "/images/tribenine/tribenine_ui_anim_08.gif?height=660&width=720", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
+      { src: "/images/tribenine/tribenine_ui_anim_04.gif?height=658&width=720", alt: "UnityのuGUI用Shader作成", caption: "UnityのuGUI用Shader作" },
+      // { src: "/images/tribenine/tribenine_support_site_01.png?height=1373&width=1440", alt: "お問い合わせサイトのデザイン作成と実装(CMS)", caption: "お問い合わせサイトのデザイン作成と実装(CMS)" },
+      // { src: "/images/tribenine/tribenine_support_site_02.png?height=1160&width=1440", alt: "お問い合わせサイトのデザイン作成と実装(CMS)", caption: "お問い合わせサイトのデザイン作成と実装(CMS)" },
+      // { src: "/images/tribenine/tribenine_webstore_site_01.png?height=1776&width=1440", alt: "外部決済サイトのデザイン作成と実装(CMS)", caption: "外部決済サイトのデザイン作成と実装(CMS)" },
     ],
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
@@ -176,7 +179,9 @@ const portfolioItems = [
       "ゲーム内のUIアニメーション設計と制作全般を担当",
       "プロモーションムービー制作にも部分的に関与",
     ],
-    videoUrl: "https://youtu.be/UbhDj6wOsqo",
+    // videoUrlYoutube: "https://youtu.be/UbhDj6wOsqo",
+    videoUrl: "/movies/KonMari_1080p.mp4",
+    videoThumb: "/movies/KonMari_thumb.png",
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
@@ -209,7 +214,9 @@ const portfolioItems = [
       "UnityのC#によるUIアニメーション制御",
       "外部の制作会社さんとの連携",
     ],
-    videoUrl: "https://youtu.be/Utsz-ajBvUw",
+    // videoUrlYoutube: "https://youtu.be/Utsz-ajBvUw",
+    videoUrl: "/movies/HoneyWorks_1080p.mp4",
+    videoThumb: "/movies/HoneyWorks_thumb.png",
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
@@ -243,7 +250,9 @@ const portfolioItems = [
       "プロモーションムービーの提案と制作",
       "外部の制作会社さんの開拓と連携",
     ],
-    videoUrl: "https://youtu.be/HfFRJdeWR_k",
+    // videoUrlYoutube: "https://youtu.be/HfFRJdeWR_k",
+    videoUrl: "/movies/BonBonJourney_1080p.mp4",
+    videoThumb: "/movies/BonBonJourney_thumb.png",
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
@@ -276,7 +285,9 @@ const portfolioItems = [
       "UnityのC#によるUIアニメーション制御",
       "UnityのuGUIを用いたUIの実装",
     ],
-    videoUrl: "https://youtu.be/YzFR1-4qvr8",
+    // videoUrlYoutube: "https://youtu.be/YzFR1-4qvr8",
+    videoUrl: "/movies/IdolMasterSideM_1080p.mp4",
+    videoThumb: "/movies/IdolMasterSideM_thumb.png",
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
@@ -307,7 +318,9 @@ const portfolioItems = [
       "Particle Systemを使用したエフェクト制作全般",
       "UnityのNGUIを用いたUIの実装",
     ],
-    videoUrl: "https://youtu.be/6Y4d1JH939I",
+    // videoUrlYoutube: "https://youtu.be/6Y4d1JH939I",
+    videoUrl: "/movies/SummonSoulBattle_1080p.mp4",
+    videoThumb: "/movies/SummonSoulBattle_thumb.png",
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
@@ -336,7 +349,9 @@ const portfolioItems = [
       "開発から運用までプロジェクトに参画（約2年）",
       "ゲーム内の演出制作全般",
     ],
-    videoUrl: "https://youtu.be/XNOXl7gE2_c",
+    // videoUrlYoutube: "https://youtu.be/XNOXl7gE2_c",
+    videoUrl: "/movies/WakeUpGirls_1080p.mp4",
+    videoThumb: "/movies/WakeUpGirls_thumb.png",
     tools: [ 
       {icon : <SimpleIcons.SiAdobe size="32px" className="mb-0" />, name :"Adobe Flash"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
@@ -365,7 +380,9 @@ const portfolioItems = [
       "運用時期にプロジェクトに参画（約6ヶ月）",
       "ゲーム内の演出制作全般",
     ],
-    videoUrl: "https://youtu.be/kPCtgFWWzhM",
+    // videoUrlYoutube: "https://youtu.be/kPCtgFWWzhM",
+    videoUrl: "/movies/SkyLock_1080p.mp4",
+    videoThumb: "/movies/SkyLock_thumb.png",
     tools: [ 
       {icon : <SimpleIcons.SiAdobe size="32px" className="mb-0" />, name :"Adobe Flash"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
@@ -643,7 +660,7 @@ export default function PortfolioDetailPage({ params }) {
         imageUrl={portfolio.thumbnail}
         title={portfolio.title}
         subtitle={portfolio.description}
-        height="35vh"
+        height="40vh"
         overlayOpacity={0.7}
       ></ParallaxHero>
 
@@ -699,19 +716,45 @@ export default function PortfolioDetailPage({ params }) {
         </ScrollReveal>
         )}
 
-        {/* 비디오 플레이어 */}
-        {portfolio.videoUrl && (
+        {/* 비디오 플레이어 YouTube */}
+        {portfolio.videoUrlYoutube && (
         <ScrollReveal>
           <div className="m-4 mt-2 mb-6 overflow-hidden rounded-xl bg-gradient-to-r from-gray-900 to-gray-700 shadow-xl">
             <div className="aspect-video">
               <ReactPlayer
-              url = {portfolio.videoUrl}
-              muted
-              controls
-              pip
-              width = {"100%"}
-              height = {"100%"}
-            />
+                url = {portfolio.videoUrlYoutube}
+                muted
+                controls
+                pip
+                width = {"100%"}
+                height = {"100%"}
+              />
+            </div>
+          </div>
+        </ScrollReveal>
+        )}
+
+        {/* 비디오 플레이어 MP4 */}
+        {portfolio.videoUrl && (
+        <ScrollReveal>
+          <div className="m-4 mt-2 mb-6 overflow-hidden rounded-xl bg-gradient-to-r from-gray-900 to-gray-700 shadow-xl">
+            <div className="aspect-video">
+              <MediaController>
+                <video
+                  slot = "media"
+                  src = {portfolio.videoUrl}
+                  poster = {portfolio.videoThumb}
+                ></video>
+                <MediaControlBar>
+                  <MediaPlayButton className="pl-4" />
+                  <MediaTimeRange className="px-2" />
+                  <MediaTimeDisplay showDuration className="text-sm" />
+                  {/* <MediaMuteButton /> */}
+                  {/* <MediaVolumeRange /> */}
+                  <MediaPlaybackRateButton className="px-2" />
+                  <MediaFullscreenButton className="pr-4" />
+                </MediaControlBar>
+              </MediaController>
             </div>
           </div>
         </ScrollReveal>
@@ -776,14 +819,14 @@ export default function PortfolioDetailPage({ params }) {
               }}
             >
               <ArrowLeft className="h-4 w-4" />
-              {t("project.viewNext")}
+              {/* {t("project.viewNext")} */}
             </Button>
             <Button
               variant="outline"
               className="mb-2 px-6 flex items-center gap-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 cursor-pointer hover:border-gray-400 hover:bg-gray-50 hover:shadow-lg rounded-xl border-gray-300 bg-gray-50 shadow-md"
               onClick={() => router.push("/portfolio")}
             >
-              <ArrowUp className="h-4 w-4" />
+              <List className="h-4 w-4" />
               {t("project.viewAll")}
             </Button>
             <Button
@@ -795,7 +838,7 @@ export default function PortfolioDetailPage({ params }) {
                 } 
               }}
             >
-              {t("project.viewPrev")}
+              {/* {t("project.viewPrev")} */}
               <ArrowRight className="h-4 w-4" />
             </Button>
           </div>

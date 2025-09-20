@@ -105,7 +105,7 @@ export default function Navbar() {
               <motion.div variants={itemVariants}>
                 <Link
                   href="/portfolio"
-                  className={`rounded-md border-1 border-gray-400/0 px-3 py-2 text-sm font-medium transition-colors ${
+                  className={`rounded-md border-1 border-gray-400/0 px-3 py-2 text-sm font-bold transition-colors ${
                     isActive("/portfolio")
                       ? "text-gray-900"
                       : "text-gray-600 hover:bg-gray-900/10 hover:text-gray-900 hover:border-gray-400"
@@ -117,7 +117,7 @@ export default function Navbar() {
               <motion.div variants={itemVariants}>
                 <Link
                   href="/about"
-                  className={`rounded-md border-1 border-gray-400/0 px-3 py-2 text-sm font-medium transition-colors ${
+                  className={`rounded-md border-1 border-gray-400/0 px-3 py-2 text-sm font-bold transition-colors ${
                     isActive("/about")
                       ? "text-gray-900"
                       : "text-gray-600 hover:bg-gray-900/10 hover:text-gray-900 hover:border-gray-400"
