@@ -41,7 +41,7 @@ const portfolioItems = [
       "セクションのリードとして体制管理と進行管理",
       "外部の制作会社さんとの連携",
     ],
-    videoUrlYoutube: "https://youtu.be/_JVsbOn_8f0",
+    youtubeUrl: "https://youtu.be/_JVsbOn_8f0",
     galleryTitle: "UIアニメーションディレクションと制作事例",
     galleryDetailView: "false",
     galleryGrids: "sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4",
@@ -93,7 +93,7 @@ const portfolioItems = [
       "外部の制作会社の開拓と連携",
       "お問い合わせや外部決済サイトのデザイン改修（HTML、CSS、JavaScriptコーディング）",
     ],
-    // videoUrlYoutube: "https://youtu.be/MAc9YG05rNM",
+    youtubeUrl: "https://youtu.be/MAc9YG05rNM",
     videoUrl: "/movies/TribeNine_720p.mp4",
     videoThumb: "/movies/TribeNine_thumb.png",
     galleryTitle: "制作のスナップショット",
@@ -179,7 +179,7 @@ const portfolioItems = [
       "ゲーム内のUIアニメーション設計と制作全般を担当",
       "プロモーションムービー制作にも部分的に関与",
     ],
-    // videoUrlYoutube: "https://youtu.be/UbhDj6wOsqo",
+    youtubeUrl: "https://youtu.be/UbhDj6wOsqo",
     videoUrl: "/movies/KonMari_720p.mp4",
     videoThumb: "/movies/KonMari_thumb.png",
     tools: [ 
@@ -214,7 +214,7 @@ const portfolioItems = [
       "UnityのC#によるUIアニメーション制御",
       "外部の制作会社さんとの連携",
     ],
-    // videoUrlYoutube: "https://youtu.be/Utsz-ajBvUw",
+    youtubeUrl: "https://youtu.be/Utsz-ajBvUw",
     videoUrl: "/movies/HoneyWorks_720p.mp4",
     videoThumb: "/movies/HoneyWorks_thumb.png",
     tools: [ 
@@ -250,7 +250,7 @@ const portfolioItems = [
       "プロモーションムービーの提案と制作",
       "外部の制作会社さんの開拓と連携",
     ],
-    // videoUrlYoutube: "https://youtu.be/HfFRJdeWR_k",
+    youtubeUrl: "https://youtu.be/HfFRJdeWR_k",
     videoUrl: "/movies/BonBonJourney_720p.mp4",
     videoThumb: "/movies/BonBonJourney_thumb.png",
     tools: [ 
@@ -285,7 +285,7 @@ const portfolioItems = [
       "UnityのC#によるUIアニメーション制御",
       "UnityのuGUIを用いたUIの実装",
     ],
-    // videoUrlYoutube: "https://youtu.be/YzFR1-4qvr8",
+    youtubeUrl: "https://youtu.be/YzFR1-4qvr8",
     videoUrl: "/movies/IdolMasterSideM_720p.mp4",
     videoThumb: "/movies/IdolMasterSideM_thumb.png",
     tools: [ 
@@ -318,7 +318,7 @@ const portfolioItems = [
       "Particle Systemを使用したエフェクト制作全般",
       "UnityのNGUIを用いたUIの実装",
     ],
-    // videoUrlYoutube: "https://youtu.be/6Y4d1JH939I",
+    youtubeUrl: "https://youtu.be/6Y4d1JH939I",
     videoUrl: "/movies/SummonSoulBattle_720p.mp4",
     videoThumb: "/movies/SummonSoulBattle_thumb.png",
     tools: [ 
@@ -349,7 +349,7 @@ const portfolioItems = [
       "開発から運用までプロジェクトに参画（約2年）",
       "ゲーム内の演出制作全般",
     ],
-    // videoUrlYoutube: "https://youtu.be/XNOXl7gE2_c",
+    youtubeUrl: "https://youtu.be/XNOXl7gE2_c",
     videoUrl: "/movies/WakeUpGirls_720p.mp4",
     videoThumb: "/movies/WakeUpGirls_thumb.png",
     tools: [ 
@@ -380,7 +380,7 @@ const portfolioItems = [
       "運用時期にプロジェクトに参画（約6ヶ月）",
       "ゲーム内の演出制作全般",
     ],
-    // videoUrlYoutube: "https://youtu.be/kPCtgFWWzhM",
+    youtubeUrl: "https://youtu.be/kPCtgFWWzhM",
     videoUrl: "/movies/SkyLock_720p.mp4",
     videoThumb: "/movies/SkyLock_thumb.png",
     tools: [ 
@@ -594,10 +594,12 @@ const portfolioItems = [
 export default function PortfolioDetailPage({ params }) {
   const router = useRouter()
   const { id } = use(params);
+  const { t } = useLanguage()
   const [portfolio, setPortfolio] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
   const [currentPageNum, setCurrentPageNum] = useState(null)
-  const { t } = useLanguage()
+  const [isPlayYoutube, setIsPlayYoutube] = useState(true)
+  const [isPlayVideo, setIsPlayVideo] = useState(false)
 
   useEffect(() => {
     const pageid = id;
@@ -717,12 +719,12 @@ export default function PortfolioDetailPage({ params }) {
         )}
 
         {/* 비디오 플레이어 YouTube */}
-        {portfolio.videoUrlYoutube && (
+        {isPlayYoutube && portfolio.youtubeUrl && (
         <ScrollReveal>
           <div className="m-4 mt-2 mb-6 overflow-hidden rounded-xl bg-gradient-to-r from-gray-900 to-gray-700 shadow-xl">
             <div className="aspect-video">
               <ReactPlayer
-                url = {portfolio.videoUrlYoutube}
+                url = {portfolio.youtubeUrl}
                 muted
                 controls
                 pip
@@ -735,7 +737,7 @@ export default function PortfolioDetailPage({ params }) {
         )}
 
         {/* 비디오 플레이어 MP4 */}
-        {portfolio.videoUrl && (
+        {isPlayVideo && portfolio.videoUrl && (
         <ScrollReveal>
           <div className="m-4 mt-2 mb-6 overflow-hidden rounded-xl bg-gradient-to-r from-gray-900 to-gray-700 shadow-xl">
             <div className="aspect-video">
