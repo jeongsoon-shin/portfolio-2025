@@ -180,7 +180,7 @@ export default function AboutPage() {
                 <h3 className="mb-3 text-lg font-semibold text-gray-900 dark:text-white">{t("about.contact")}</h3>
                 <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                   <li className="flex text-xs"><Mail size={20} /><a href="mailto:shin.jeongsoon.1210@gmail.com" className="ml-3 mt-1">shin.jeongsoon.1210@gmail.com</a></li>
-                  <li className="flex text-xs"><Link size={20} /><a href="http://theflasia.cafe24.com/" className="ml-3 mt-1">http://theflasia.cafe24.com/</a></li>
+                  <li className="flex text-xs"><Link size={20} /><a href="https://shinjeongsoon.sakura.ne.jp/" className="ml-3 mt-1">https://shinjeongsoon.sakura.ne.jp/</a></li>
                   <li className="flex text-xs"><Facebook size={20} /><a href="https://www.facebook.com/shin.jeongsoon" target="_blank" className="ml-3 mt-1">https://www.facebook.com/shin.jeongsoon</a></li>
                   <li className="flex text-xs"><Linkedin size={20} /><a href="https://www.linkedin.com/in/shin-jeongsoon" target="_blank" className="ml-3 mt-1">https://www.linkedin.com/in/shin-jeongsoon</a></li>
                 </ul>
