@@ -42,6 +42,10 @@ const portfolioItems = [
       "外部の制作会社さんとの連携",
     ],
     youtubeUrl: "https://youtu.be/_JVsbOn_8f0",
+    isPlayYoutube : true,
+    videoUrl: "",
+    videoPoster: "",
+    isPlayVideo : false,
     galleryTitle: "UIアニメーションディレクションと制作事例",
     galleryDetailView: "false",
     galleryGrids: "sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4",
@@ -96,8 +100,10 @@ const portfolioItems = [
       "お問い合わせや外部決済サイトのデザイン改修（HTML、CSS、JavaScriptコーディング）",
     ],
     youtubeUrl: "https://youtu.be/MAc9YG05rNM",
+    isPlayYoutube : true,
     videoUrl: "/movies/TribeNine_720p.mp4",
-    videoThumb: "/movies/TribeNine_thumb.png",
+    videoPoster: "/movies/TribeNine_thumb.png",
+    isPlayVideo : false,
     galleryTitle: "制作のスナップショット",
     galleryDetailView: "false",
     galleryGrids: "sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4",
@@ -185,8 +191,10 @@ const portfolioItems = [
       "プロモーションムービー制作にも部分的に関与",
     ],
     youtubeUrl: "https://youtu.be/UbhDj6wOsqo",
+    isPlayYoutube : true,
     videoUrl: "/movies/KonMari_720p.mp4",
-    videoThumb: "/movies/KonMari_thumb.png",
+    videoPoster: "/movies/KonMari_thumb.png",
+    isPlayVideo : false,
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
@@ -220,8 +228,10 @@ const portfolioItems = [
       "外部の制作会社さんとの連携",
     ],
     youtubeUrl: "https://youtu.be/Utsz-ajBvUw",
+    isPlayYoutube : true,
     videoUrl: "/movies/HoneyWorks_720p.mp4",
-    videoThumb: "/movies/HoneyWorks_thumb.png",
+    videoPoster: "/movies/HoneyWorks_thumb.png",
+    isPlayVideo : false,
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
@@ -256,8 +266,10 @@ const portfolioItems = [
       "外部の制作会社さんの開拓と連携",
     ],
     youtubeUrl: "https://youtu.be/HfFRJdeWR_k",
+    isPlayYoutube : true,
     videoUrl: "/movies/BonBonJourney_720p.mp4",
-    videoThumb: "/movies/BonBonJourney_thumb.png",
+    videoPoster: "/movies/BonBonJourney_thumb.png",
+    isPlayVideo : false,
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
@@ -291,8 +303,10 @@ const portfolioItems = [
       "UnityのuGUIを用いたUIの実装",
     ],
     youtubeUrl: "https://youtu.be/YzFR1-4qvr8",
+    isPlayYoutube : true,
     videoUrl: "/movies/IdolMasterSideM_720p.mp4",
-    videoThumb: "/movies/IdolMasterSideM_thumb.png",
+    videoPoster: "/movies/IdolMasterSideM_thumb.png",
+    isPlayVideo : false,
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
@@ -324,8 +338,10 @@ const portfolioItems = [
       "UnityのNGUIを用いたUIの実装",
     ],
     youtubeUrl: "https://youtu.be/6Y4d1JH939I",
+    isPlayYoutube : true,
     videoUrl: "/movies/SummonSoulBattle_720p.mp4",
-    videoThumb: "/movies/SummonSoulBattle_thumb.png",
+    videoPoster: "/movies/SummonSoulBattle_thumb.png",
+    isPlayVideo : false,
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
@@ -355,8 +371,10 @@ const portfolioItems = [
       "ゲーム内の演出制作全般",
     ],
     youtubeUrl: "https://youtu.be/XNOXl7gE2_c",
+    isPlayYoutube : true,
     videoUrl: "/movies/WakeUpGirls_720p.mp4",
-    videoThumb: "/movies/WakeUpGirls_thumb.png",
+    videoPoster: "/movies/WakeUpGirls_thumb.png",
+    isPlayVideo : false,
     tools: [ 
       {icon : <SimpleIcons.SiAdobe size="32px" className="mb-0" />, name :"Adobe Flash"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
@@ -386,8 +404,10 @@ const portfolioItems = [
       "ゲーム内の演出制作全般",
     ],
     youtubeUrl: "https://youtu.be/kPCtgFWWzhM",
+    isPlayYoutube : true,
     videoUrl: "/movies/SkyLock_720p.mp4",
-    videoThumb: "/movies/SkyLock_thumb.png",
+    videoPoster: "/movies/SkyLock_thumb.png",
+    isPlayVideo : false,
     tools: [ 
       {icon : <SimpleIcons.SiAdobe size="32px" className="mb-0" />, name :"Adobe Flash"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
@@ -603,8 +623,6 @@ export default function PortfolioDetailPage({ params }) {
   const [portfolio, setPortfolio] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
   const [currentPageNum, setCurrentPageNum] = useState(null)
-  const [isPlayYoutube, setIsPlayYoutube] = useState(true)
-  const [isPlayVideo, setIsPlayVideo] = useState(false)
 
   useEffect(() => {
     const pageid = id;
@@ -724,7 +742,7 @@ export default function PortfolioDetailPage({ params }) {
         )}
 
         {/* 비디오 플레이어 YouTube */}
-        {isPlayYoutube && portfolio.youtubeUrl && (
+        {portfolio.isPlayYoutube && portfolio.youtubeUrl && (
         <ScrollReveal>
           <div className="m-4 mt-2 mb-6 overflow-hidden rounded-xl bg-gradient-to-r from-gray-900 to-gray-700 shadow-xl">
             <div className="aspect-video">
@@ -742,7 +760,7 @@ export default function PortfolioDetailPage({ params }) {
         )}
 
         {/* 비디오 플레이어 MP4 */}
-        {isPlayVideo && portfolio.videoUrl && (
+        {portfolio.isPlayVideo && portfolio.videoUrl && (
         <ScrollReveal>
           <div className="m-4 mt-2 mb-6 overflow-hidden rounded-xl bg-gradient-to-r from-gray-900 to-gray-700 shadow-xl">
             <div className="aspect-video">
