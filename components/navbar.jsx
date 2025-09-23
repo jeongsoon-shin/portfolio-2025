@@ -94,7 +94,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <motion.div variants={itemVariants} className="flex items-center">
-            <Link href="/portfolio">
+            <Link href="/works">
               <span className={`text-xl font-bold tracking-tight transition-colors duration-300 text-gray-900`}>Shin JeongSoon</span><span className={`text-xl font-light tracking-tight transition-colors duration-300 text-gray-600`}>'s Portfolio</span>
             </Link>
           </motion.div>
@@ -104,9 +104,9 @@ export default function Navbar() {
             <div className="ml-10 flex items-center space-x-1">
               <motion.div variants={itemVariants}>
                 <Link
-                  href="/portfolio"
+                  href="/works"
                   className={`rounded-md border-1 border-gray-400/0 px-3 py-2 text-sm font-bold transition-colors ${
-                    isActive("/portfolio")
+                    isActive("/works")
                       ? "text-gray-900"
                       : "text-gray-600 hover:bg-gray-900/10 hover:text-gray-900 hover:border-gray-400"
                   }`}
@@ -182,9 +182,9 @@ export default function Navbar() {
         >
           <div className="space-y-1 px-2 pb-3 pt-2">
             <Link
-              href="/portfolio"
+              href="/works"
               className={`block rounded-md px-3 py-2 text-base font-medium ${
-                isActive("/portfolio")
+                isActive("/works")
                   ? "text-gray-900"
                   : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
               }`}

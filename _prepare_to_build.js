@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 
 const TARGET_NAME = '[id]'; // 원본 템플릿 폴더명
-const baseTemplateDir = path.resolve(__dirname, './app/portfolio', TARGET_NAME);
-const componentsDir = path.resolve(__dirname, './app/portfolio');
+const baseTemplateDir = path.resolve(__dirname, './app/works', TARGET_NAME);
+const componentsDir = path.resolve(__dirname, './app/works');
 
 // 복제할 개수 설정
 const COUNT = 13;

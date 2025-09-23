@@ -27,7 +27,7 @@ export default function PortfolioDetailPageClient({ id }) {
   useEffect(() => {
     const parsedId = parseInt(id, 10)
     if (isNaN(parsedId)) {
-      router.push('/portfolio')
+      router.push('/works')
       return
     }
 
@@ -35,7 +35,7 @@ export default function PortfolioDetailPageClient({ id }) {
     if (item) {
       setPortfolio(item)
     } else {
-      router.push('/portfolio')
+      router.push('/works')
     }
 
     const timeout = setTimeout(() => {

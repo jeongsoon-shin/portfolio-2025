@@ -19,12 +19,11 @@ import * as SimpleIcons from "react-icons/si"
 import * as BoxIcons from "react-icons/bi"
 
 // 포트폴리오 데이터
-const portfolioItems = [
+const workItems = [
   {
     id: 13,
     title: "怪獣８号 THE GAME",
-    thumbnail: "/images/portfolio-top-kaijyu8.png?height=672&width=1280",
-    // thumbnail: "/images/page-top-newgame.png?height=630&width=1200",
+    thumbnail: "/portfolio/images/works-top-kaijyu8.png?height=672&width=1280",
     description: "モバイル・PC向けの新規ゲーム開発におけるUIアニメーション制作内容",
     category: "モバイル・PC",
     overviewTitle: "プロジェクトの紹介",
@@ -50,18 +49,18 @@ const portfolioItems = [
     galleryDetailView: "false",
     galleryGrids: "sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4",
     gallery: [
-      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_01.gif?height=295&width=640", alt: "バトルにおけるUIアニメーション", caption: "バトルにおけるUIアニメーション実装" },
-      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_02.gif?height=295&width=640", alt: "バトルにおけるUIアニメーション", caption: "バトルにおけるUIアニメーション実装" },
-      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_03.gif?height=295&width=640", alt: "バトルにおけるUIアニメーション", caption: "バトルにおけるUIアニメーション実装" },
-      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_04.gif?height=295&width=640", alt: "チュートリアルとメッセージ機能のUIアニメーション", caption: "チュートリアルとメッセージ機能のUIアニメーション" },
-      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_05.gif?height=295&width=640", alt: "プレイヤーランクアップのUIアニメーション", caption: "プレイヤーランクアップのUIアニメーション" },
-      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_06.gif?height=295&width=640", alt: "ストーリー画面のUIアニメーション", caption: "ストーリー画面のUIアニメーション" },
-      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_07.gif?height=295&width=640", alt: "キャラクター画面のUIアニメーション", caption: "キャラクター画面のUIアニメーション" },
-      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_08.gif?height=295&width=640", alt: "キャラクター画面のUIアニメーション", caption: "キャラクター画面のUIアニメーション" },
-      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_09.gif?height=295&width=640", alt: "ショップ画面のUIアニメーション", caption: "ョップ画面のUIアニメーション" },
-      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_10.gif?height=295&width=640", alt: "ガチャ画面のUIアニメーション", caption: "ガチャ画面のUIアニメーション" },
-      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_11.gif?height=295&width=640", alt: "スキット画面のUIアニメーション", caption: "スキット画面のUIアニメーション" },
-      { src: "/images/kj8-thegame/kj8-thegame_ui_anim_12.gif?height=295&width=640", alt: "スキット画面のUIアニメーション", caption: "スキット画面のUIアニメーション" },
+      { src: "/portfolio/images/kj8-thegame/kj8-thegame_ui_anim_01.gif?height=295&width=640", alt: "バトルにおけるUIアニメーション", caption: "バトルにおけるUIアニメーション実装" },
+      { src: "/portfolio/images/kj8-thegame/kj8-thegame_ui_anim_02.gif?height=295&width=640", alt: "バトルにおけるUIアニメーション", caption: "バトルにおけるUIアニメーション実装" },
+      { src: "/portfolio/images/kj8-thegame/kj8-thegame_ui_anim_03.gif?height=295&width=640", alt: "バトルにおけるUIアニメーション", caption: "バトルにおけるUIアニメーション実装" },
+      { src: "/portfolio/images/kj8-thegame/kj8-thegame_ui_anim_04.gif?height=295&width=640", alt: "チュートリアルとメッセージ機能のUIアニメーション", caption: "チュートリアルとメッセージ機能のUIアニメーション" },
+      { src: "/portfolio/images/kj8-thegame/kj8-thegame_ui_anim_05.gif?height=295&width=640", alt: "プレイヤーランクアップのUIアニメーション", caption: "プレイヤーランクアップのUIアニメーション" },
+      { src: "/portfolio/images/kj8-thegame/kj8-thegame_ui_anim_06.gif?height=295&width=640", alt: "ストーリー画面のUIアニメーション", caption: "ストーリー画面のUIアニメーション" },
+      { src: "/portfolio/images/kj8-thegame/kj8-thegame_ui_anim_07.gif?height=295&width=640", alt: "キャラクター画面のUIアニメーション", caption: "キャラクター画面のUIアニメーション" },
+      { src: "/portfolio/images/kj8-thegame/kj8-thegame_ui_anim_08.gif?height=295&width=640", alt: "キャラクター画面のUIアニメーション", caption: "キャラクター画面のUIアニメーション" },
+      { src: "/portfolio/images/kj8-thegame/kj8-thegame_ui_anim_09.gif?height=295&width=640", alt: "ショップ画面のUIアニメーション", caption: "ョップ画面のUIアニメーション" },
+      { src: "/portfolio/images/kj8-thegame/kj8-thegame_ui_anim_10.gif?height=295&width=640", alt: "ガチャ画面のUIアニメーション", caption: "ガチャ画面のUIアニメーション" },
+      { src: "/portfolio/images/kj8-thegame/kj8-thegame_ui_anim_11.gif?height=295&width=640", alt: "スキット画面のUIアニメーション", caption: "スキット画面のUIアニメーション" },
+      { src: "/portfolio/images/kj8-thegame/kj8-thegame_ui_anim_12.gif?height=295&width=640", alt: "スキット画面のUIアニメーション", caption: "スキット画面のUIアニメーション" },
     ],
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
@@ -78,7 +77,7 @@ const portfolioItems = [
   {
     id: 12,
     title: "TRIBE NINE",
-    thumbnail: "/images/portfolio-top-tribenine.png?height=630&width=1280",
+    thumbnail: "/portfolio/images/works-top-tribenine.png?height=630&width=1280",
     description: "モバイル・PC向けのゲーム開発におけるUIアニメーション制作内容",
     category: "モバイル・PC",
     overviewTitle: "プロジェクトの紹介",
@@ -101,24 +100,24 @@ const portfolioItems = [
     ],
     youtubeUrl: "https://youtu.be/MAc9YG05rNM",
     isPlayYoutube : true,
-    videoUrl: "/movies/TribeNine_720p.mp4",
-    videoPoster: "/movies/TribeNine_thumb.png",
+    videoUrl: "/portfolio/movies/TribeNine_720p.mp4",
+    videoPoster: "/portfolio/movies/TribeNine_thumb.png",
     isPlayVideo : false,
     galleryTitle: "制作のスナップショット",
     galleryDetailView: "false",
     galleryGrids: "sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4",
     gallery: [
-      { src: "/images/tribenine/tribenine_camera_work_01.gif?height=658&width=720", alt: "カメラワーク実装", caption: "Unityでのカメラワーク実装" },
-      { src: "/images/tribenine/tribenine_ui_anim_01.gif?height=659&width=720", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
-      { src: "/images/tribenine/tribenine_ui_anim_05.gif?height=660&width=720", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
-      { src: "/images/tribenine/tribenine_ui_anim_03.gif?height=658&width=720", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
-      { src: "/images/tribenine/tribenine_ui_anim_06.gif?height=658&width=720", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
-      { src: "/images/tribenine/tribenine_ui_anim_07.gif?height=658&width=720", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
-      { src: "/images/tribenine/tribenine_ui_anim_08.gif?height=660&width=720", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
-      { src: "/images/tribenine/tribenine_ui_anim_04.gif?height=658&width=720", alt: "UnityのuGUI用Shader作成", caption: "UnityのuGUI用Shader作" },
-      // { src: "/images/tribenine/tribenine_support_site_01.png?height=1373&width=1440", alt: "お問い合わせサイトのデザイン作成と実装(CMS)", caption: "お問い合わせサイトのデザイン作成と実装(CMS)" },
-      // { src: "/images/tribenine/tribenine_support_site_02.png?height=1160&width=1440", alt: "お問い合わせサイトのデザイン作成と実装(CMS)", caption: "お問い合わせサイトのデザイン作成と実装(CMS)" },
-      // { src: "/images/tribenine/tribenine_webstore_site_01.png?height=1776&width=1440", alt: "外部決済サイトのデザイン作成と実装(CMS)", caption: "外部決済サイトのデザイン作成と実装(CMS)" },
+      { src: "/portfolio/images/tribenine/tribenine_camera_work_01.gif?height=658&width=720", alt: "カメラワーク実装", caption: "Unityでのカメラワーク実装" },
+      { src: "/portfolio/images/tribenine/tribenine_ui_anim_01.gif?height=659&width=720", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
+      { src: "/portfolio/images/tribenine/tribenine_ui_anim_05.gif?height=660&width=720", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
+      { src: "/portfolio/images/tribenine/tribenine_ui_anim_03.gif?height=658&width=720", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
+      { src: "/portfolio/images/tribenine/tribenine_ui_anim_06.gif?height=658&width=720", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
+      { src: "/portfolio/images/tribenine/tribenine_ui_anim_07.gif?height=658&width=720", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
+      { src: "/portfolio/images/tribenine/tribenine_ui_anim_08.gif?height=660&width=720", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
+      { src: "/portfolio/images/tribenine/tribenine_ui_anim_04.gif?height=658&width=720", alt: "UnityのuGUI用Shader作成", caption: "UnityのuGUI用Shader作" },
+      // { src: "/portfolio/images/tribenine/tribenine_support_site_01.png?height=1373&width=1440", alt: "お問い合わせサイトのデザイン作成と実装(CMS)", caption: "お問い合わせサイトのデザイン作成と実装(CMS)" },
+      // { src: "/portfolio/images/tribenine/tribenine_support_site_02.png?height=1160&width=1440", alt: "お問い合わせサイトのデザイン作成と実装(CMS)", caption: "お問い合わせサイトのデザイン作成と実装(CMS)" },
+      // { src: "/portfolio/images/tribenine/tribenine_webstore_site_01.png?height=1776&width=1440", alt: "外部決済サイトのデザイン作成と実装(CMS)", caption: "外部決済サイトのデザイン作成と実装(CMS)" },
     ],
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
@@ -137,7 +136,7 @@ const portfolioItems = [
   {
     id: 11,
     title: "UnityのuGUI用Shader作成",
-    thumbnail: "/images/portfolio-top-shader.png?height=640&width=1080",
+    thumbnail: "/portfolio/images/works-top-shader.png?height=640&width=1080",
     description: "UnityのuGUIに向けたShaderの作成について",
     category: "GAME",
     overviewTitle: "取り組みの紹介",
@@ -153,16 +152,16 @@ const portfolioItems = [
     galleryDetailView: "true",
     galleryGrids: "sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4",
     gallery: [
-      { src: "/images/shader/Dissolve.gif?height=500&width=600", alt: "画像にディゾルブ効果を反映させるeShader", caption: "画像にディゾルブ効果を反映させるeShaderの作成" },
-      { src: "/images/shader/Glitch.gif?height=500&width=600", alt: "画像にグリッチ効果を反映させるShader", caption: "画像にグリッチ効果を反映させるShaderの作成" },
-      { src: "/images/shader/Glow.gif?height=500&width=600", alt: "画像にグロー効果を反映させるShader", caption: "画像にグロー効果を反映させるShaderの作成" },
-      { src: "/images/shader/Gradient.gif?height=500&width=600", alt: "画像にグラデーション効果を反映させるShader", caption: "画像にグラデーション効果を反映させるShaderの作成" },
-      { src: "/images/shader/Blur.gif?height=500&width=600", alt: "画像にブラー効果を反映させるShader", caption: "画像にブラー効果を反映させるShaderの作成" },
-      { src: "/images/shader/Shadow.gif?height=500&width=600", alt: "画像にシャドウ効果を反映させるShader", caption: "画像にシャドウ効果を反映させるShaderの作成" },
-      { src: "/images/shader/Pixelate.gif?height=500&width=600", alt: "画像にピクセレート効果を反映させるShader", caption: "画像にピクセレート効果を反映させるShaderの作成" },
-      { src: "/images/shader/HalfTone.gif?height=500&width=600", alt: "画像にハーフトーン効果を反映させるShader", caption: "画像にハーフトーン効果を反映させるShaderの作成" },
-      { src: "/images/shader/ChromaticAberration.gif?height=500&width=600", alt: "画像に色収差効果を反映させるShader", caption: "画像に色収差効果を反映させるShaderの作成" },
-      { src: "/images/shader/Shine.gif?height=500&width=600", alt: "画像に輝き効果を反映させるShader", caption: "画像に輝き効果を反映させるShaderの作成" },
+      { src: "/portfolio/images/shader/Dissolve.gif?height=500&width=600", alt: "画像にディゾルブ効果を反映させるeShader", caption: "画像にディゾルブ効果を反映させるeShaderの作成" },
+      { src: "/portfolio/images/shader/Glitch.gif?height=500&width=600", alt: "画像にグリッチ効果を反映させるShader", caption: "画像にグリッチ効果を反映させるShaderの作成" },
+      { src: "/portfolio/images/shader/Glow.gif?height=500&width=600", alt: "画像にグロー効果を反映させるShader", caption: "画像にグロー効果を反映させるShaderの作成" },
+      { src: "/portfolio/images/shader/Gradient.gif?height=500&width=600", alt: "画像にグラデーション効果を反映させるShader", caption: "画像にグラデーション効果を反映させるShaderの作成" },
+      { src: "/portfolio/images/shader/Blur.gif?height=500&width=600", alt: "画像にブラー効果を反映させるShader", caption: "画像にブラー効果を反映させるShaderの作成" },
+      { src: "/portfolio/images/shader/Shadow.gif?height=500&width=600", alt: "画像にシャドウ効果を反映させるShader", caption: "画像にシャドウ効果を反映させるShaderの作成" },
+      { src: "/portfolio/images/shader/Pixelate.gif?height=500&width=600", alt: "画像にピクセレート効果を反映させるShader", caption: "画像にピクセレート効果を反映させるShaderの作成" },
+      { src: "/portfolio/images/shader/HalfTone.gif?height=500&width=600", alt: "画像にハーフトーン効果を反映させるShader", caption: "画像にハーフトーン効果を反映させるShaderの作成" },
+      { src: "/portfolio/images/shader/ChromaticAberration.gif?height=500&width=600", alt: "画像に色収差効果を反映させるShader", caption: "画像に色収差効果を反映させるShaderの作成" },
+      { src: "/portfolio/images/shader/Shine.gif?height=500&width=600", alt: "画像に輝き効果を反映させるShader", caption: "画像に輝き効果を反映させるShaderの作成" },
     ],
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
@@ -175,7 +174,7 @@ const portfolioItems = [
   {
     id: 10,
     title: "KonMari Spark Joy!",
-    thumbnail: "/images/portfolio-top-konmari.png?height=630&width=1200",
+    thumbnail: "/portfolio/images/works-top-konmari.png?height=630&width=1200",
     description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
     category: "モバイルゲーム",
     overviewTitle: "プロジェクトの紹介",
@@ -192,8 +191,8 @@ const portfolioItems = [
     ],
     youtubeUrl: "https://youtu.be/UbhDj6wOsqo",
     isPlayYoutube : true,
-    videoUrl: "/movies/KonMari_720p.mp4",
-    videoPoster: "/movies/KonMari_thumb.png",
+    videoUrl: "/portfolio/movies/KonMari_720p.mp4",
+    videoPoster: "/portfolio/movies/KonMari_thumb.png",
     isPlayVideo : false,
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
@@ -210,7 +209,7 @@ const portfolioItems = [
   {
     id: 9,
     title: "HoneyWorks Premium Live",
-    thumbnail: "/images/portfolio-top-honeyworks.png?height=720&width=1280",
+    thumbnail: "/portfolio/images/works-top-honeyworks.png?height=720&width=1280",
     description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
     category: "モバイルゲーム",
     overviewTitle: "プロジェクトの紹介",
@@ -229,8 +228,8 @@ const portfolioItems = [
     ],
     youtubeUrl: "https://youtu.be/Utsz-ajBvUw",
     isPlayYoutube : true,
-    videoUrl: "/movies/HoneyWorks_720p.mp4",
-    videoPoster: "/movies/HoneyWorks_thumb.png",
+    videoUrl: "/portfolio/movies/HoneyWorks_720p.mp4",
+    videoPoster: "/portfolio/movies/HoneyWorks_thumb.png",
     isPlayVideo : false,
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
@@ -247,7 +246,7 @@ const portfolioItems = [
   {
     id: 8,
     title: "ONE PIECE ボン！ボン！ジャーニー!!",
-    thumbnail: "/images/portfolio-top-bonbonjourney.png?height=337&width=1010",
+    thumbnail: "/portfolio/images/works-top-bonbonjourney.png?height=337&width=1010",
     description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
     category: "モバイルゲーム",
     overviewTitle: "プロジェクトの紹介",
@@ -267,8 +266,8 @@ const portfolioItems = [
     ],
     youtubeUrl: "https://youtu.be/HfFRJdeWR_k",
     isPlayYoutube : true,
-    videoUrl: "/movies/BonBonJourney_720p.mp4",
-    videoPoster: "/movies/BonBonJourney_thumb.png",
+    videoUrl: "/portfolio/movies/BonBonJourney_720p.mp4",
+    videoPoster: "/portfolio/movies/BonBonJourney_thumb.png",
     isPlayVideo : false,
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
@@ -285,7 +284,7 @@ const portfolioItems = [
   {
     id: 7,
     title: "アイドルマスター SideM LIVE ON ST@GE!",
-    thumbnail: "/images/portfolio-top-idolmastersidem.png?height=751&width=1280",
+    thumbnail: "/portfolio/images/works-top-idolmastersidem.png?height=751&width=1280",
     description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
     category: "モバイルゲーム",
     overviewTitle: "プロジェクトの紹介",
@@ -304,8 +303,8 @@ const portfolioItems = [
     ],
     youtubeUrl: "https://youtu.be/YzFR1-4qvr8",
     isPlayYoutube : true,
-    videoUrl: "/movies/IdolMasterSideM_720p.mp4",
-    videoPoster: "/movies/IdolMasterSideM_thumb.png",
+    videoUrl: "/portfolio/movies/IdolMasterSideM_720p.mp4",
+    videoPoster: "/portfolio/movies/IdolMasterSideM_thumb.png",
     isPlayVideo : false,
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
@@ -321,7 +320,7 @@ const portfolioItems = [
   {
     id: 6,
     title: "サモンソウルバトル",
-    thumbnail: "/images/portfolio-top-summonsoulbattle.png?height=4376&width=835",
+    thumbnail: "/portfolio/images/works-top-summonsoulbattle.png?height=4376&width=835",
     description: "モバイル向けのゲーム開発におけるUIアニメーション制作内容",
     category: "モバイルゲーム",
     overviewTitle: "プロジェクトの紹介",
@@ -339,8 +338,8 @@ const portfolioItems = [
     ],
     youtubeUrl: "https://youtu.be/6Y4d1JH939I",
     isPlayYoutube : true,
-    videoUrl: "/movies/SummonSoulBattle_720p.mp4",
-    videoPoster: "/movies/SummonSoulBattle_thumb.png",
+    videoUrl: "/portfolio/movies/SummonSoulBattle_720p.mp4",
+    videoPoster: "/portfolio/movies/SummonSoulBattle_thumb.png",
     isPlayVideo : false,
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
@@ -355,7 +354,7 @@ const portfolioItems = [
   {
     id: 5,
     title: "Wake Up, Girls! ステージの天使",
-    thumbnail: "/images/portfolio-top-wakeupgirls.png?height=800&width=1280",
+    thumbnail: "/portfolio/images/works-top-wakeupgirls.png?height=800&width=1280",
     description: "モバイル向けのゲーム開発における演出制作内容",
     category: "モバイルゲーム",
     overviewTitle: "プロジェクトの紹介",
@@ -372,8 +371,8 @@ const portfolioItems = [
     ],
     youtubeUrl: "https://youtu.be/XNOXl7gE2_c",
     isPlayYoutube : true,
-    videoUrl: "/movies/WakeUpGirls_720p.mp4",
-    videoPoster: "/movies/WakeUpGirls_thumb.png",
+    videoUrl: "/portfolio/movies/WakeUpGirls_720p.mp4",
+    videoPoster: "/portfolio/movies/WakeUpGirls_thumb.png",
     isPlayVideo : false,
     tools: [ 
       {icon : <SimpleIcons.SiAdobe size="32px" className="mb-0" />, name :"Adobe Flash"},
@@ -388,7 +387,7 @@ const portfolioItems = [
   {
     id: 4,
     title: "SKYLOCK(スカイロック)",
-    thumbnail: "/images/portfolio-top-skylock.png?height=380&width=1010",
+    thumbnail: "/portfolio/images/works-top-skylock.png?height=380&width=1010",
     description: "モバイル向けのゲーム開発における演出制作内容",
     category: "モバイルゲーム",
     overviewTitle: "プロジェクトの紹介",
@@ -405,8 +404,8 @@ const portfolioItems = [
     ],
     youtubeUrl: "https://youtu.be/kPCtgFWWzhM",
     isPlayYoutube : true,
-    videoUrl: "/movies/SkyLock_720p.mp4",
-    videoPoster: "/movies/SkyLock_thumb.png",
+    videoUrl: "/portfolio/movies/SkyLock_720p.mp4",
+    videoPoster: "/portfolio/movies/SkyLock_thumb.png",
     isPlayVideo : false,
     tools: [ 
       {icon : <SimpleIcons.SiAdobe size="32px" className="mb-0" />, name :"Adobe Flash"},
@@ -421,7 +420,7 @@ const portfolioItems = [
   {
     id: 3,
     title: "BIRDMAN「バードマン」",
-    thumbnail: "/images/portfolio-top-birdman.png?height=673&width=1280",
+    thumbnail: "/portfolio/images/works-top-birdman.png?height=673&width=1280",
     description: "WEBサイトなどWEB向けコンテンツ制作内容",
     category: "WEB制作",
     overviewTitle: "担当業務内容",
@@ -440,24 +439,24 @@ const portfolioItems = [
     galleryTitle: "制作を担当したプロジェクト",
     galleryDetailView: "true",
     gallery: [
-      { src: "/images/birdman/lovemusic.png?height=400&width=590", alt: "LOVE MUSIC", caption: "LOVE MUSIC | Portal Audio Player Walkman | Sony" },
-      { src: "/images/birdman/nap.png?height=484&width=580", alt: "Hiroshi Nakamura & NAP Co.,Ltd.", caption: "Hiroshi Nakamura & NAP Co.,Ltd." },
-      { src: "/images/birdman/no1no1.png?height=520&width=560", alt: "No.1 No.1", caption: "HOME'S No.1 No.1(Smartphone Site)" },
-      { src: "/images/birdman/dayz.png?height=560&width=500", alt: "HAPPY BIRTH DAYZ", caption: "NISSAN HAPPY BIRTH DAYZ" },
-      { src: "/images/birdman/dajare_a_day.png?height=520&width=560", alt: "DAJARE-A-DAY", caption: "Domino's Campaign(Smartphone Site)" },
-      { src: "/images/birdman/smooth.png?height=600&width=800", alt: "Smooth inc", caption: "Smooth inc Renewal" },
-      { src: "/images/birdman/regame_vol3.png?height=433&width=640", alt: "REGAME VOL3", caption: "Real Escape Game Online vol.03" },
-      { src: "/images/birdman/birdman_sp.png?height=520&width=560", alt: "BIRDMAN", caption: "BIRDMAN - SMARTPHONE SITE" },
-      { src: "/images/birdman/tokyo2020.png?height=599&width=640", alt: "TOKYO2020", caption: "TOKYO2020 - PLEDGE" },
-      { src: "/images/birdman/noritz.png?height=600&width=640", alt: "NORITZ", caption: "NORITZ - SUNLIGHT PROJECT" },
-      { src: "/images/birdman/cafx.png?height=624&width=512", alt: "CyberAgentFX", caption: "CyberAgentFX - Cymo School" },
-      { src: "/images/birdman/suidobashijuko.png?height=614&width=584", alt: "Suidobashi Heavy Industry", caption: "Suidobashi Heavy Industry - KURATAS" },
-      { src: "/images/birdman/tweet_fantasy.png?height=600&width=584", alt: "Tweet Fantasy", caption: "MEIJI Fruits Gummi Brand Site" },
-      { src: "/images/birdman/ketsume.png?height=590&width=544", alt: "KETSUMEISHI", caption: "KETSUMEISHI Offcial Renewal" },
-      { src: "/images/birdman/z-trial.png?height=760&width=584", alt: "The Z-Trials", caption: "Walkman Z1000-series to the trail" },
-      { src: "/images/birdman/eco_journey.png?height=434&width=680", alt: "Nikon - ECO JOURNEY", caption: "Nikon - ECO JOURNEY" },
-      { src: "/images/birdman/ultrabookPUT.png?height=442&width=640", alt: "Intel Ultrabook POP-UP THEATER", caption: "Intel Ultrabook POP-UP THEATER" },
-      { src: "/images/birdman/hondaN.png?height=386&width=560", alt: "Honda N teaser", caption: "Honda N teaser" }
+      { src: "/portfolio/images/birdman/lovemusic.png?height=400&width=590", alt: "LOVE MUSIC", caption: "LOVE MUSIC | Portal Audio Player Walkman | Sony" },
+      { src: "/portfolio/images/birdman/nap.png?height=484&width=580", alt: "Hiroshi Nakamura & NAP Co.,Ltd.", caption: "Hiroshi Nakamura & NAP Co.,Ltd." },
+      { src: "/portfolio/images/birdman/no1no1.png?height=520&width=560", alt: "No.1 No.1", caption: "HOME'S No.1 No.1(Smartphone Site)" },
+      { src: "/portfolio/images/birdman/dayz.png?height=560&width=500", alt: "HAPPY BIRTH DAYZ", caption: "NISSAN HAPPY BIRTH DAYZ" },
+      { src: "/portfolio/images/birdman/dajare_a_day.png?height=520&width=560", alt: "DAJARE-A-DAY", caption: "Domino's Campaign(Smartphone Site)" },
+      { src: "/portfolio/images/birdman/smooth.png?height=600&width=800", alt: "Smooth inc", caption: "Smooth inc Renewal" },
+      { src: "/portfolio/images/birdman/regame_vol3.png?height=433&width=640", alt: "REGAME VOL3", caption: "Real Escape Game Online vol.03" },
+      { src: "/portfolio/images/birdman/birdman_sp.png?height=520&width=560", alt: "BIRDMAN", caption: "BIRDMAN - SMARTPHONE SITE" },
+      { src: "/portfolio/images/birdman/tokyo2020.png?height=599&width=640", alt: "TOKYO2020", caption: "TOKYO2020 - PLEDGE" },
+      { src: "/portfolio/images/birdman/noritz.png?height=600&width=640", alt: "NORITZ", caption: "NORITZ - SUNLIGHT PROJECT" },
+      { src: "/portfolio/images/birdman/cafx.png?height=624&width=512", alt: "CyberAgentFX", caption: "CyberAgentFX - Cymo School" },
+      { src: "/portfolio/images/birdman/suidobashijuko.png?height=614&width=584", alt: "Suidobashi Heavy Industry", caption: "Suidobashi Heavy Industry - KURATAS" },
+      { src: "/portfolio/images/birdman/tweet_fantasy.png?height=600&width=584", alt: "Tweet Fantasy", caption: "MEIJI Fruits Gummi Brand Site" },
+      { src: "/portfolio/images/birdman/ketsume.png?height=590&width=544", alt: "KETSUMEISHI", caption: "KETSUMEISHI Offcial Renewal" },
+      { src: "/portfolio/images/birdman/z-trial.png?height=760&width=584", alt: "The Z-Trials", caption: "Walkman Z1000-series to the trail" },
+      { src: "/portfolio/images/birdman/eco_journey.png?height=434&width=680", alt: "Nikon - ECO JOURNEY", caption: "Nikon - ECO JOURNEY" },
+      { src: "/portfolio/images/birdman/ultrabookPUT.png?height=442&width=640", alt: "Intel Ultrabook POP-UP THEATER", caption: "Intel Ultrabook POP-UP THEATER" },
+      { src: "/portfolio/images/birdman/hondaN.png?height=386&width=560", alt: "Honda N teaser", caption: "Honda N teaser" }
     ],
     tools: [ 
       {icon : <SimpleIcons.SiAdobe size="32px" className="mb-0" />, name :"Adobe Flash"},
@@ -472,7 +471,7 @@ const portfolioItems = [
   {
     id: 2,
     title: "クリエイターズカンパニーコネクション",
-    thumbnail: "/images/portfolio-top-ccc.png?height=675&width=1200",
+    thumbnail: "/portfolio/images/works-top-ccc.png?height=675&width=1200",
     description: "WEBサイトなどWEB向けコンテンツ制作内容",
     category: "WEB制作",
     overviewTitle: "担当業務内容",
@@ -490,27 +489,27 @@ const portfolioItems = [
     galleryTitle: "制作を担当したプロジェクト",
     galleryDetailView: "true",
     gallery: [
-      { src: "/images/ccc/csbooks.png?height=475&width=560", alt: "C's BOOKS Website Renewal", caption: "C's BOOKS" },
-      { src: "/images/ccc/hotel_manzoku.png?height=440&width=560", alt: "HOTEL MAN-ZOKU", caption: "HOTEL MAN-ZOKU" },
-      { src: "/images/ccc/manzoku_renewal.png?height=560&width=535", alt: "MANZOKU Website Renewal", caption: "MANZOKU Website Renewal" },
-      { src: "/images/ccc/yukai_renewal_website.png?height=545&width=568", alt: "YUKAI LIFE Mobile", caption: "YUKAI LIFE Website Renewal" },
-      { src: "/images/ccc/yukai_renewal_mobile.png?height=440&width=560", alt: "YUKAI LIFE Mobile", caption: "YUKAI LIFE Mobile Renewal" },
-      { src: "/images/ccc/manzoku_job_website.png?height=480&width=550", alt: "MANZOKU JOB Website", caption: "MANZOKU JOB Website" },
-      { src: "/images/ccc/manzoku_job_mobile.png?height=440&width=560", alt: "MANZOKU JOB Mobile", caption: "MANZOKU JOB Mobile" },
-      { src: "/images/ccc/japanet_hadaka.png?height=470&width=548", alt: "JAPANET HADAKA Website", caption: "JAPANET HADAKA" },
-      { src: "/images/ccc/mobile_manzoku_tv.png?height=440&width=560", alt: "MANZOKU TV Mobile Site", caption: "MANZOKU TV Mobile" },
-      { src: "/images/ccc/mobile_manzoku_total.png?height=440&width=560", alt: "MANZOKU Mobile Site", caption: "MANZOKU Mobile" },
-      { src: "/images/ccc/manzoku_mall_admin_pc.png?height=360&width=549", alt: "MANZOKU Client Management", caption: "MANZOKU Management" },
-      { src: "/images/ccc/psta.png?height=510&width=426", alt: "PARADiSE STUDiO Website, Mobile Site", caption: "PARADiSE STUDiO" },
-      { src: "/images/ccc/pokepara_proposal.png?height=508&width=550", alt: "POKEPARA Proposal Design", caption: "POKEPARA" },
-      // { src: "/images/ccc/yukai_mobile_samepicgame.png?height=440&width=560", alt: "YUKAI LIFE Mobile Contents", caption: "Yukai Mobile - Puzzle#3" },
-      // { src: "/images/ccc/yukai_mobile_switchgame.png?height=440&width=560", alt: "YUKAI LIFE Mobile Contents", caption: "Yukai Mobile - Puzzle#2" },
-      // { src: "/images/ccc/yukai_mobile_piecegame.png?height=440&width=560", alt: "YUKAI LIFE Mobile Contents", caption: "Yukai Mobile - Puzzle#1" },
-      // { src: "/images/ccc/yukai_mobile_clock.png?height=400&width=560", alt: "YUKAI LIFE Mobile Contents", caption: "Yukai Mobile - Clock" },
-      { src: "/images/ccc/yukai_mobile_motenabi.png?height=420&width=560", alt: "YUKAI LIFE Mobile Contents", caption: "Yukai Mobile - motenabi" },
-      { src: "/images/ccc/yukai_mobile_jobcheck.png?height=420&width=560", alt: "YUKAI LIFE Mobile Contents", caption: "Yukai Mobile - JobCheck" },
-      { src: "/images/ccc/yukai_life_mobile.png?height=440&width=560", alt: "YUKAI LIFE, YUKAI WATERS Mobile Site", caption: "Yukai Mobile Site" },
-      { src: "/images/ccc/yukai_life_website.png?height=480&width=430", alt: "YUKAI LIFE Flash Contents", caption: "Yukai Life" }
+      { src: "/portfolio/images/ccc/csbooks.png?height=475&width=560", alt: "C's BOOKS Website Renewal", caption: "C's BOOKS" },
+      { src: "/portfolio/images/ccc/hotel_manzoku.png?height=440&width=560", alt: "HOTEL MAN-ZOKU", caption: "HOTEL MAN-ZOKU" },
+      { src: "/portfolio/images/ccc/manzoku_renewal.png?height=560&width=535", alt: "MANZOKU Website Renewal", caption: "MANZOKU Website Renewal" },
+      { src: "/portfolio/images/ccc/yukai_renewal_website.png?height=545&width=568", alt: "YUKAI LIFE Mobile", caption: "YUKAI LIFE Website Renewal" },
+      { src: "/portfolio/images/ccc/yukai_renewal_mobile.png?height=440&width=560", alt: "YUKAI LIFE Mobile", caption: "YUKAI LIFE Mobile Renewal" },
+      { src: "/portfolio/images/ccc/manzoku_job_website.png?height=480&width=550", alt: "MANZOKU JOB Website", caption: "MANZOKU JOB Website" },
+      { src: "/portfolio/images/ccc/manzoku_job_mobile.png?height=440&width=560", alt: "MANZOKU JOB Mobile", caption: "MANZOKU JOB Mobile" },
+      { src: "/portfolio/images/ccc/japanet_hadaka.png?height=470&width=548", alt: "JAPANET HADAKA Website", caption: "JAPANET HADAKA" },
+      { src: "/portfolio/images/ccc/mobile_manzoku_tv.png?height=440&width=560", alt: "MANZOKU TV Mobile Site", caption: "MANZOKU TV Mobile" },
+      { src: "/portfolio/images/ccc/mobile_manzoku_total.png?height=440&width=560", alt: "MANZOKU Mobile Site", caption: "MANZOKU Mobile" },
+      { src: "/portfolio/images/ccc/manzoku_mall_admin_pc.png?height=360&width=549", alt: "MANZOKU Client Management", caption: "MANZOKU Management" },
+      { src: "/portfolio/images/ccc/psta.png?height=510&width=426", alt: "PARADiSE STUDiO Website, Mobile Site", caption: "PARADiSE STUDiO" },
+      { src: "/portfolio/images/ccc/pokepara_proposal.png?height=508&width=550", alt: "POKEPARA Proposal Design", caption: "POKEPARA" },
+      // { src: "/portfolio/images/ccc/yukai_mobile_samepicgame.png?height=440&width=560", alt: "YUKAI LIFE Mobile Contents", caption: "Yukai Mobile - Puzzle#3" },
+      // { src: "/portfolio/images/ccc/yukai_mobile_switchgame.png?height=440&width=560", alt: "YUKAI LIFE Mobile Contents", caption: "Yukai Mobile - Puzzle#2" },
+      // { src: "/portfolio/images/ccc/yukai_mobile_piecegame.png?height=440&width=560", alt: "YUKAI LIFE Mobile Contents", caption: "Yukai Mobile - Puzzle#1" },
+      // { src: "/portfolio/images/ccc/yukai_mobile_clock.png?height=400&width=560", alt: "YUKAI LIFE Mobile Contents", caption: "Yukai Mobile - Clock" },
+      { src: "/portfolio/images/ccc/yukai_mobile_motenabi.png?height=420&width=560", alt: "YUKAI LIFE Mobile Contents", caption: "Yukai Mobile - motenabi" },
+      { src: "/portfolio/images/ccc/yukai_mobile_jobcheck.png?height=420&width=560", alt: "YUKAI LIFE Mobile Contents", caption: "Yukai Mobile - JobCheck" },
+      { src: "/portfolio/images/ccc/yukai_life_mobile.png?height=440&width=560", alt: "YUKAI LIFE, YUKAI WATERS Mobile Site", caption: "Yukai Mobile Site" },
+      { src: "/portfolio/images/ccc/yukai_life_website.png?height=480&width=430", alt: "YUKAI LIFE Flash Contents", caption: "Yukai Life" }
     ],
     tools: [ 
       {icon : <SimpleIcons.SiAdobe size="32px" className="mb-0" />, name :"Adobe Flash"},
@@ -525,7 +524,7 @@ const portfolioItems = [
   {
     id: 1,
     title: "WEDIT DESIGN",
-    thumbnail: "/images/portfolio-top-weditdesign.png?height=630&width=1200",
+    thumbnail: "/portfolio/images/works-top-weditdesign.png?height=630&width=1200",
     description: "WEBサイトなどWEB向けコンテンツ制作内容",
     category: "WEB制作",
     overviewTitle: "担当業務内容",
@@ -544,65 +543,65 @@ const portfolioItems = [
     galleryTitle: "制作を担当したプロジェクト",
     galleryDetailView: "true",
     gallery: [
-      { src: "/images/weditdesign/kerasys.jpg?width=480&height=472", alt: "Kerasys", caption: "Kerasys Online Promotion" },
-      { src: "/images/weditdesign/rfid.jpg?width=480&height=373", alt: "RFid", caption: "PIFF RFiD Service Experience" },
-      { src: "/images/weditdesign/rentaphone.jpg?width=480&height=480", alt: "Rent a Phone", caption: "PIFF RFiD Phone Rent Service" },
-      { src: "/images/weditdesign/yournz.jpg?width=480&height=459", alt: "YourNZ", caption: "YourNZ Website" },
-      { src: "/images/weditdesign/greenjuice.jpg?width=520&height=410", alt: "Greenjuice", caption: "Pulmuone Greenjuice" },
-      { src: "/images/weditdesign/dsrgroup.jpg?width=480&height=353", alt: "DSRGroup", caption: "DSRGroup Website" },
-      { src: "/images/weditdesign/kt_telecop.jpg?width=509&height=400", alt: "KT TELECOP", caption: "KT TELECOP Website" },
-      { src: "/images/weditdesign/kt_linkus.jpg?width=492&height=350", alt: "KT LINKUS", caption: "KT LINKUS Website" },
-      { src: "/images/weditdesign/the_hong.jpg?width=477&height=460", alt: "The Hong", caption: "The Hong Website" },
-      { src: "/images/weditdesign/eria.jpg?width=499&height=390", alt: "eria welfare", caption: "eria welfare Website" },
-      { src: "/images/weditdesign/eyenuri.jpg?width=455&height=344", alt: "EyeNuri", caption: "EyeNuri Website" },
-      { src: "/images/weditdesign/macpert.jpg?width=460&height=449", alt: "Macpert", caption: "Macpert - Marketing&Consulting Expert" },
-      { src: "/images/weditdesign/cl_interactive.png?width=480&height=430", alt: "CL INTERACTIVE", caption: "CL INTERACTIVE Website" },
-      { src: "/images/weditdesign/softzen.jpg?width=490&height=428", alt: "Softzen", caption: "Softzen - The Best Mobile Company" },
-      { src: "/images/weditdesign/donga01.jpg?width=428&height=330", alt: "Donga Ilbo Company", caption: "Donga Ilbo Company Website" },
-      { src: "/images/weditdesign/webzine.jpg?width=428&height=292", alt: "TOYA Webzine", caption: "TOYA WEBZINE Website" },
-      { src: "/images/weditdesign/donga02.jpg?width=428&height=408", alt: "Donga Ilbo Cyber Tour", caption: "Donga Ilbo CyberTour Website" },
-      { src: "/images/weditdesign/sicf.jpg?width=428&height=373", alt: "Seoul International Cultural Foundation", caption: "Seoul International DanceCompetition Website" },
-      { src: "/images/weditdesign/design.jpg?width=428&height=448", alt: "Design House", caption: "Design House Website" },
-      { src: "/images/weditdesign/festival.jpg?width=428&height=458", alt: "Seoul Design Festival", caption: "Seoul Design Festival Website" },
-      { src: "/images/weditdesign/innotel.jpg?width=428&height=438", alt: "INNOTELETEK", caption: "INNOTELETEK Website" },
-      { src: "/images/weditdesign/alumni.jpg?width=428&height=294", alt: "Mckinsey Alumni", caption: "McKinsey&Company Alumi Website" },
-      { src: "/images/weditdesign/inno.jpg?width=428&height=348", alt: "INNO Design", caption: "INNO Design Website Renewal" },
-      { src: "/images/weditdesign/living.jpg?width=428&height=448", alt: "Seoul Living Design Fair 2005", caption: "Seoul Living Design Fair 2005 Website" },
-      { src: "/images/weditdesign/osong.jpg?width=430&height=436", alt: "Osong Bio-, alth Science Technopolis", caption: "Osong Bio-, alth Science TechnopolisWebsite" },
-      { src: "/images/weditdesign/expo.jpg?width=428&height=408", alt: "World Ceramic Exposion Foundation", caption: "World Ceramic Exposion Foundation Website" },
-      { src: "/images/weditdesign/vdk.jpg?width=428&height=411", alt: "VonDutch Korea", caption: "VonDutch Korea Website" },
-      { src: "/images/weditdesign/kmasd.jpg?width=428&height=432", alt: "Korea Management Association", caption: "Korea Management Association Website" },
-      { src: "/images/weditdesign/dsa.jpg?width=428&height=380", alt: "DongSeung ARK", caption: "DongSeung ARK Website" },
-      { src: "/images/weditdesign/gnet.jpg?width=428&height=374", alt: "Hyundai Food System", caption: "Hyundai Food System Website" },
-      // { src: "/images/weditdesign/konan.jpg?width=428&height=373", alt: "Konan Technology", caption: "Konan Technology Website" },
-      // { src: "/images/weditdesign/kokomo02.jpg?width=428&height=337", alt: "KOKOMO Living Store", caption: "KOKOMO ShoppingMall Website" },
-      // { src: "/images/weditdesign/mky.jpg?width=428&height=321", alt: "MKY Group", caption: "MKY Group Website" },
-      // { src: "/images/weditdesign/kokomo01.jpg?width=428&height=456", alt: "KOKOMO Living", caption: "KOKOMO Living Website" },
-      // { src: "/images/weditdesign/interpark01.jpg?width=428&height=468", alt: "Interpark KnowHow", caption: "Interpark KnowHow Website" },
-      // { src: "/images/weditdesign/lotte01.jpg?width=428&height=457", alt: "Lotte Town Finance", caption: "Lotte Town Finance Website" },
-      // { src: "/images/weditdesign/wedi.jpg?width=428&height=320", alt: "The World Ethnic Dance Institute", caption: "The World Ethnic Dance Institute Website" },
-      // { src: "/images/weditdesign/kma.jpg?width=428&height=364", alt: "Korea Management Association", caption: "Korea Management Association WebsiteRenewal" },
-      // { src: "/images/weditdesign/habitat.jpg?width=428&height=348", alt: "Habitat", caption: "Habitat Website Renewal" },
-      // { src: "/images/weditdesign/interpark01.jpg?width=428&height=433", alt: "Interpark KnowHow", caption: "Interpark KnowHow Website" },
-      // { src: "/images/weditdesign/hoseo.jpg?width=428&height=346", alt: "Hoseo University Entrance Information", caption: "Hoseo University EntranceInformation Website" },
-      // { src: "/images/weditdesign/cs.jpg?width=428&height=358", alt: "Hanbit Soft Counter Strike", caption: "Hanbit Soft Counter Strike Website" },
-      // { src: "/images/weditdesign/daum.jpg?width=426&height=334", alt: "Daum Cafe Template", caption: "Daum Communication Cafe Template" },
-      // { src: "/images/weditdesign/lemon.jpg?width=428&height=456", alt: "Lotte Lemon", caption: "Lotte Lemon Website" },
-      // { src: "/images/weditdesign/asiana02.jpg?width=428&height=336", alt: "Asiana Littles", caption: "Asiana Littles Website" },
-      // { src: "/images/weditdesign/mc.jpg?width=600&height=260", alt: "McKinsey&Company", caption: "McKinsey&Company Website" },
-      // { src: "/images/weditdesign/toshiba.jpg?width=428&height=267", alt: "Club Toshiba", caption: "Club Toshiba Website" },
-      // { src: "/images/weditdesign/ted.jpg?width=428&height=441", alt: "TED Architerior", caption: "TED Architerior Website" },
-      // { src: "/images/weditdesign/velox.jpg?width=428&height=441", alt: "Velox Soft", caption: "Velox Soft Website" },
-      // { src: "/images/weditdesign/samsung01.jpg?width=428&height=369", alt: "Samsung Everland Publicity Information", caption: "Samsung Everland PublicityInformation System" },
-      // { src: "/images/weditdesign/dr01.jpg?width=428&height=459", alt: "DigitalRank 4th", caption: "DigitalRank 4th Renewal" },
-      // { src: "/images/weditdesign/yonhap.jpg?width=428&height=430", alt: "Yonhapnews Weather", caption: "Yonhapnews Weather Website" },
-      // { src: "/images/weditdesign/livetone.jpg?width=428&height=319", alt: "LiveTone", caption: "LiveTone Website" },
-      // { src: "/images/weditdesign/fan.jpg?width=428&height=387", alt: "FanPlus", caption: "FanPlus Website" },
-      // { src: "/images/weditdesign/sibc.jpg?width=428&height=404", alt: "SIB Center", caption: "SIB Center Website" },
-      // { src: "/images/weditdesign/samsung04.jpg?width=428&height=431", alt: "Samsung Electronics UI", caption: "Samsung Electronics UI Template" },
-      // { src: "/images/weditdesign/samsung05.jpg?width=428&height=337", alt: "Samsung Life", caption: "Samsung Life Website" },
-      // { src: "/images/weditdesign/dr02.jpg?width=428&height=407", alt: "DigitalRank 3th", caption: "DigitalRank 4th Renewal" },
-      // { src: "/images/weditdesign/asiana01.jpg?width=428&height=343", alt: "Asiana Littles", caption: "Asiana Littles Website" },
+      { src: "/portfolio/images/weditdesign/kerasys.jpg?width=480&height=472", alt: "Kerasys", caption: "Kerasys Online Promotion" },
+      { src: "/portfolio/images/weditdesign/rfid.jpg?width=480&height=373", alt: "RFid", caption: "PIFF RFiD Service Experience" },
+      { src: "/portfolio/images/weditdesign/rentaphone.jpg?width=480&height=480", alt: "Rent a Phone", caption: "PIFF RFiD Phone Rent Service" },
+      { src: "/portfolio/images/weditdesign/yournz.jpg?width=480&height=459", alt: "YourNZ", caption: "YourNZ Website" },
+      { src: "/portfolio/images/weditdesign/greenjuice.jpg?width=520&height=410", alt: "Greenjuice", caption: "Pulmuone Greenjuice" },
+      { src: "/portfolio/images/weditdesign/dsrgroup.jpg?width=480&height=353", alt: "DSRGroup", caption: "DSRGroup Website" },
+      { src: "/portfolio/images/weditdesign/kt_telecop.jpg?width=509&height=400", alt: "KT TELECOP", caption: "KT TELECOP Website" },
+      { src: "/portfolio/images/weditdesign/kt_linkus.jpg?width=492&height=350", alt: "KT LINKUS", caption: "KT LINKUS Website" },
+      { src: "/portfolio/images/weditdesign/the_hong.jpg?width=477&height=460", alt: "The Hong", caption: "The Hong Website" },
+      { src: "/portfolio/images/weditdesign/eria.jpg?width=499&height=390", alt: "eria welfare", caption: "eria welfare Website" },
+      { src: "/portfolio/images/weditdesign/eyenuri.jpg?width=455&height=344", alt: "EyeNuri", caption: "EyeNuri Website" },
+      { src: "/portfolio/images/weditdesign/macpert.jpg?width=460&height=449", alt: "Macpert", caption: "Macpert - Marketing&Consulting Expert" },
+      { src: "/portfolio/images/weditdesign/cl_interactive.png?width=480&height=430", alt: "CL INTERACTIVE", caption: "CL INTERACTIVE Website" },
+      { src: "/portfolio/images/weditdesign/softzen.jpg?width=490&height=428", alt: "Softzen", caption: "Softzen - The Best Mobile Company" },
+      { src: "/portfolio/images/weditdesign/donga01.jpg?width=428&height=330", alt: "Donga Ilbo Company", caption: "Donga Ilbo Company Website" },
+      { src: "/portfolio/images/weditdesign/webzine.jpg?width=428&height=292", alt: "TOYA Webzine", caption: "TOYA WEBZINE Website" },
+      { src: "/portfolio/images/weditdesign/donga02.jpg?width=428&height=408", alt: "Donga Ilbo Cyber Tour", caption: "Donga Ilbo CyberTour Website" },
+      { src: "/portfolio/images/weditdesign/sicf.jpg?width=428&height=373", alt: "Seoul International Cultural Foundation", caption: "Seoul International DanceCompetition Website" },
+      { src: "/portfolio/images/weditdesign/design.jpg?width=428&height=448", alt: "Design House", caption: "Design House Website" },
+      { src: "/portfolio/images/weditdesign/festival.jpg?width=428&height=458", alt: "Seoul Design Festival", caption: "Seoul Design Festival Website" },
+      { src: "/portfolio/images/weditdesign/innotel.jpg?width=428&height=438", alt: "INNOTELETEK", caption: "INNOTELETEK Website" },
+      { src: "/portfolio/images/weditdesign/alumni.jpg?width=428&height=294", alt: "Mckinsey Alumni", caption: "McKinsey&Company Alumi Website" },
+      { src: "/portfolio/images/weditdesign/inno.jpg?width=428&height=348", alt: "INNO Design", caption: "INNO Design Website Renewal" },
+      { src: "/portfolio/images/weditdesign/living.jpg?width=428&height=448", alt: "Seoul Living Design Fair 2005", caption: "Seoul Living Design Fair 2005 Website" },
+      { src: "/portfolio/images/weditdesign/osong.jpg?width=430&height=436", alt: "Osong Bio-, alth Science Technopolis", caption: "Osong Bio-, alth Science TechnopolisWebsite" },
+      { src: "/portfolio/images/weditdesign/expo.jpg?width=428&height=408", alt: "World Ceramic Exposion Foundation", caption: "World Ceramic Exposion Foundation Website" },
+      { src: "/portfolio/images/weditdesign/vdk.jpg?width=428&height=411", alt: "VonDutch Korea", caption: "VonDutch Korea Website" },
+      { src: "/portfolio/images/weditdesign/kmasd.jpg?width=428&height=432", alt: "Korea Management Association", caption: "Korea Management Association Website" },
+      { src: "/portfolio/images/weditdesign/dsa.jpg?width=428&height=380", alt: "DongSeung ARK", caption: "DongSeung ARK Website" },
+      { src: "/portfolio/images/weditdesign/gnet.jpg?width=428&height=374", alt: "Hyundai Food System", caption: "Hyundai Food System Website" },
+      // { src: "/portfolio/images/weditdesign/konan.jpg?width=428&height=373", alt: "Konan Technology", caption: "Konan Technology Website" },
+      // { src: "/portfolio/images/weditdesign/kokomo02.jpg?width=428&height=337", alt: "KOKOMO Living Store", caption: "KOKOMO ShoppingMall Website" },
+      // { src: "/portfolio/images/weditdesign/mky.jpg?width=428&height=321", alt: "MKY Group", caption: "MKY Group Website" },
+      // { src: "/portfolio/images/weditdesign/kokomo01.jpg?width=428&height=456", alt: "KOKOMO Living", caption: "KOKOMO Living Website" },
+      // { src: "/portfolio/images/weditdesign/interpark01.jpg?width=428&height=468", alt: "Interpark KnowHow", caption: "Interpark KnowHow Website" },
+      // { src: "/portfolio/images/weditdesign/lotte01.jpg?width=428&height=457", alt: "Lotte Town Finance", caption: "Lotte Town Finance Website" },
+      // { src: "/portfolio/images/weditdesign/wedi.jpg?width=428&height=320", alt: "The World Ethnic Dance Institute", caption: "The World Ethnic Dance Institute Website" },
+      // { src: "/portfolio/images/weditdesign/kma.jpg?width=428&height=364", alt: "Korea Management Association", caption: "Korea Management Association WebsiteRenewal" },
+      // { src: "/portfolio/images/weditdesign/habitat.jpg?width=428&height=348", alt: "Habitat", caption: "Habitat Website Renewal" },
+      // { src: "/portfolio/images/weditdesign/interpark01.jpg?width=428&height=433", alt: "Interpark KnowHow", caption: "Interpark KnowHow Website" },
+      // { src: "/portfolio/images/weditdesign/hoseo.jpg?width=428&height=346", alt: "Hoseo University Entrance Information", caption: "Hoseo University EntranceInformation Website" },
+      // { src: "/portfolio/images/weditdesign/cs.jpg?width=428&height=358", alt: "Hanbit Soft Counter Strike", caption: "Hanbit Soft Counter Strike Website" },
+      // { src: "/portfolio/images/weditdesign/daum.jpg?width=426&height=334", alt: "Daum Cafe Template", caption: "Daum Communication Cafe Template" },
+      // { src: "/portfolio/images/weditdesign/lemon.jpg?width=428&height=456", alt: "Lotte Lemon", caption: "Lotte Lemon Website" },
+      // { src: "/portfolio/images/weditdesign/asiana02.jpg?width=428&height=336", alt: "Asiana Littles", caption: "Asiana Littles Website" },
+      // { src: "/portfolio/images/weditdesign/mc.jpg?width=600&height=260", alt: "McKinsey&Company", caption: "McKinsey&Company Website" },
+      // { src: "/portfolio/images/weditdesign/toshiba.jpg?width=428&height=267", alt: "Club Toshiba", caption: "Club Toshiba Website" },
+      // { src: "/portfolio/images/weditdesign/ted.jpg?width=428&height=441", alt: "TED Architerior", caption: "TED Architerior Website" },
+      // { src: "/portfolio/images/weditdesign/velox.jpg?width=428&height=441", alt: "Velox Soft", caption: "Velox Soft Website" },
+      // { src: "/portfolio/images/weditdesign/samsung01.jpg?width=428&height=369", alt: "Samsung Everland Publicity Information", caption: "Samsung Everland PublicityInformation System" },
+      // { src: "/portfolio/images/weditdesign/dr01.jpg?width=428&height=459", alt: "DigitalRank 4th", caption: "DigitalRank 4th Renewal" },
+      // { src: "/portfolio/images/weditdesign/yonhap.jpg?width=428&height=430", alt: "Yonhapnews Weather", caption: "Yonhapnews Weather Website" },
+      // { src: "/portfolio/images/weditdesign/livetone.jpg?width=428&height=319", alt: "LiveTone", caption: "LiveTone Website" },
+      // { src: "/portfolio/images/weditdesign/fan.jpg?width=428&height=387", alt: "FanPlus", caption: "FanPlus Website" },
+      // { src: "/portfolio/images/weditdesign/sibc.jpg?width=428&height=404", alt: "SIB Center", caption: "SIB Center Website" },
+      // { src: "/portfolio/images/weditdesign/samsung04.jpg?width=428&height=431", alt: "Samsung Electronics UI", caption: "Samsung Electronics UI Template" },
+      // { src: "/portfolio/images/weditdesign/samsung05.jpg?width=428&height=337", alt: "Samsung Life", caption: "Samsung Life Website" },
+      // { src: "/portfolio/images/weditdesign/dr02.jpg?width=428&height=407", alt: "DigitalRank 3th", caption: "DigitalRank 4th Renewal" },
+      // { src: "/portfolio/images/weditdesign/asiana01.jpg?width=428&height=343", alt: "Asiana Littles", caption: "Asiana Littles Website" },
     ],
     tools: [ 
       {icon : <SimpleIcons.SiAdobe size="32px" className="mb-0" />, name :"Adobe Flash"},
@@ -620,7 +619,7 @@ export default function PortfolioDetailPage({ params }) {
   const router = useRouter()
   const { id } = use(params);
   const { t } = useLanguage()
-  const [portfolio, setPortfolio] = useState(null)
+  const [work, setWork] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
   const [currentPageNum, setCurrentPageNum] = useState(null)
 
@@ -630,8 +629,7 @@ export default function PortfolioDetailPage({ params }) {
     
     if (!window.location.href.includes('localhost')) {
       ReactGA.initialize("G-970VH63QCH");
-      // ReactGA.send({ hitType: "pageview", page: "/portfolio/" + pageid, title: "Portfolio Detail View" });
-      ReactGA.send({ hitType: "pageview", title: "Portfolio Detail Page" });
+      ReactGA.send({ hitType: "pageview", title: "Works Detail Page" });
     }
 
     const handleContextMenu = (event) => {
@@ -644,16 +642,16 @@ export default function PortfolioDetailPage({ params }) {
     const parsedId = Number.parseInt(pageid);
 
     if (isNaN(parsedId)) {
-      router.push("/portfolio")
+      router.push("/works")
       return
     }
     
-    const item = portfolioItems.find((item) => item.id === parsedId)
+    const item = workItems.find((item) => item.id === parsedId)
 
     if (item) {
-      setPortfolio(item)
+      setWork(item)
     } else {
-      router.push("/portfolio")
+      router.push("/works")
     }
 
     // 로딩 상태 업데이트
@@ -670,7 +668,7 @@ export default function PortfolioDetailPage({ params }) {
     )
   }
 
-  if (!portfolio) {
+  if (!work) {
     return null
   }
 
@@ -682,29 +680,29 @@ export default function PortfolioDetailPage({ params }) {
 
       {/* 히어로 섹션 */}
       <ParallaxHero
-        imageUrl={portfolio.thumbnail}
-        title={portfolio.title}
-        subtitle={portfolio.description}
+        imageUrl={work.thumbnail}
+        title={work.title}
+        subtitle={work.description}
         height="40vh"
         overlayOpacity={0.7}
       ></ParallaxHero>
 
       <main className="container relative mx-auto px-4 py-8">
         {/* 프로젝트소개 */}
-        {(portfolio.overview.length > 0) && (
+        {(work.overview.length > 0) && (
         <ScrollReveal>
           <div className="m-4 mt-2 mb-6 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
             <div className="items-center justify-between gap-4">
-              {(portfolio.overviewTitle.length >= 0) && (<h2 className="mb-4 ml-0 mr-0 text-xl font-semibold text-gray-900 dark:text-white">{portfolio.overviewTitle}</h2>)}
+              {(work.overviewTitle.length >= 0) && (<h2 className="mb-4 ml-0 mr-0 text-xl font-semibold text-gray-900 dark:text-white">{work.overviewTitle}</h2>)}
               <div>
-                {portfolio.overview.map((detail, index) => (
+                {work.overview.map((detail, index) => (
                   <p className="mt-1 text-gray-700 dark:text-gray-400" key={index}>
                   {detail}
                 </p>
                 ))}
               </div>
-              {(portfolio.responsibilitiesTitle.length == 0) && (<div className="mt-4">
-                  {portfolio.responsibilities.map((step, index) => (
+              {(work.responsibilitiesTitle.length == 0) && (<div className="mt-4">
+                  {work.responsibilities.map((step, index) => (
                     <div className="mb-1 flex items-start gap-4" key={index}>
                       <div className="mt-2 flex h-2 w-2 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-gray-900 to-gray-700 text-sm font-medium text-white dark:from-gray-700 dark:to-gray-500"></div>
                       <div className="pt-0">
@@ -719,14 +717,14 @@ export default function PortfolioDetailPage({ params }) {
         )}
 
         {/* 업무내용 */}
-        {(portfolio.responsibilitiesTitle.length > 0) && (portfolio.responsibilities.length > 0) && (
+        {(work.responsibilitiesTitle.length > 0) && (work.responsibilities.length > 0) && (
         <ScrollReveal>
           <div className="m-4 mt-2 mb-6 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
             <div className="items-center justify-between gap-4">
-              <h2 className="mb-4 ml-0 mr-0 text-xl font-semibold text-gray-900 dark:text-white">{portfolio.responsibilitiesTitle}</h2>
+              <h2 className="mb-4 ml-0 mr-0 text-xl font-semibold text-gray-900 dark:text-white">{work.responsibilitiesTitle}</h2>
               <div className="mt-0 prose max-w-none dark:prose-invert">
                 <div className="">
-                  {portfolio.responsibilities.map((step, index) => (
+                  {work.responsibilities.map((step, index) => (
                     <div className="mb-1 flex items-start gap-4" key={index}>
                       <div className="mt-2 flex h-2 w-2 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-gray-900 to-gray-700 text-sm font-medium text-white dark:from-gray-700 dark:to-gray-500"></div>
                       <div className="pt-0">
@@ -742,12 +740,12 @@ export default function PortfolioDetailPage({ params }) {
         )}
 
         {/* 비디오 플레이어 YouTube */}
-        {portfolio.isPlayYoutube && portfolio.youtubeUrl && (
+        {work.isPlayYoutube && work.youtubeUrl && (
         <ScrollReveal>
           <div className="m-4 mt-2 mb-6 overflow-hidden rounded-xl bg-gradient-to-r from-gray-900 to-gray-700 shadow-xl">
             <div className="aspect-video">
               <ReactPlayer
-                url = {portfolio.youtubeUrl}
+                url = {work.youtubeUrl}
                 muted
                 controls
                 pip
@@ -760,15 +758,15 @@ export default function PortfolioDetailPage({ params }) {
         )}
 
         {/* 비디오 플레이어 MP4 */}
-        {portfolio.isPlayVideo && portfolio.videoUrl && (
+        {work.isPlayVideo && work.videoUrl && (
         <ScrollReveal>
           <div className="m-4 mt-2 mb-6 overflow-hidden rounded-xl bg-gradient-to-r from-gray-900 to-gray-700 shadow-xl">
             <div className="aspect-video">
               <MediaController style={{ width: "100%" }} mediacontroller="mc">
                 <video
                   slot = "media"
-                  src = {portfolio.videoUrl}
-                  poster = {portfolio.videoThumb}
+                  src = {work.videoUrl}
+                  poster = {work.videoThumb}
                   style={{
                     width: '100%',
                     height: 'auto',
@@ -791,12 +789,12 @@ export default function PortfolioDetailPage({ params }) {
         )}
 
         {/* 갤러리 섹션 */}
-        {portfolio.gallery && (
+        {work.gallery && (
           <ScrollReveal>
             <div className="m-4 mt-2 mb-6 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
-              {/* <h2 className="mb-2 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-lg font-bold tracking-tight text-transparent dark:from-gray-100 dark:to-gray-400">{portfolio.galleryTitle}</h2> */}
-              <h2 className="mb-4 ml-0 mr-0 text-xl font-semibold text-gray-900 dark:text-white">{portfolio.galleryTitle}</h2>
-              <ImageGallery images={portfolio.gallery} isDetailView = {portfolio.galleryDetailView} grids={portfolio.galleryGrids} />
+              {/* <h2 className="mb-2 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-lg font-bold tracking-tight text-transparent dark:from-gray-100 dark:to-gray-400">{work.galleryTitle}</h2> */}
+              <h2 className="mb-4 ml-0 mr-0 text-xl font-semibold text-gray-900 dark:text-white">{work.galleryTitle}</h2>
+              <ImageGallery images={work.gallery} isDetailView = {work.galleryDetailView} grids={work.galleryGrids} />
             </div>
           </ScrollReveal>
         )}
@@ -806,7 +804,7 @@ export default function PortfolioDetailPage({ params }) {
             <div className="prose max-w-none dark:prose-invert">
               <h2 className="text-xl font-semibold text-gray-900 dark:text-white">{t("project.tools")}</h2>
               <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                {portfolio.tools.map((tool, index) => (
+                {work.tools.map((tool, index) => (
                   <InteractiveCard
                     key={index}
                     className="flex items-center gap-3 rounded-lg border border-gray-100 bg-gray-50 p-4 transition-all hover:-translate-y-1 hover:shadow-md dark:border-gray-700 dark:bg-gray-800 dark:hover:shadow-gray-900/30"
@@ -822,13 +820,13 @@ export default function PortfolioDetailPage({ params }) {
           </div>
         </ScrollReveal>
 
-        {portfolio.url && (
+        {work.url && (
           <ScrollReveal>
             <div className="m-4 mt-2 mb-2 flex justify-center shadow-lg">
               <Button
                 variant="outline"
                 className="flex items-center gap-2 rounded-xl w-full border-gray-300 px-12 py-6 text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-800 cursor-pointer"
-                onClick={() => window.open(portfolio.url, "_blank")}
+                onClick={() => window.open(work.url, "_blank")}
               >
                 <ExternalLink className="h-4 w-4" />
                 {t("project.visitWebsite")}
@@ -841,10 +839,10 @@ export default function PortfolioDetailPage({ params }) {
           <div className="flex items-center justify-between m-4 mt-6 mb-6 animate-fade-in-up">
             <Button
               variant="outline"
-              className={`mb-2 px-6 flex items-center gap-2 ${Number.parseInt(currentPageNum) < portfolioItems.length ? "text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 cursor-pointer hover:border-gray-400 hover:bg-gray-50 shadow-md hover:shadow-lg" : "text-gray-300"} rounded-xl border-gray-300 bg-gray-50`}
+              className={`mb-2 px-6 flex items-center gap-2 ${Number.parseInt(currentPageNum) < workItems.length ? "text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 cursor-pointer hover:border-gray-400 hover:bg-gray-50 shadow-md hover:shadow-lg" : "text-gray-300"} rounded-xl border-gray-300 bg-gray-50`}
               onClick={() => {
-                if(Number.parseInt(currentPageNum) < portfolioItems.length) {
-                  router.push(`/portfolio/${Number.parseInt(currentPageNum) + 1}`);
+                if(Number.parseInt(currentPageNum) < workItems.length) {
+                  router.push(`/works/${Number.parseInt(currentPageNum) + 1}`);
                 } 
               }}
             >
@@ -854,7 +852,7 @@ export default function PortfolioDetailPage({ params }) {
             <Button
               variant="outline"
               className="mb-2 px-6 flex items-center gap-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 cursor-pointer hover:border-gray-400 hover:bg-gray-50 hover:shadow-lg rounded-xl border-gray-300 bg-gray-50 shadow-md"
-              onClick={() => router.push("/portfolio")}
+              onClick={() => router.push("/works")}
             >
               <List className="h-4 w-4" />
               {t("project.viewAll")}
@@ -864,7 +862,7 @@ export default function PortfolioDetailPage({ params }) {
               className={`mb-2 px-6 flex items-center gap-2 ${Number.parseInt(currentPageNum) - 1 > 0 ? "text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 cursor-pointer hover:border-gray-400 hover:bg-gray-50 shadow-md hover:shadow-lg" : "text-gray-300"} rounded-xl border-gray-300 bg-gray-50`}
               onClick={() => {
                 if(Number.parseInt(currentPageNum) - 1 > 0) {
-                  router.push(`/portfolio/${Number.parseInt(currentPageNum) - 1}`);
+                  router.push(`/works/${Number.parseInt(currentPageNum) - 1}`);
                 } 
               }}
             >

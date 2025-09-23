@@ -61,7 +61,7 @@ const interviews = [
 
 // 스킬 데이터
 const skills = [
-  { name: "UIアニメーション制作", level: 90, icon: <Palette className="h-5 w-5" /> },
+  { name: "UnityにおけるUIアニメーション制作", level: 90, icon: <Palette className="h-5 w-5" /> },
   { name: "UnityのuGUIを用いたUI実装", level: 90, icon: <Smartphone className="h-5 w-5" /> },
   { name: "AfterEffectsを用いた演出制作", level: 75, icon: <Palette className="h-5 w-5" /> },
   { name: "C#を用いたのUIアニメーション制作", level: 60, icon: <Code className="h-5 w-5" /> },
@@ -87,7 +87,6 @@ export default function AboutPage() {
   useEffect(() => {
     if (!window.location.href.includes('localhost')) {
       ReactGA.initialize("G-970VH63QCH");
-      // ReactGA.send({ hitType: "pageview", page: "/about", title: "About View" });
       ReactGA.send({ hitType: "pageview", title: "About Page" });
     }
 
@@ -143,7 +142,7 @@ export default function AboutPage() {
 
       {/* 히어로 섹션 */}
       <ParallaxHero
-        imageUrl="/images/about-top.png?height=600&width=1200"
+        imageUrl="/portfolio/images/about-top.png?height=600&width=1200"
         title={t("about.title")}
         subtitle={t("about.subtitle")}
         height="40vh"
@@ -159,7 +158,7 @@ export default function AboutPage() {
               <div className="mb-6 flex flex-col items-center">
                 <div className="mb-4 h-32 w-32 overflow-hidden rounded-full bg-gradient-to-r from-gray-900 to-gray-700 p-1 dark:from-gray-700 dark:to-gray-500">
                   <img
-                    src="/images/about-photo.png?height=256&width=256"
+                    src="/portfolio/images/about-photo.png?height=256&width=256"
                     className="h-full w-full rounded-full object-cover"
                   />
                 </div>

@@ -1,0 +1,6 @@
+AuthUserFile /home/shinjeongsoon/www/portfolio/.htpasswd
+AuthType Basic
+AuthName "Web access"
+Require valid-user
+Satisfy all
+Order deny,allow

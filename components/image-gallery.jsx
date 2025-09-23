@@ -7,10 +7,8 @@ export default function ImageGallery({ images = [], isDetailView = "true", grids
   const [selectedImage, setSelectedImage] = useState(null)
 
   const openImage = (image) => {
-    if(isDetailView === "true") {
-      setSelectedImage(image)
-      // document.body.style.overflow = "hidden" // 스크롤 방지
-    }
+    setSelectedImage(image)
+    // document.body.style.overflow = "hidden" // 스크롤 방지
   }
 
   const closeImage = () => {
@@ -25,13 +23,13 @@ export default function ImageGallery({ images = [], isDetailView = "true", grids
         {images.map((image, index) => (
           <div
             key={index}
-            className="cursor-pointer overflow-hidden rounded-lg transition-transform duration-300 hover:scale-105 active:scale-95"
-            onClick={() => openImage(image)}
+            className={`overflow-hidden rounded-lg transition-transform duration-300 ${isDetailView === "true" ? "cursor-pointer hover:scale-105 active:scale-95" : ""}`}
+            onClick={isDetailView === "true" ? () => openImage(image) : undefined}
           >
             <img
               src={image.src || "/placeholder.svg"}
               alt={image.alt || `Gallery image ${index + 1}`}
-              className="h-full w-full object-cover transition-transform duration-300 hover:scale-110"
+              className={`h-full w-full object-cover transition-transform duration-300 ${isDetailView === "true" ? "hover:scale-110" : ""}`}
             />
           </div>
         ))}

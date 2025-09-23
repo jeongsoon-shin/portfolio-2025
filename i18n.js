@@ -13,7 +13,7 @@ const translations = {
       theme: "테마변경",
     },
     // 포트폴리오 페이지
-    portfolio: {
+    works: {
       title: "포트폴리오",
       subtitle: "UI 디자이너의 창의적인 작품 모음입니다",
       viewWorks: "작품 보기",
@@ -114,7 +114,7 @@ const translations = {
       theme: "Toggle Theme",
     },
     // Portfolio page
-    portfolio: {
+    works: {
       title: "Portfolio",
       subtitle: "A collection of creative works by a UI designer",
       viewWorks: "View Works",
@@ -215,7 +215,7 @@ const translations = {
       theme: "テーマ変更",
     },
     // ポートフォリオページ
-    portfolio: {
+    works: {
       title: "PORTFOLIO : WORKS",
       subtitle: "これまでに携わってきた制作実績について",
       viewWorks: "作品と業務内容を見る",

@@ -8,7 +8,7 @@ export default function HomePage() {
 
   useEffect(() => {
     // 메인 페이지에 접속하면 바로 포트폴리오 페이지로 리디렉션
-    router.push("/portfolio")
+    router.push("/works")
   }, [router])
 
   return (

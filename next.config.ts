@@ -8,10 +8,11 @@ const nextConfig: NextConfig = {
 
   // 만약 하위 디렉터리에 배포할 경우 basePath 설정
   // 예: https://example.com/portfolio 에 배포할 경우
-  // basePath: '/portfolio',
+  basePath: '/portfolio',
+  assetPrefix: '/portfolio/',
   
   // compress: false,
-  // /* distDir: 'dist', */
+  // distDir: 'out/portfolio',
   // output: 'export',
   // productionBrowserSourceMaps: true,
   // reactStrictMode: true,

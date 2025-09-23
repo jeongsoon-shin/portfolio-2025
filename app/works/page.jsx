@@ -17,7 +17,7 @@ import ParticleBackground from "@/components/particle-background"
 import ScrollProgress from "@/components/scroll-progress"
 
 // 포트폴리오 데이터
-const portfolioItems = [
+const workItems = [
   {
     id: "13",
     title: "怪獣８号 THE GAME",
@@ -26,7 +26,7 @@ const portfolioItems = [
       {platform : "MOBILE"},
       {platform : "PC"},
     ],
-    thumbnail: "/images/portfolio-thumb-kaijyu8.png?height=225&width=400",
+    thumbnail: "/portfolio/images/works-thumb-kaijyu8.png?height=225&width=400",
     description: "「怪獣８号 THE GAME」でUIアニメーションのセクションリードとして制作を担当しました。",
   },
   {
@@ -37,7 +37,7 @@ const portfolioItems = [
       {platform : "MOBILE"},
       {platform : "PC"},
     ],
-    thumbnail: "/images/portfolio-thumb-tribenine.png?height=225&width=400",
+    thumbnail: "/portfolio/images/works-thumb-tribenine.png?height=225&width=400",
     description: "「TRIBE NINE」でUIアニメーションのセクションリードとして制作を担当しました。",
   },
     {
@@ -47,7 +47,7 @@ const portfolioItems = [
     platformList: [
       {platform : "Shader"},
     ],
-    thumbnail: "/images/portfolio-thumb-shader.png?height=225&width=400",
+    thumbnail: "/portfolio/images/works-thumb-shader.png?height=225&width=400",
     description: "UnityのuGUIに向けたShader作成の事例",
   },
   {
@@ -57,7 +57,7 @@ const portfolioItems = [
     platformList: [
       {platform : "MOBILE"},
     ],
-    thumbnail: "/images/portfolio-thumb-konmari.png?height=225&width=400",
+    thumbnail: "/portfolio/images/works-thumb-konmari.png?height=225&width=400",
     description: "「KonMari Spark Joy!」でUIアニメーションの制作を担当しました。",
   },
   {
@@ -67,7 +67,7 @@ const portfolioItems = [
     platformList: [
       {platform : "MOBILE"},
     ],
-    thumbnail: "/images/portfolio-thumb-honeyworks.png?height=225&width=400",
+    thumbnail: "/portfolio/images/works-thumb-honeyworks.png?height=225&width=400",
     description: "「HoneyWorks Premium Live」でUIアニメーションの制作を担当しました。",
   },
   {
@@ -77,7 +77,7 @@ const portfolioItems = [
     platformList: [
       {platform : "MOBILE"},
     ],
-    thumbnail: "/images/portfolio-thumb-bonbonjourney.png?height=225&width=400",
+    thumbnail: "/portfolio/images/works-thumb-bonbonjourney.png?height=225&width=400",
     description: "「ONE PIECE ボン！ボン！ジャーニー!!」でUIアニメーションの制作を担当しました。",
   },
   {
@@ -87,7 +87,7 @@ const portfolioItems = [
     platformList: [
       {platform : "MOBILE"},
     ],
-    thumbnail: "/images/portfolio-thumb-idolmastersidem.png?height=225&width=400",
+    thumbnail: "/portfolio/images/works-thumb-idolmastersidem.png?height=225&width=400",
     description: "「アイドルマスター SideM LIVE ON ST@GE!」でUIアニメーションの制作を担当しました。",
   },
   {
@@ -97,7 +97,7 @@ const portfolioItems = [
     platformList: [
       {platform : "MOBILE"},
     ],
-    thumbnail: "/images/portfolio-thumb-summonsoulbattle.png?height=225&width=400",
+    thumbnail: "/portfolio/images/works-thumb-summonsoulbattle.png?height=225&width=400",
     description: "「サモンソウルバトル」でUIアニメーションの制作を担当しました。",
   },
   {
@@ -107,7 +107,7 @@ const portfolioItems = [
     platformList: [
       {platform : "MOBILE"},
     ],
-    thumbnail: "/images/portfolio-thumb-wakeupgirls.png?height=225&width=400",
+    thumbnail: "/portfolio/images/works-thumb-wakeupgirls.png?height=225&width=400",
     description: "「Wake Up, Girls! ステージの天使」でゲーム内の演出制作を担当しました。",
   },
   {
@@ -117,7 +117,7 @@ const portfolioItems = [
     platformList: [
       {platform : "MOBILE"},
     ],
-    thumbnail: "/images/portfolio-thumb-skylock.png?height=225&width=400",
+    thumbnail: "/portfolio/images/works-thumb-skylock.png?height=225&width=400",
     description: "「SKYLOCK(スカイロック)」でゲーム内の演出制作を担当しました。",
   },
   {
@@ -128,7 +128,7 @@ const portfolioItems = [
       {platform : "MOBILE"},
       {platform : "PC"},
     ],
-    thumbnail: "/images/portfolio-thumb-birdman.png?height=225&width=400",
+    thumbnail: "/portfolio/images/works-thumb-birdman.png?height=225&width=400",
     description: "Flash Developer / Front-End EngineerとしてWebコンテンツの制作を担当しました。",
   },
   {
@@ -139,7 +139,7 @@ const portfolioItems = [
       {platform : "MOBILE"},
       {platform : "PC"},
     ],
-    thumbnail: "/images/portfolio-thumb-ccc.png?height=225&width=400",
+    thumbnail: "/portfolio/images/works-thumb-ccc.png?height=225&width=400",
     description: "Web DesignerとしてWebコンテンツの制作を担当しました。",
   },
   {
@@ -149,7 +149,7 @@ const portfolioItems = [
     platformList: [
       {platform : "PC"},
     ],
-    thumbnail: "/images/portfolio-thumb-weditdesign.png?height=225&width=400",
+    thumbnail: "/portfolio/images/works-thumb-weditdesign.png?height=225&width=400",
     description: "Web DesignerとしてWebコンテンツの制作を担当しました。",
   },
 ]
@@ -176,11 +176,11 @@ const interviews = [
   },
 ]
 
-export default function PortfolioPage() {
+export default function WorksPage() {
   const router = useRouter()
   const [isLoading, setIsLoading] = useState(true)
   const [selectedCategory, setSelectedCategory] = useState("全て")
-  const [filteredItems, setFilteredItems] = useState(portfolioItems)
+  const [filteredItems, setFilteredItems] = useState(workItems)
   const { t } = useLanguage()
   const { isMobile, isTablet } = useBreakpoint()
 
@@ -194,8 +194,7 @@ export default function PortfolioPage() {
   useEffect(() => {
     if (!window.location.href.includes('localhost')) {
       ReactGA.initialize("G-970VH63QCH");
-      // ReactGA.send({ hitType: "pageview", page: "/portfolio", title: "Portfolio Main View" });
-      ReactGA.send({ hitType: "pageview", title: "Portfolio Main Page" });
+      ReactGA.send({ hitType: "pageview", title: "Works Top Page" });
     }
 
     const handleContextMenu = (event) => {
@@ -204,19 +203,19 @@ export default function PortfolioPage() {
     // document에 이벤트 리스너 추가
     document.addEventListener("contextmenu", handleContextMenu);
 
-    if (selectedCategory === "全て" || selectedCategory === t("portfolio.categories.all")) {
-      setFilteredItems(portfolioItems)
+    if (selectedCategory === "全て" || selectedCategory === t("works.categories.all")) {
+      setFilteredItems(workItems)
     } else {
-      setFilteredItems(portfolioItems.filter((item) => item.category === selectedCategory))
+      setFilteredItems(workItems.filter((item) => item.category === selectedCategory))
     }
   }, [selectedCategory, t])
 
   // 카테고리 목록
   const categories = [
-    t("portfolio.categories.all"),
-    t("portfolio.categories.game"),
-    t("portfolio.categories.web"),
-    // t("portfolio.categories.interview"),
+    t("works.categories.all"),
+    t("works.categories.game"),
+    t("works.categories.web"),
+    // t("works.categories.interview"),
   ]
 
   // 애니메이션 변수
@@ -252,9 +251,9 @@ export default function PortfolioPage() {
 
         {/* 히어로 섹션 */}
         <ParallaxHero
-          imageUrl="/images/page-top-bg.png?height=630&width=1200"
-          title={t("portfolio.title")}
-          subtitle={t("portfolio.subtitle")}
+          imageUrl="/portfolio/images/page-top-bg.png?height=630&width=1200"
+          title={t("works.title")}
+          subtitle={t("works.subtitle")}
           height="40vh"
           overlayOpacity={0.7}
         >
@@ -262,28 +261,28 @@ export default function PortfolioPage() {
             <Button
               className={`rounded-full px-6 py-2 text-white bg-gradient-primary hover:shadow-lg hover:shadow-primary-color/20}`}
               onClick={() => {
-                const portfolioSection = document.getElementById("portfolio-section")
-                if (portfolioSection) {
-                  portfolioSection.scrollIntoView({ behavior: "smooth" })
+                const worksSection = document.getElementById("works-section")
+                if (worksSection) {
+                  worksSection.scrollIntoView({ behavior: "smooth" })
                 }
               }}
             >
-              {t("portfolio.viewWorks")}
+              {t("works.viewWorks")}
             </Button>
           </motion.div>
         </ParallaxHero>
 
         <main className="container relative mx-auto px-4 py-8">
-          <div id="portfolio-section">
+          <div id="works-section">
             <ScrollRevealMotion>
               <div className="mb-8 text-center">
                 <h2
                   className={`title-responsive font-light tracking-tight bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent}`}
                 >
-                  {t("portfolio.worksTitle")}
+                  {t("works.worksTitle")}
                 </h2>
                 <p className={`mt-2 text-xl font-light tracking-tight text-gray-500`}>
-                  {t("portfolio.worksDescription")}
+                  {t("works.worksDescription")}
                 </p>
               </div>
             </ScrollRevealMotion>
@@ -327,7 +326,7 @@ export default function PortfolioPage() {
                     backgroundOpacity={0.05}
                     enhanced={true}
                   >
-                    <div className="group relative overflow-hidden rounded-xl cursor-pointer" onClick={() => router.push(`/portfolio/${item.id}`)}>
+                    <div className="group relative overflow-hidden rounded-xl cursor-pointer" onClick={() => router.push(`/works/${item.id}`)}>
                       <div className="relative aspect-video overflow-hidden">
                         <OptimizedImage
                           src={item.thumbnail || "/placeholder.svg"}
@@ -338,12 +337,12 @@ export default function PortfolioPage() {
                         />
                         <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100">
                           <Button
-                            onClick={() => router.push(`/portfolio/${item.id}`)}
+                            onClick={() => router.push(`/works/${item.id}`)}
                             variant="outline"
                             className="flex items-center gap-2 rounded-full border-white bg-white/20 px-8 py-4 text-sm font-medium text-white backdrop-blur-sm transition-all hover:bg-white hover:text-gray-900 dark:hover:bg-gray-800 dark:hover:text-white cursor-pointer"
                           >
                             <Play className="h-4 w-4" />
-                            {t("portfolio.viewProject")}
+                            {t("works.viewProject")}
                           </Button>
                         </div>
                       </div>
@@ -359,7 +358,7 @@ export default function PortfolioPage() {
                           <motion.button
                             whileHover={{ scale: 1.1, rotate: 15 }}
                             whileTap={{ scale: 0.9 }}
-                            onClick={() => router.push(`/portfolio/${item.id}`)}
+                            onClick={() => router.push(`/works/${item.id}`)}
                             className={`rounded-full p-1.5 transition-colors text-gray-400 hover:bg-gray-100 hover:text-gray-900} cursor-pointer`}
                           >
                             <ArrowUpRight className="h-4 w-4" />
@@ -388,10 +387,10 @@ export default function PortfolioPage() {
                 <h2
                   className={`title-responsive font-light tracking-tight bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent}`}
                 >
-                  {t("portfolio.interviewTitle")}
+                  {t("works.interviewTitle")}
                 </h2>
                 <p className={`mt-2 text-xl font-light tracking-tight text-gray-500`}>
-                  {t("portfolio.interviewDescription")}
+                  {t("works.interviewDescription")}
                 </p>
               </div>
             </ScrollRevealMotion>
