@@ -770,7 +770,7 @@ export default function PortfolioDetailPage({ params }) {
         <div className={work.isVerticalRatio ? "grid gap-0 sm:grid-cols-1 md:grid-cols-3" : ""}>
         {/* 비디오 플레이어 YouTube */}
         {work.isPlayYoutube && work.youtubeUrl && (
-        <ScrollReveal direction={work.isVerticalRatio ? "left" : ""} className={work.isVerticalRatio ? "md:col-span-1" : ""}>
+        <ScrollReveal className={work.isVerticalRatio ? "md:col-span-1" : ""}>
           <div className="m-4 mt-2 mb-6 overflow-hidden rounded-xl bg-gradient-to-r from-gray-900 to-gray-700 shadow-xl">
             <div className={work.isVerticalRatio ? "aspect-[9/16]" : "aspect-video"}>
               <ReactPlayer
@@ -788,7 +788,7 @@ export default function PortfolioDetailPage({ params }) {
 
         {/* 비디오 플레이어 MP4 */}
         {work.isPlayVideo && work.videoUrl && (
-        <ScrollReveal direction={work.isVerticalRatio ? "left" : ""} className={work.isVerticalRatio ? "md:col-span-1" : ""}>
+        <ScrollReveal className={work.isVerticalRatio ? "md:col-span-1" : ""}>
           <div className="m-4 mt-2 mb-6 overflow-hidden rounded-xl bg-gradient-to-r from-gray-900 to-gray-700 shadow-xl">
             <div className={work.isVerticalRatio ? "aspect-[9/16]" : "aspect-video"}>
               <MediaController style={{ width: "100%" }} mediacontroller="mc">
@@ -819,7 +819,7 @@ export default function PortfolioDetailPage({ params }) {
 
         {/* 갤러리 섹션 */}
         {work.gallery && (
-          <ScrollReveal direction={work.isVerticalRatio ? "right" : ""} className={work.isVerticalRatio ? "md:col-span-2" : ""}>
+          <ScrollReveal className={work.isVerticalRatio ? "md:col-span-2" : ""}>
             <div className="m-4 mt-2 mb-6 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
               {/* <h2 className="mb-2 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-lg font-bold tracking-tight text-transparent dark:from-gray-100 dark:to-gray-400">{work.galleryTitle}</h2> */}
               <h2 className="mb-4 ml-0 mr-0 text-xl font-semibold text-gray-900 dark:text-white">{work.galleryTitle}</h2>

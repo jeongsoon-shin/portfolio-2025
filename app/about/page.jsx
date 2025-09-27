@@ -153,7 +153,7 @@ export default function AboutPage() {
       <main className="container relative mx-auto px-4 py-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {/* 프로필 섹션 */}
-          <ScrollReveal direction="left" className="md:col-span-1">
+          <ScrollReveal /* direction="left" */ className="md:col-span-1">
             <InteractiveCard className="mb-8 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800 dark:shadow-gray-900/30">
               <div className="mb-6 flex flex-col items-center">
                 <div className="mb-4 h-32 w-32 overflow-hidden rounded-full bg-gradient-to-r from-gray-900 to-gray-700 p-1 dark:from-gray-700 dark:to-gray-500">
@@ -230,7 +230,7 @@ export default function AboutPage() {
           {/* 경력 및 스킬 섹션 */}
           <div className="md:col-span-1">
             {/* 경력 */}
-            <ScrollReveal direction="right" /*delay={0.1}*/>
+            <ScrollReveal /* direction="right" delay={0.1} */>
               <InteractiveCard className="mb-8 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800 dark:shadow-gray-900/30">
                 <h2 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white">{t("about.experience")}</h2>
                 <div className="space-y-6">
@@ -256,7 +256,7 @@ export default function AboutPage() {
 
             {/* 인터뷰 경력 */}
             {interviews.length >= 1 && (
-              <ScrollReveal direction="right">
+              <ScrollReveal /* direction="right" */>
                 <InteractiveCard className="mb-8 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800 dark:shadow-gray-900/30">
                   <h2 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white">{t("about.interviews")}</h2>
                   <div className="space-y-6">
@@ -283,7 +283,7 @@ export default function AboutPage() {
             )}
 
             {/* 스킬 */}
-            <ScrollReveal direction="right">
+            <ScrollReveal /* direction="right" */>
               <InteractiveCard className="mb-10 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800 dark:shadow-gray-900/30">
                 <h2 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white">{t("about.skills")}</h2>
                 <div className="space-y-4">
