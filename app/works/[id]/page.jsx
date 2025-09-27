@@ -45,9 +45,10 @@ const workItems = [
     videoUrl: "",
     videoPoster: "",
     isPlayVideo : false,
-    galleryTitle: "UIアニメーションディレクションと制作事例",
+    isVerticalRatio: false,
+    galleryTitle: "UIアニメーションのディレクションと制作事例",
     galleryDetailView: "false",
-    galleryGrids: "sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4",
+    galleryGrids: "grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4",
     gallery: [
       { src: "/portfolio/images/kj8-thegame/kj8-thegame_ui_anim_01.gif?height=295&width=640", alt: "バトルにおけるUIアニメーション", caption: "バトルにおけるUIアニメーション実装" },
       { src: "/portfolio/images/kj8-thegame/kj8-thegame_ui_anim_02.gif?height=295&width=640", alt: "バトルにおけるUIアニメーション", caption: "バトルにおけるUIアニメーション実装" },
@@ -103,9 +104,10 @@ const workItems = [
     videoUrl: "/portfolio/movies/TribeNine_720p.mp4",
     videoPoster: "/portfolio/movies/TribeNine_thumb.png",
     isPlayVideo : false,
+    isVerticalRatio: false,
     galleryTitle: "制作のスナップショット",
     galleryDetailView: "false",
-    galleryGrids: "sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4",
+    galleryGrids: "grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4",
     gallery: [
       { src: "/portfolio/images/tribenine/tribenine_camera_work_01.gif?height=658&width=720", alt: "カメラワーク実装", caption: "Unityでのカメラワーク実装" },
       { src: "/portfolio/images/tribenine/tribenine_ui_anim_01.gif?height=659&width=720", alt: "UIアニメーション実装", caption: "UnityでのUIアニメーション実装" },
@@ -150,7 +152,7 @@ const workItems = [
     videoUrl: "",
     galleryTitle: "制作したShaderの実例",
     galleryDetailView: "true",
-    galleryGrids: "sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4",
+    galleryGrids: "grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4",
     gallery: [
       { src: "/portfolio/images/shader/Dissolve.gif?height=500&width=600", alt: "画像にディゾルブ効果を反映させるeShader", caption: "画像にディゾルブ効果を反映させるeShaderの作成" },
       { src: "/portfolio/images/shader/Glitch.gif?height=500&width=600", alt: "画像にグリッチ効果を反映させるShader", caption: "画像にグリッチ効果を反映させるShaderの作成" },
@@ -194,6 +196,7 @@ const workItems = [
     videoUrl: "/portfolio/movies/KonMari_720p.mp4",
     videoPoster: "/portfolio/movies/KonMari_thumb.png",
     isPlayVideo : false,
+    isVerticalRatio: false,
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
@@ -231,6 +234,7 @@ const workItems = [
     videoUrl: "/portfolio/movies/HoneyWorks_720p.mp4",
     videoPoster: "/portfolio/movies/HoneyWorks_thumb.png",
     isPlayVideo : false,
+    isVerticalRatio: false,
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
@@ -264,11 +268,28 @@ const workItems = [
       "プロモーションムービーの提案と制作",
       "外部の制作会社さんの開拓と連携",
     ],
-    youtubeUrl: "https://youtu.be/HfFRJdeWR_k",
+    // youtubeUrl: "https://youtu.be/HfFRJdeWR_k",
+    youtubeUrl: "https://youtube.com/shorts/ADpOSPSiOMw",
     isPlayYoutube : true,
     videoUrl: "/portfolio/movies/BonBonJourney_720p.mp4",
     videoPoster: "/portfolio/movies/BonBonJourney_thumb.png",
     isPlayVideo : false,
+    isVerticalRatio: true,
+    galleryTitle: "UIアニメーションのディレクションと制作事例",
+    galleryDetailView: "false",
+    galleryGrids: "grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-5",
+    gallery: [
+      { src: "/portfolio/images/bonbonjourney/bonbonjourney_ui_anim_01.gif?height=334&width=188", alt: "タイトルのUIアニメーション", caption: "タイトルのUIアニメーション" },
+      { src: "/portfolio/images/bonbonjourney/bonbonjourney_ui_anim_02.gif?height=334&width=188", alt: "チュートリアルアニメーション", caption: "チュートリアルアニメーション" },
+      { src: "/portfolio/images/bonbonjourney/bonbonjourney_ui_anim_03.gif?height=334&width=188", alt: "ストーリーアニメーション", caption: "ストーリーアニメーション" },
+      { src: "/portfolio/images/bonbonjourney/bonbonjourney_ui_anim_04.gif?height=334&width=188", alt: "ストーリーアニメーション", caption: "ストーリーアニメーション" },
+      { src: "/portfolio/images/bonbonjourney/bonbonjourney_ui_anim_05.gif?height=334&width=188", alt: "バトルのUIアニメーション", caption: "バトルのUIアニメーション" },
+      { src: "/portfolio/images/bonbonjourney/bonbonjourney_ui_anim_06.gif?height=334&width=188", alt: "バトル結果UIアニメーション", caption: "バトル結果UIアニメーション" },
+      { src: "/portfolio/images/bonbonjourney/bonbonjourney_ui_anim_07.gif?height=334&width=188", alt: "バトルのアニメーション", caption: "バトルのアニメーション" },
+      { src: "/portfolio/images/bonbonjourney/bonbonjourney_ui_anim_08.gif?height=334&width=188", alt: "バトルのアニメーション", caption: "バトルのアニメーション" },
+      { src: "/portfolio/images/bonbonjourney/bonbonjourney_ui_anim_09.gif?height=334&width=188", alt: "イベントUIアニメーション", caption: "イベントUIアニメーション" },
+      { src: "/portfolio/images/bonbonjourney/bonbonjourney_ui_anim_10.gif?height=334&width=188", alt: "イベントUIアニメーション", caption: "イベントUIアニメーション" },
+    ],
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
@@ -306,6 +327,7 @@ const workItems = [
     videoUrl: "/portfolio/movies/IdolMasterSideM_720p.mp4",
     videoPoster: "/portfolio/movies/IdolMasterSideM_thumb.png",
     isPlayVideo : false,
+    isVerticalRatio: false,
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
@@ -341,6 +363,7 @@ const workItems = [
     videoUrl: "/portfolio/movies/SummonSoulBattle_720p.mp4",
     videoPoster: "/portfolio/movies/SummonSoulBattle_thumb.png",
     isPlayVideo : false,
+    isVerticalRatio: false,
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
@@ -374,6 +397,7 @@ const workItems = [
     videoUrl: "/portfolio/movies/WakeUpGirls_720p.mp4",
     videoPoster: "/portfolio/movies/WakeUpGirls_thumb.png",
     isPlayVideo : false,
+    isVerticalRatio: false,
     tools: [ 
       {icon : <SimpleIcons.SiAdobe size="32px" className="mb-0" />, name :"Adobe Flash"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
@@ -407,6 +431,7 @@ const workItems = [
     videoUrl: "/portfolio/movies/SkyLock_720p.mp4",
     videoPoster: "/portfolio/movies/SkyLock_thumb.png",
     isPlayVideo : false,
+    isVerticalRatio: false,
     tools: [ 
       {icon : <SimpleIcons.SiAdobe size="32px" className="mb-0" />, name :"Adobe Flash"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
@@ -438,6 +463,7 @@ const workItems = [
     videoUrl: "",
     galleryTitle: "制作を担当したプロジェクト",
     galleryDetailView: "true",
+    galleryGrids: "grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-5",
     gallery: [
       { src: "/portfolio/images/birdman/lovemusic.png?height=400&width=590", alt: "LOVE MUSIC", caption: "LOVE MUSIC | Portal Audio Player Walkman | Sony" },
       { src: "/portfolio/images/birdman/nap.png?height=484&width=580", alt: "Hiroshi Nakamura & NAP Co.,Ltd.", caption: "Hiroshi Nakamura & NAP Co.,Ltd." },
@@ -488,6 +514,7 @@ const workItems = [
     videoUrl: "",
     galleryTitle: "制作を担当したプロジェクト",
     galleryDetailView: "true",
+    galleryGrids: "grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-5",
     gallery: [
       { src: "/portfolio/images/ccc/csbooks.png?height=475&width=560", alt: "C's BOOKS Website Renewal", caption: "C's BOOKS" },
       { src: "/portfolio/images/ccc/hotel_manzoku.png?height=440&width=560", alt: "HOTEL MAN-ZOKU", caption: "HOTEL MAN-ZOKU" },
@@ -542,6 +569,7 @@ const workItems = [
     videoUrl: "",
     galleryTitle: "制作を担当したプロジェクト",
     galleryDetailView: "true",
+    galleryGrids: "grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-5",
     gallery: [
       { src: "/portfolio/images/weditdesign/kerasys.jpg?width=480&height=472", alt: "Kerasys", caption: "Kerasys Online Promotion" },
       { src: "/portfolio/images/weditdesign/rfid.jpg?width=480&height=373", alt: "RFid", caption: "PIFF RFiD Service Experience" },
@@ -739,11 +767,12 @@ export default function PortfolioDetailPage({ params }) {
         </ScrollReveal>
         )}
 
+        <div className={work.isVerticalRatio ? "grid gap-0 sm:grid-cols-1 md:grid-cols-3" : ""}>
         {/* 비디오 플레이어 YouTube */}
         {work.isPlayYoutube && work.youtubeUrl && (
-        <ScrollReveal>
+        <ScrollReveal direction={work.isVerticalRatio ? "left" : ""} className={work.isVerticalRatio ? "md:col-span-1" : ""}>
           <div className="m-4 mt-2 mb-6 overflow-hidden rounded-xl bg-gradient-to-r from-gray-900 to-gray-700 shadow-xl">
-            <div className="aspect-video">
+            <div className={work.isVerticalRatio ? "aspect-[9/16]" : "aspect-video"}>
               <ReactPlayer
                 url = {work.youtubeUrl}
                 muted
@@ -759,9 +788,9 @@ export default function PortfolioDetailPage({ params }) {
 
         {/* 비디오 플레이어 MP4 */}
         {work.isPlayVideo && work.videoUrl && (
-        <ScrollReveal>
+        <ScrollReveal direction={work.isVerticalRatio ? "left" : ""} className={work.isVerticalRatio ? "md:col-span-1" : ""}>
           <div className="m-4 mt-2 mb-6 overflow-hidden rounded-xl bg-gradient-to-r from-gray-900 to-gray-700 shadow-xl">
-            <div className="aspect-video">
+            <div className={work.isVerticalRatio ? "aspect-[9/16]" : "aspect-video"}>
               <MediaController style={{ width: "100%" }} mediacontroller="mc">
                 <video
                   slot = "media"
@@ -790,7 +819,7 @@ export default function PortfolioDetailPage({ params }) {
 
         {/* 갤러리 섹션 */}
         {work.gallery && (
-          <ScrollReveal>
+          <ScrollReveal direction={work.isVerticalRatio ? "right" : ""} className={work.isVerticalRatio ? "md:col-span-2" : ""}>
             <div className="m-4 mt-2 mb-6 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
               {/* <h2 className="mb-2 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-lg font-bold tracking-tight text-transparent dark:from-gray-100 dark:to-gray-400">{work.galleryTitle}</h2> */}
               <h2 className="mb-4 ml-0 mr-0 text-xl font-semibold text-gray-900 dark:text-white">{work.galleryTitle}</h2>
@@ -798,6 +827,7 @@ export default function PortfolioDetailPage({ params }) {
             </div>
           </ScrollReveal>
         )}
+        </div>
 
         <ScrollReveal>
           <div className="m-4 mt-2 mb-6 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
