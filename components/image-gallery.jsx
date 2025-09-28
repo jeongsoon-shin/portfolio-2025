@@ -23,7 +23,7 @@ export default function ImageGallery({ images = [], isDetailView = "true", grids
         {images.map((image, index) => (
           <div
             key={index}
-            className={`overflow-hidden rounded-lg transition-transform duration-300 ${isDetailView === "true" ? "cursor-pointer hover:scale-105 active:scale-95" : ""}`}
+            className={`overflow-hidden rounded-lg transition-transform duration-300 hover:scale-105 active:scale-95 ${isDetailView === "true" ? "cursor-pointer" : ""}`}
             onClick={isDetailView === "true" ? () => openImage(image) : undefined}
           >
             <img
