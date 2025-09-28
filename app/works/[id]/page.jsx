@@ -45,7 +45,9 @@ const workItems = [
     videoUrl: "",
     videoPoster: "",
     isPlayVideo : false,
-    isVerticalRatio: false,
+    isPortraitVideo: false,
+    isPortraitRatio: "aspect-video",
+    isVideoRightPosition: false,
     galleryTitle: "UIアニメーションのディレクションと制作事例",
     galleryDetailView: "false",
     galleryGrids: "grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4",
@@ -104,7 +106,9 @@ const workItems = [
     videoUrl: "/portfolio/movies/TribeNine_720p.mp4",
     videoPoster: "/portfolio/movies/TribeNine_thumb.png",
     isPlayVideo : false,
-    isVerticalRatio: false,
+    isPortraitVideo: false,
+    isPortraitRatio: "aspect-video",
+    isVideoRightPosition: false,
     galleryTitle: "制作のスナップショット",
     galleryDetailView: "false",
     galleryGrids: "grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4",
@@ -196,7 +200,9 @@ const workItems = [
     videoUrl: "/portfolio/movies/KonMari_720p.mp4",
     videoPoster: "/portfolio/movies/KonMari_thumb.png",
     isPlayVideo : false,
-    isVerticalRatio: false,
+    isPortraitVideo: false,
+    isPortraitRatio: "aspect-video",
+    isVideoRightPosition: false,
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
@@ -234,7 +240,9 @@ const workItems = [
     videoUrl: "/portfolio/movies/HoneyWorks_720p.mp4",
     videoPoster: "/portfolio/movies/HoneyWorks_thumb.png",
     isPlayVideo : false,
-    isVerticalRatio: false,
+    isPortraitVideo: false,
+    isPortraitRatio: "aspect-video",
+    isVideoRightPosition: false,
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
@@ -274,7 +282,9 @@ const workItems = [
     videoUrl: "/portfolio/movies/BonBonJourney_720p.mp4",
     videoPoster: "/portfolio/movies/BonBonJourney_thumb.png",
     isPlayVideo : false,
-    isVerticalRatio: true,
+    isPortraitVideo: true,
+    isPortraitRatio: "aspect-[9/16]",
+    isVideoRightPosition: false,
     galleryTitle: "UIアニメーションのディレクションと制作事例",
     galleryDetailView: "false",
     galleryGrids: "grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-5",
@@ -327,7 +337,9 @@ const workItems = [
     videoUrl: "/portfolio/movies/IdolMasterSideM_720p.mp4",
     videoPoster: "/portfolio/movies/IdolMasterSideM_thumb.png",
     isPlayVideo : false,
-    isVerticalRatio: false,
+    isPortraitVideo: false,
+    isPortraitRatio: "aspect-video",
+    isVideoRightPosition: false,
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
@@ -358,12 +370,15 @@ const workItems = [
       "Particle Systemを使用したエフェクト制作全般",
       "UnityのNGUIを用いたUIの実装",
     ],
-    youtubeUrl: "https://youtu.be/6Y4d1JH939I",
+    // youtubeUrl: "https://youtu.be/6Y4d1JH939I",
+    youtubeUrl: "https://youtube.com/shorts/otbDQubxp6k",
     isPlayYoutube : true,
     videoUrl: "/portfolio/movies/SummonSoulBattle_720p.mp4",
     videoPoster: "/portfolio/movies/SummonSoulBattle_thumb.png",
     isPlayVideo : false,
-    isVerticalRatio: false,
+    isPortraitVideo: true,
+    isPortraitRatio: "aspect-[9/16]",
+    isVideoRightPosition: true,
     tools: [ 
       {icon : <SimpleIcons.SiUnity size="32px" className="mb-0" />, name :"Unity"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
@@ -392,12 +407,15 @@ const workItems = [
       "開発から運用までプロジェクトに参画（約2年）",
       "ゲーム内の演出制作全般",
     ],
-    youtubeUrl: "https://youtu.be/XNOXl7gE2_c",
+    // youtubeUrl: "https://youtu.be/XNOXl7gE2_c",
+    youtubeUrl: "https://youtube.com/shorts/FlE_17nNgjY",
     isPlayYoutube : true,
     videoUrl: "/portfolio/movies/WakeUpGirls_720p.mp4",
     videoPoster: "/portfolio/movies/WakeUpGirls_thumb.png",
     isPlayVideo : false,
-    isVerticalRatio: false,
+    isPortraitVideo: true,
+    isPortraitRatio: "aspect-[9/12]",
+    isVideoRightPosition: true,
     tools: [ 
       {icon : <SimpleIcons.SiAdobe size="32px" className="mb-0" />, name :"Adobe Flash"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
@@ -426,12 +444,15 @@ const workItems = [
       "運用時期にプロジェクトに参画（約6ヶ月）",
       "ゲーム内の演出制作全般",
     ],
-    youtubeUrl: "https://youtu.be/kPCtgFWWzhM",
+    // youtubeUrl: "https://youtu.be/kPCtgFWWzhM",
+    youtubeUrl: "https://youtube.com/shorts/VsHHKQGU2CM",
     isPlayYoutube : true,
     videoUrl: "/portfolio/movies/SkyLock_720p.mp4",
     videoPoster: "/portfolio/movies/SkyLock_thumb.png",
     isPlayVideo : false,
-    isVerticalRatio: false,
+    isPortraitVideo: true,
+    isPortraitRatio: "aspect-[9/12]",
+    isVideoRightPosition: true,
     tools: [ 
       {icon : <SimpleIcons.SiAdobe size="32px" className="mb-0" />, name :"Adobe Flash"},
       {icon : <SimpleIcons.SiAdobeaftereffects size="32px" className="mb-0" />, name :"Adobe After Effects"},
@@ -643,6 +664,95 @@ const workItems = [
   },
 ]
 
+function Overview({ params }) {
+  return (
+    <div className="m-4 mt-2 mb-6 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
+      <div className="items-center justify-between gap-4">
+        {(params.overviewTitle.length >= 0) && (<h2 className="mb-4 ml-0 mr-0 text-xl font-semibold text-gray-900 dark:text-white">{params.overviewTitle}</h2>)}
+        <div>
+          {params.overview.map((detail, index) => (
+            <p className="mt-1 text-gray-700 dark:text-gray-400" key={index}>
+            {detail}
+          </p>
+          ))}
+        </div>
+        {(params.responsibilitiesTitle.length == 0) && (<div className="mt-4">
+            {params.responsibilities.map((step, index) => (
+              <div className="mb-1 flex items-start gap-4" key={index}>
+                <div className="mt-2 flex h-2 w-2 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-gray-900 to-gray-700 text-sm font-medium text-white dark:from-gray-700 dark:to-gray-500"></div>
+                <div className="pt-0">
+                  <p className="font-medium text-gray-900 dark:text-white">{step}</p>
+                </div>
+              </div>
+            ))}
+          </div>)}
+      </div>
+    </div>
+  )
+}
+
+function Responsibilities({ params }) {
+  return (
+    <div className="m-4 mt-2 mb-6 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
+      <div className="items-center justify-between gap-4">
+        <h2 className="mb-4 ml-0 mr-0 text-xl font-semibold text-gray-900 dark:text-white">{params.responsibilitiesTitle}</h2>
+        <div className="mt-0 prose max-w-none dark:prose-invert">
+          <div className="">
+            {params.responsibilities.map((step, index) => (
+              <div className="mb-1 flex items-start gap-4" key={index}>
+                <div className="mt-2 flex h-2 w-2 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-gray-900 to-gray-700 text-sm font-medium text-white dark:from-gray-700 dark:to-gray-500"></div>
+                <div className="pt-0">
+                  <p className="font-medium text-gray-900 dark:text-white">{step}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function YoutubePlayer({ params }) {
+  return (
+    <div className="m-4 mt-2 mb-6 overflow-hidden rounded-xl bg-gradient-to-r from-gray-900 to-gray-700 shadow-xl">
+      <div className={`${params.isPortraitRatio}`}>
+        <ReactPlayer
+          url = {params.youtubeUrl}
+          muted
+          controls
+          pip
+          width = {"100%"}
+          height = {"100%"}
+        />
+      </div>
+    </div>
+  )
+}
+
+function Tools ({ title, params }) {
+  return (
+    <div className="m-4 mt-2 mb-6 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
+      <div className="prose max-w-none dark:prose-invert">
+        <h2 className="text-xl font-semibold text-gray-900 dark:text-white">{title}</h2>
+        <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          {params.tools.map((tool, index) => (
+            <InteractiveCard
+              key={index}
+              className="flex items-center gap-3 rounded-lg border border-gray-100 bg-gray-50 p-4 transition-all hover:-translate-y-1 hover:shadow-md dark:border-gray-700 dark:bg-gray-800 dark:hover:shadow-gray-900/30"
+            >
+              <div className="flex justify-center items-center">
+                {tool.icon}
+                <span className="ml-2 font-medium text-gray-900 dark:text-white text-xs">{tool.name}</span>
+              </div>
+            </InteractiveCard>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export default function PortfolioDetailPage({ params }) {
   const router = useRouter()
   const { id } = use(params);
@@ -716,139 +826,101 @@ export default function PortfolioDetailPage({ params }) {
       ></ParallaxHero>
 
       <main className="container relative mx-auto px-4 py-8">
-        {/* 프로젝트소개 */}
-        {(work.overview.length > 0) && (
-        <ScrollReveal>
-          <div className="m-4 mt-2 mb-6 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
-            <div className="items-center justify-between gap-4">
-              {(work.overviewTitle.length >= 0) && (<h2 className="mb-4 ml-0 mr-0 text-xl font-semibold text-gray-900 dark:text-white">{work.overviewTitle}</h2>)}
-              <div>
-                {work.overview.map((detail, index) => (
-                  <p className="mt-1 text-gray-700 dark:text-gray-400" key={index}>
-                  {detail}
-                </p>
-                ))}
-              </div>
-              {(work.responsibilitiesTitle.length == 0) && (<div className="mt-4">
-                  {work.responsibilities.map((step, index) => (
-                    <div className="mb-1 flex items-start gap-4" key={index}>
-                      <div className="mt-2 flex h-2 w-2 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-gray-900 to-gray-700 text-sm font-medium text-white dark:from-gray-700 dark:to-gray-500"></div>
-                      <div className="pt-0">
-                        <p className="font-medium text-gray-900 dark:text-white">{step}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>)}
-            </div>
-          </div>
-        </ScrollReveal>
-        )}
+        {/* 동영상플레이어의 위치에 따른 레이아웃 분기 */}
+        {!work.isVideoRightPosition ? (
+        <div>
+          {/* 프로젝트소개 */}
+          {(work.overview.length > 0) && (
+          <ScrollReveal>
+            <Overview params={work} />
+          </ScrollReveal>
+          )}
+          {/* 업무내용 */}
+          {(work.responsibilitiesTitle.length > 0) && (work.responsibilities.length > 0) && (
+          <ScrollReveal>
+            <Responsibilities params={work} />
+          </ScrollReveal>
+          )}
 
-        {/* 업무내용 */}
-        {(work.responsibilitiesTitle.length > 0) && (work.responsibilities.length > 0) && (
-        <ScrollReveal>
-          <div className="m-4 mt-2 mb-6 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
-            <div className="items-center justify-between gap-4">
-              <h2 className="mb-4 ml-0 mr-0 text-xl font-semibold text-gray-900 dark:text-white">{work.responsibilitiesTitle}</h2>
-              <div className="mt-0 prose max-w-none dark:prose-invert">
-                <div className="">
-                  {work.responsibilities.map((step, index) => (
-                    <div className="mb-1 flex items-start gap-4" key={index}>
-                      <div className="mt-2 flex h-2 w-2 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-gray-900 to-gray-700 text-sm font-medium text-white dark:from-gray-700 dark:to-gray-500"></div>
-                      <div className="pt-0">
-                        <p className="font-medium text-gray-900 dark:text-white">{step}</p>
-                      </div>
-                    </div>
-                  ))}
+          <div className={work.isPortraitVideo ? "grid gap-0 sm:grid-cols-1 md:grid-cols-3" : ""}>
+            {/* 비디오 플레이어 YouTube */}
+            {work.isPlayYoutube && work.youtubeUrl && (
+            <ScrollReveal className={work.isPortraitVideo ? "md:col-span-1" : ""}>
+              <YoutubePlayer params={work} />
+            </ScrollReveal>
+            )}
+
+            {/* 비디오 플레이어 MP4 */}
+            {work.isPlayVideo && work.videoUrl && (
+            <ScrollReveal className={work.isPortraitVideo ? "md:col-span-1" : ""}>
+              <div className="m-4 mt-2 mb-6 overflow-hidden rounded-xl bg-gradient-to-r from-gray-900 to-gray-700 shadow-xl">
+                <div className={work.isPortraitVideo ? "aspect-[9/16]" : "aspect-video"}>
+                  <MediaController style={{ width: "100%" }} mediacontroller="mc">
+                    <video
+                      slot = "media"
+                      src = {work.videoUrl}
+                      poster = {work.videoThumb}
+                      style={{
+                        width: '100%',
+                        height: 'auto',
+                        objectFit: 'cover',
+                      }}
+                    ></video>
+                    <MediaControlBar>
+                      <MediaPlayButton className="pl-4" />
+                      <MediaTimeRange className="px-2" />
+                      <MediaTimeDisplay showDuration className="text-sm" />
+                      {/* <MediaMuteButton /> */}
+                      {/* <MediaVolumeRange /> */}
+                      <MediaPlaybackRateButton className="px-2" />
+                      <MediaFullscreenButton className="pr-4" />
+                    </MediaControlBar>
+                  </MediaController>
                 </div>
               </div>
-            </div>
-          </div>
-        </ScrollReveal>
-        )}
+            </ScrollReveal>
+            )}
 
-        <div className={work.isVerticalRatio ? "grid gap-0 sm:grid-cols-1 md:grid-cols-3" : ""}>
-        {/* 비디오 플레이어 YouTube */}
-        {work.isPlayYoutube && work.youtubeUrl && (
-        <ScrollReveal className={work.isVerticalRatio ? "md:col-span-1" : ""}>
-          <div className="m-4 mt-2 mb-6 overflow-hidden rounded-xl bg-gradient-to-r from-gray-900 to-gray-700 shadow-xl">
-            <div className={work.isVerticalRatio ? "aspect-[9/16]" : "aspect-video"}>
-              <ReactPlayer
-                url = {work.youtubeUrl}
-                muted
-                controls
-                pip
-                width = {"100%"}
-                height = {"100%"}
-              />
-            </div>
+            {/* 갤러리 섹션 */}
+            {work.gallery && (
+              <ScrollReveal className={work.isPortraitVideo ? "md:col-span-2" : ""}>
+                <div className="m-4 mt-2 mb-6 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
+                  {/* <h2 className="mb-2 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-lg font-bold tracking-tight text-transparent dark:from-gray-100 dark:to-gray-400">{work.galleryTitle}</h2> */}
+                  <h2 className="mb-4 ml-0 mr-0 text-xl font-semibold text-gray-900 dark:text-white">{work.galleryTitle}</h2>
+                  <ImageGallery images={work.gallery} isDetailView = {work.galleryDetailView} grids={work.galleryGrids} />
+                </div>
+              </ScrollReveal>
+            )}
           </div>
-        </ScrollReveal>
-        )}
 
-        {/* 비디오 플레이어 MP4 */}
-        {work.isPlayVideo && work.videoUrl && (
-        <ScrollReveal className={work.isVerticalRatio ? "md:col-span-1" : ""}>
-          <div className="m-4 mt-2 mb-6 overflow-hidden rounded-xl bg-gradient-to-r from-gray-900 to-gray-700 shadow-xl">
-            <div className={work.isVerticalRatio ? "aspect-[9/16]" : "aspect-video"}>
-              <MediaController style={{ width: "100%" }} mediacontroller="mc">
-                <video
-                  slot = "media"
-                  src = {work.videoUrl}
-                  poster = {work.videoThumb}
-                  style={{
-                    width: '100%',
-                    height: 'auto',
-                    objectFit: 'cover',
-                  }}
-                ></video>
-                <MediaControlBar>
-                  <MediaPlayButton className="pl-4" />
-                  <MediaTimeRange className="px-2" />
-                  <MediaTimeDisplay showDuration className="text-sm" />
-                  {/* <MediaMuteButton /> */}
-                  {/* <MediaVolumeRange /> */}
-                  <MediaPlaybackRateButton className="px-2" />
-                  <MediaFullscreenButton className="pr-4" />
-                </MediaControlBar>
-              </MediaController>
-            </div>
-          </div>
-        </ScrollReveal>
-        )}
-
-        {/* 갤러리 섹션 */}
-        {work.gallery && (
-          <ScrollReveal className={work.isVerticalRatio ? "md:col-span-2" : ""}>
-            <div className="m-4 mt-2 mb-6 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
-              {/* <h2 className="mb-2 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-lg font-bold tracking-tight text-transparent dark:from-gray-100 dark:to-gray-400">{work.galleryTitle}</h2> */}
-              <h2 className="mb-4 ml-0 mr-0 text-xl font-semibold text-gray-900 dark:text-white">{work.galleryTitle}</h2>
-              <ImageGallery images={work.gallery} isDetailView = {work.galleryDetailView} grids={work.galleryGrids} />
+          <ScrollReveal>
+            <Tools title={t("project.tools")} params={work} />
+          </ScrollReveal>
+        </div>
+        ) : (
+        <div className="grid gap-0 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <ScrollReveal className="sm:col-span-1 md:col-span-1 lg:col-span-2">
+            {(work.overview.length > 0) && (
+              <Overview params={work} />
+            )}
+            {(work.responsibilitiesTitle.length > 0) && (work.responsibilities.length > 0) && (  
+            <Responsibilities params={work} />
+            )}
+            <div className="md:hidden lg:block">
+              <Tools title={t("project.tools")} params={work} />
             </div>
           </ScrollReveal>
-        )}
-        </div>
-
-        <ScrollReveal>
-          <div className="m-4 mt-2 mb-6 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
-            <div className="prose max-w-none dark:prose-invert">
-              <h2 className="text-xl font-semibold text-gray-900 dark:text-white">{t("project.tools")}</h2>
-              <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                {work.tools.map((tool, index) => (
-                  <InteractiveCard
-                    key={index}
-                    className="flex items-center gap-3 rounded-lg border border-gray-100 bg-gray-50 p-4 transition-all hover:-translate-y-1 hover:shadow-md dark:border-gray-700 dark:bg-gray-800 dark:hover:shadow-gray-900/30"
-                  >
-                    <div className="flex justify-center items-center">
-                      {tool.icon}
-                      <span className="ml-2 font-medium text-gray-900 dark:text-white text-xs">{tool.name}</span>
-                    </div>
-                  </InteractiveCard>
-                ))}
-              </div>
+          {/* 비디오 플레이어 YouTube */}
+          {work.isPlayYoutube && work.youtubeUrl && (
+          <ScrollReveal className="sm:col-span-1 md:col-span-1 lg:col-span-1">
+            <YoutubePlayer params={work} />
+            <div className="md:block lg:hidden">
+              <Tools title={t("project.tools")} params={work} />
             </div>
-          </div>
-        </ScrollReveal>
+          </ScrollReveal>
+          )}
+        </div>
+        )}
 
         {work.url && (
           <ScrollReveal>
