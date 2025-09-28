@@ -730,6 +730,36 @@ function YoutubePlayer({ params }) {
   )
 }
 
+function VideoPlayer({ params }) {
+  return (
+    <div className="m-4 mt-2 mb-6 overflow-hidden rounded-xl bg-gradient-to-r from-gray-900 to-gray-700 shadow-xl">
+      <div className={`${params.isPortraitRatio}`}>
+        <MediaController style={{ width: "100%" }} mediacontroller="mc">
+          <video
+            slot = "media"
+            src = {params.videoUrl}
+            poster = {params.videoThumb}
+            style={{
+              width: '100%',
+              height: 'auto',
+              objectFit: 'cover',
+            }}
+          ></video>
+          <MediaControlBar>
+            <MediaPlayButton className="pl-4" />
+            <MediaTimeRange className="px-2" />
+            <MediaTimeDisplay showDuration className="text-sm" />
+            {/* <MediaMuteButton /> */}
+            {/* <MediaVolumeRange /> */}
+            <MediaPlaybackRateButton className="px-2" />
+            <MediaFullscreenButton className="pr-4" />
+          </MediaControlBar>
+        </MediaController>
+      </div>
+    </div>
+  )
+}
+
 function Tools ({ title, params }) {
   return (
     <div className="m-4 mt-2 mb-6 rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800">
@@ -853,31 +883,7 @@ export default function PortfolioDetailPage({ params }) {
             {/* 비디오 플레이어 MP4 */}
             {work.isPlayVideo && work.videoUrl && (
             <ScrollReveal className={work.isPortraitVideo ? "md:col-span-1" : ""}>
-              <div className="m-4 mt-2 mb-6 overflow-hidden rounded-xl bg-gradient-to-r from-gray-900 to-gray-700 shadow-xl">
-                <div className={work.isPortraitVideo ? "aspect-[9/16]" : "aspect-video"}>
-                  <MediaController style={{ width: "100%" }} mediacontroller="mc">
-                    <video
-                      slot = "media"
-                      src = {work.videoUrl}
-                      poster = {work.videoThumb}
-                      style={{
-                        width: '100%',
-                        height: 'auto',
-                        objectFit: 'cover',
-                      }}
-                    ></video>
-                    <MediaControlBar>
-                      <MediaPlayButton className="pl-4" />
-                      <MediaTimeRange className="px-2" />
-                      <MediaTimeDisplay showDuration className="text-sm" />
-                      {/* <MediaMuteButton /> */}
-                      {/* <MediaVolumeRange /> */}
-                      <MediaPlaybackRateButton className="px-2" />
-                      <MediaFullscreenButton className="pr-4" />
-                    </MediaControlBar>
-                  </MediaController>
-                </div>
-              </div>
+              <VideoPlayer params={work} />
             </ScrollReveal>
             )}
 
@@ -898,8 +904,8 @@ export default function PortfolioDetailPage({ params }) {
           </ScrollReveal>
         </div>
         ) : (
-        <div className="grid gap-0 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          <ScrollReveal className="sm:col-span-1 md:col-span-1 lg:col-span-2">
+        <div className="grid gap-0 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-5 xl:grid-cols-3">
+          <ScrollReveal className="sm:col-span-1 md:col-span-1 lg:col-span-3 xl:col-span-2">
             {(work.overview.length > 0) && (
               <Overview params={work} />
             )}
@@ -911,14 +917,24 @@ export default function PortfolioDetailPage({ params }) {
             </div>
           </ScrollReveal>
           {/* 비디오 플레이어 YouTube */}
-          {work.isPlayYoutube && work.youtubeUrl && (
-          <ScrollReveal className="sm:col-span-1 md:col-span-1 lg:col-span-1">
-            <YoutubePlayer params={work} />
+          <ScrollReveal className="sm:col-span-1 md:col-span-1 lg:col-span-2 xl:col-span-1">
+            {/* 비디오 플레이어 YouTube */}
+            {work.isPlayYoutube && work.youtubeUrl && (
+            <ScrollReveal className={work.isPortraitVideo ? "md:col-span-1" : ""}>
+              <YoutubePlayer params={work} />
+            </ScrollReveal>
+            )}
+
+            {/* 비디오 플레이어 MP4 */}
+            {work.isPlayVideo && work.videoUrl && (
+            <ScrollReveal className={work.isPortraitVideo ? "md:col-span-1" : ""}>
+              <VideoPlayer params={work} />
+            </ScrollReveal>
+            )}
             <div className="md:block lg:hidden">
               <Tools title={t("project.tools")} params={work} />
             </div>
           </ScrollReveal>
-          )}
         </div>
         )}
 
