@@ -105,7 +105,7 @@ export default function Navbar() {
               <motion.div variants={itemVariants}>
                 <Link
                   href="/works"
-                  className={`rounded-md border-1 border-gray-400/0 px-3 py-2 text-sm font-bold transition-colors ${
+                  className={`rounded-md border-1 border-gray-400/0 px-3 py-2 text-md font-semibold transition-colors ${
                     isActive("/works")
                       ? "text-gray-900"
                       : "text-gray-600 hover:bg-gray-900/10 hover:text-gray-900 hover:border-gray-400"
@@ -117,7 +117,7 @@ export default function Navbar() {
               <motion.div variants={itemVariants}>
                 <Link
                   href="/about"
-                  className={`rounded-md border-1 border-gray-400/0 px-3 py-2 text-sm font-bold transition-colors ${
+                  className={`rounded-md border-1 border-gray-400/0 px-3 py-2 text-md font-semibold transition-colors ${
                     isActive("/about")
                       ? "text-gray-900"
                       : "text-gray-600 hover:bg-gray-900/10 hover:text-gray-900 hover:border-gray-400"
@@ -126,38 +126,12 @@ export default function Navbar() {
                   {t("nav.about")}
                 </Link>
               </motion.div>
-              
-              {/* <motion.div variants={itemVariants}>
-                <Link
-                  href="/contact"
-                  className={`rounded-md px-3 py-2 text-sm font-medium transition-colors ${
-                    isActive("/contact")
-                      ? "text-gray-900"
-                      : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
-                  }`}
-                >
-                  {t("nav.contact")}
-                </Link>
-              </motion.div> */}
-              
-              {/*
-              <motion.div variants={itemVariants}>
-                <LanguageSwitcher />
-              </motion.div>
-              */}
-              {/*}
-              <motion.div variants={itemVariants}>
-                <ThemeToggle />
-              </motion.div>
-              */}
             </div>
           </div>
 
           {/* 모바일 메뉴 버튼 */}
           <div className="flex md:hidden">
             <div className="flex items-center space-x-1">
-              {/* <LanguageSwitcher />
-              <ThemeToggle /> */}
               <button
                 type="button"
                 className={`inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500"`}
@@ -203,17 +177,6 @@ export default function Navbar() {
             >
               {t("nav.about")}
             </Link>
-            {/* <Link
-              href="/contact"
-              className={`block rounded-md px-3 py-2 text-base font-medium ${
-                isActive("/contact")
-                  ? "text-gray-900"
-                  : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
-              }`}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {t("nav.contact")}
-            </Link> */}
           </div>
         </motion.div>
       )}

@@ -102,10 +102,10 @@ const workItems = [
       "お問い合わせや外部決済サイトのデザイン改修（HTML、CSS、JavaScriptコーディング）",
     ],
     youtubeUrl: "https://youtu.be/MAc9YG05rNM",
-    isPlayYoutube : true,
-    videoUrl: "/portfolio/movies/TribeNine_720p.mp4",
+    isPlayYoutube : false,
+    videoUrl: "/portfolio/movies/TribeNine_720p.webm",
     videoPoster: "/portfolio/movies/TribeNine_thumb.png",
-    isPlayVideo : false,
+    isPlayVideo : true,
     isPortraitVideo: false,
     isPortraitRatio: "aspect-video",
     isVideoRightPosition: false,
@@ -196,10 +196,10 @@ const workItems = [
       "プロモーションムービー制作にも部分的に関与",
     ],
     youtubeUrl: "https://youtu.be/UbhDj6wOsqo",
-    isPlayYoutube : true,
-    videoUrl: "/portfolio/movies/KonMari_720p.mp4",
+    isPlayYoutube : false,
+    videoUrl: "/portfolio/movies/KonMari_720p.webm",
     videoPoster: "/portfolio/movies/KonMari_thumb.png",
-    isPlayVideo : false,
+    isPlayVideo : true,
     isPortraitVideo: false,
     isPortraitRatio: "aspect-video",
     isVideoRightPosition: false,
@@ -236,10 +236,10 @@ const workItems = [
       "外部の制作会社さんとの連携",
     ],
     youtubeUrl: "https://youtu.be/Utsz-ajBvUw",
-    isPlayYoutube : true,
-    videoUrl: "/portfolio/movies/HoneyWorks_720p.mp4",
+    isPlayYoutube : false,
+    videoUrl: "/portfolio/movies/HoneyWorks_720p.webm",
     videoPoster: "/portfolio/movies/HoneyWorks_thumb.png",
-    isPlayVideo : false,
+    isPlayVideo : true,
     isPortraitVideo: false,
     isPortraitRatio: "aspect-video",
     isVideoRightPosition: false,
@@ -278,10 +278,10 @@ const workItems = [
     ],
     // youtubeUrl: "https://youtu.be/HfFRJdeWR_k",
     youtubeUrl: "https://youtube.com/shorts/ADpOSPSiOMw",
-    isPlayYoutube : true,
-    videoUrl: "/portfolio/movies/BonBonJourney_720p.mp4",
+    isPlayYoutube : false,
+    videoUrl: "/portfolio/movies/BonBonJourney_720p_portrait.webm",
     videoPoster: "/portfolio/movies/BonBonJourney_thumb.png",
-    isPlayVideo : false,
+    isPlayVideo : true,
     isPortraitVideo: true,
     isPortraitRatio: "aspect-[9/16]",
     isVideoRightPosition: false,
@@ -333,10 +333,10 @@ const workItems = [
       "UnityのuGUIを用いたUIの実装",
     ],
     youtubeUrl: "https://youtu.be/YzFR1-4qvr8",
-    isPlayYoutube : true,
-    videoUrl: "/portfolio/movies/IdolMasterSideM_720p.mp4",
+    isPlayYoutube : false,
+    videoUrl: "/portfolio/movies/IdolMasterSideM_720p.webm",
     videoPoster: "/portfolio/movies/IdolMasterSideM_thumb.png",
-    isPlayVideo : false,
+    isPlayVideo : true,
     isPortraitVideo: false,
     isPortraitRatio: "aspect-video",
     isVideoRightPosition: false,
@@ -372,10 +372,10 @@ const workItems = [
     ],
     // youtubeUrl: "https://youtu.be/6Y4d1JH939I",
     youtubeUrl: "https://youtube.com/shorts/otbDQubxp6k",
-    isPlayYoutube : true,
-    videoUrl: "/portfolio/movies/SummonSoulBattle_720p.mp4",
+    isPlayYoutube : false,
+    videoUrl: "/portfolio/movies/SummonSoulBattle_720p_portrait.webm",
     videoPoster: "/portfolio/movies/SummonSoulBattle_thumb.png",
-    isPlayVideo : false,
+    isPlayVideo : true,
     isPortraitVideo: true,
     isPortraitRatio: "aspect-[9/16]",
     isVideoRightPosition: true,
@@ -409,10 +409,10 @@ const workItems = [
     ],
     // youtubeUrl: "https://youtu.be/XNOXl7gE2_c",
     youtubeUrl: "https://youtube.com/shorts/FlE_17nNgjY",
-    isPlayYoutube : true,
-    videoUrl: "/portfolio/movies/WakeUpGirls_720p.mp4",
-    videoPoster: "/portfolio/movies/WakeUpGirls_thumb.png",
-    isPlayVideo : false,
+    isPlayYoutube : false,
+    videoUrl: "/portfolio/movies/WakeUpGirls_720p_portrait.webm",
+    // videoPoster: "/portfolio/movies/WakeUpGirls_thumb.png",
+    isPlayVideo : true,
     isPortraitVideo: true,
     isPortraitRatio: "aspect-[9/12]",
     isVideoRightPosition: true,
@@ -446,10 +446,10 @@ const workItems = [
     ],
     // youtubeUrl: "https://youtu.be/kPCtgFWWzhM",
     youtubeUrl: "https://youtube.com/shorts/VsHHKQGU2CM",
-    isPlayYoutube : true,
-    videoUrl: "/portfolio/movies/SkyLock_720p.mp4",
-    videoPoster: "/portfolio/movies/SkyLock_thumb.png",
-    isPlayVideo : false,
+    isPlayYoutube : false,
+    videoUrl: "/portfolio/movies/SkyLock_720p_portrait.webm",
+    // videoPoster: "/portfolio/movies/SkyLock_thumb.png",
+    isPlayVideo : true,
     isPortraitVideo: true,
     isPortraitRatio: "aspect-[9/12]",
     isVideoRightPosition: true,
@@ -738,7 +738,7 @@ function VideoPlayer({ params }) {
           <video
             slot = "media"
             src = {params.videoUrl}
-            poster = {params.videoThumb}
+            poster = {params.videoPoster}
             style={{
               width: '100%',
               height: 'auto',
@@ -767,9 +767,13 @@ function Tools ({ title, params }) {
         <h2 className="text-xl font-semibold text-gray-900 dark:text-white">{title}</h2>
         <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {params.tools.map((tool, index) => (
+            // <InteractiveCard
+            //   key={index}
+            //   className="flex items-center gap-3 rounded-lg border border-gray-100 bg-gray-50 p-4 transition-all hover:-translate-y-1 hover:shadow-md dark:border-gray-700 dark:bg-gray-800 dark:hover:shadow-gray-900/30"
+            // >
             <InteractiveCard
               key={index}
-              className="flex items-center gap-3 rounded-lg border border-gray-100 bg-gray-50 p-4 transition-all hover:-translate-y-1 hover:shadow-md dark:border-gray-700 dark:bg-gray-800 dark:hover:shadow-gray-900/30"
+              className="flex items-center gap-3 rounded-lg border border-gray-100 bg-gray-50 p-4 transition-all dark:border-gray-700 dark:bg-gray-800 dark:hover:shadow-gray-900/30"
             >
               <div className="flex justify-center items-center">
                 {tool.icon}
