@@ -746,13 +746,13 @@ function VideoPlayer({ params }) {
             }}
           ></video>
           <MediaControlBar>
-            <MediaPlayButton className="pl-4" />
+            <MediaPlayButton className="pl-4 pr-2" />
             <MediaTimeRange className="px-2" />
-            <MediaTimeDisplay showDuration className="text-sm" />
+            <MediaTimeDisplay showDuration className="px-2 text-xs" />
             {/* <MediaMuteButton /> */}
             {/* <MediaVolumeRange /> */}
-            <MediaPlaybackRateButton className="px-2" />
-            <MediaFullscreenButton className="pr-4" />
+            <MediaPlaybackRateButton className="px-2 text-xs" />
+            <MediaFullscreenButton className="pl-2 pr-4" />
           </MediaControlBar>
         </MediaController>
       </div>
